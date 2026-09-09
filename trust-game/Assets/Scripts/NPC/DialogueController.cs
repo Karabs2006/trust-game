@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 
-public class DialogueController : MonoBehaviour
+public class DialogueController : MonoBehaviour, IInteractable
 {
     [Header("NPC Data")]
     public NPCInfo dialogueData;
@@ -51,8 +51,7 @@ public class DialogueController : MonoBehaviour
         // // {
         // //     dialogueIndex = dialogueData.incorrectItemIndex;
 
-        // //     flames.Play();
-        // //     SoundManager.Play("Wrong");
+    
         // // }
         // // else if (objectiveState == ObjectiveState.Correct)
         // // {
@@ -91,6 +90,7 @@ public class DialogueController : MonoBehaviour
         {
             if (dialogueChoice.ChoiceIndex == dialogueIndex)
             {
+                DisplayChoices(dialogueChoice);
                 return;
             }
         }
@@ -162,8 +162,8 @@ public class DialogueController : MonoBehaviour
     {
         for(int i = 0; i < choice.choices.Length; i++)
         {
-            int NextLine = choice.nextDialogueIndex[i];
-            //dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+            int nextIndex = choice.nextDialogueIndex[i];
+            dialogueUI.CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
         }
     }
 

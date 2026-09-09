@@ -6,12 +6,11 @@ public class DialogueTest : MonoBehaviour
 
     void Start()
     {
-        controller = GetComponent<DialogueController>();
+        DialogueController controller = GetComponent<DialogueController>();
     }
 
     public void Test()
     {
-        controller = GetComponent<DialogueController>();
         controller.Interact();
     }
 
