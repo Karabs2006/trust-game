@@ -1,12 +1,16 @@
 using UnityEngine;
+using System.Collections;
 
 public class RoadEvent : MonoBehaviour
 {
 
-    public GameObject minigame;
+    public GameObject puzzle;
+    public PuzzlePosition puzzlePosition;
+
+
     void Start()
     {
-        //minigame.SetActive(false);
+        puzzle.SetActive(false);
     }
 
     // Update is called once per frame
@@ -17,7 +21,7 @@ public class RoadEvent : MonoBehaviour
 
     void StartEvent()
     {
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
 
@@ -25,7 +29,13 @@ public class RoadEvent : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartEvent();
+            //Stop Player Movement when puzzle is active
+            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
+
+            playerMovement.currentSpeed = 0;
+
+            puzzle.SetActive(true);
+            puzzlePosition.StartCoroutine(puzzlePosition.Countdown());
         }
     }
 }

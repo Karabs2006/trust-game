@@ -15,7 +15,7 @@ public class EventInput : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // This method is called by the Player Input component via Unity Events
+    // Reads player movement for the puzzle
     public void OnMove(InputAction.CallbackContext context)
     {
         // Read the Vector2 value from the input action
