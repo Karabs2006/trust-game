@@ -19,12 +19,12 @@ MonoBehaviour:
   - 'add option here '
   - Yes Response
   - No Response
-  autoProgressLines: 010100
-  endDialogueLines: 0000010101
+  autoProgressLines: 0101000000
+  endDialogueLines: 0000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   choices:
-  - ChoiceIndex: 2
+  - choiceIndex: 2
     choices:
     - Yes
     - No

@@ -23,7 +23,7 @@ public class NPCInfo : ScriptableObject
 [System.Serializable]
 public class DialogueChoice
 {
-    public int ChoiceIndex; //the lines where choices appear
+    public int choiceIndex; //the lines where choices appear
     public string[] choices; //the players dialogue options
     public int[] nextDialogueIndex; // the response from the NPC
 }

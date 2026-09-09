@@ -88,7 +88,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         foreach(DialogueChoice dialogueChoice in dialogueData.choices)
         {
-            if (dialogueChoice.ChoiceIndex == dialogueIndex)
+            if (dialogueChoice.choiceIndex == dialogueIndex)
             {
                 DisplayChoices(dialogueChoice);
                 return;
