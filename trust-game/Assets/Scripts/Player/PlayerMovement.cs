@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+       
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     
