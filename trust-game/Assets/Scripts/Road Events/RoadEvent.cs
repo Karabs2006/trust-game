@@ -6,11 +6,13 @@ public class RoadEvent : MonoBehaviour
 
     public GameObject puzzle;
     public PuzzlePosition puzzlePosition;
+    public GameObject trunkInventory;
 
 
     void Start()
     {
         puzzle.SetActive(false);
+        trunkInventory.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class RoadEvent : MonoBehaviour
             playerMovement.currentSpeed = 0;
 
             puzzle.SetActive(true);
+            trunkInventory.SetActive(true);
             puzzlePosition.StartCoroutine(puzzlePosition.Countdown());
         }
     }
