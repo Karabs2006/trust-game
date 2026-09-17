@@ -12,6 +12,7 @@ public class DialogueUI : MonoBehaviour
     public TMP_Text dialogueText;
     public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
+    public Image npcImage;
     
     
     void Awake() //stops there from being multiple instances of this script
@@ -28,7 +29,12 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowDialogueUI(bool show)
     {
-        dialoguePanel.SetActive(true);
+        dialoguePanel.SetActive(show);
+    }
+
+    public void SetNPCInfo(Sprite npcSprite)
+    {
+       npcImage.sprite = npcSprite;
     }
 
     public void SetDialogueText(string text) //gets the dialogue info 

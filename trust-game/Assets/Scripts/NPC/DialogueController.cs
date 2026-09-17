@@ -17,6 +17,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     void Start()
     {
         dialogueUI = DialogueUI.Instance;
+        dialogueUI.ShowDialogueUI(false); 
     }
 
     public void Interact() //Call this when the player interacts with an NPC
@@ -37,12 +38,13 @@ public class DialogueController : MonoBehaviour, IInteractable
         return !isDialogueActive;
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
        
         {
             isDialogueActive = true;
             dialogueIndex = 0;
+           dialogueUI.SetNPCInfo(dialogueData.npcSprite);
        
         // {
         // //     dialogueIndex = dialogueData.inProgressIndex;
