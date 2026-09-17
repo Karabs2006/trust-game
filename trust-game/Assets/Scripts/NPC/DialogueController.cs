@@ -14,6 +14,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 
     [HideInInspector] public bool isDialogueActive;
 
+
     void Start()
     {
         dialogueUI = DialogueUI.Instance;
