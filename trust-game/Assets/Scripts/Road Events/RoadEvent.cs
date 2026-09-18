@@ -7,6 +7,7 @@ public class RoadEvent : MonoBehaviour
     public GameObject puzzle;
     public PuzzlePosition puzzlePosition;
     public GameObject trunkInventory;
+    public PlayerMovement playerMovement;
 
 
     void Start()
@@ -24,6 +25,7 @@ public class RoadEvent : MonoBehaviour
     void StartEvent()
     {
         //Time.timeScale = 0f;
+
     }
 
 
@@ -34,7 +36,10 @@ public class RoadEvent : MonoBehaviour
             //Stop Player Movement when puzzle is active
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
 
-            playerMovement.currentSpeed = 0;
+            //playerMovement.currentSpeed = 0;
+            playerMovement.puzzleActive = true;
+            playerMovement.rb.linearVelocity = Vector2.zero;
+    
 
             puzzle.SetActive(true);
             trunkInventory.SetActive(true);

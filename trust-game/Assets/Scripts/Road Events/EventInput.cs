@@ -8,11 +8,15 @@ public class EventInput : MonoBehaviour
     
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private Vector2 originalPosition;
+
+
 
     private void Awake()
     {
         // Get references to components
         rb = GetComponent<Rigidbody2D>();
+        originalPosition = rb.position;
     }
 
     // Reads player movement for the puzzle
@@ -20,6 +24,12 @@ public class EventInput : MonoBehaviour
     {
         // Read the Vector2 value from the input action
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void Respawn()
+    {
+        rb.position = originalPosition;
+        rb.linearVelocity = Vector2.zero;
     }
 
     private void FixedUpdate()

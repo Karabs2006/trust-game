@@ -32,7 +32,7 @@ public class NPCEvent : MonoBehaviour
         if (!dialogueController.isDialogueActive)
         {
             // Debug.Log ("done");
-            // playerMovement.currentSpeed = 10f;
+            playerMovement.currentSpeed = 10f;
         }
     }
 
