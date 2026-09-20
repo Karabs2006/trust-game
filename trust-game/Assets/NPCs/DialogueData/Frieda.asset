@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
+  m_Name: Frieda
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
+  npcSprite: {fileID: 0}
+  dialogueLines:
+  - " Hello \u2026 um my name is Frieda"
+  - like the artist!
+  - "My mama said i\u2026i should not say im lost to anyone for i belong everywhere
+    but home."
+  - "But can I tell you something\u2026 I feel pretty lost with my bud Moshi Moshi"
+  - 'My Tomogachi! '
+  - 'if you bring us along, Moshi Moshi would make you feel all new and lively with
+    his amazing charm. '
+  - 'Can I ask you to give me a lift, I promise not to annoy you and be a burden
+    like how I was to my mom and dad. '
+  - Thank you so much!
+  - "Mom was right\u2026 no one would give me a second chance, im just a burden to
+    all.  "
+  autoProgressLines: 010000000100000000
+  endDialogueLines: 000000000000000101
+  autoProgressDelay: 1.5
+  dialogueSpeed: 0.07
+  choices:
+  - choiceIndex: 3
+    choices:
+    - Whos Moshi Moshi?
+    - You shouldnt be out here, its not safe
+    nextDialogueIndex: 0400000006000000
+  - choiceIndex: 5
+    choices:
+    - Sure you can come along
+    - Sorry...
+    nextDialogueIndex: 0700000008000000
+  - choiceIndex: 6
+    choices:
+    - Sure you can come along
+    - Sorry...
+    nextDialogueIndex: 0700000008000000
+  givesItem: 

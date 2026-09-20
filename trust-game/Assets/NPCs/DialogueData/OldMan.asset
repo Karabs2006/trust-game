@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
+  m_Name: OldMan
+  m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
+  npcSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueLines:
+  - "Listen Kid\u2026 You be careful drivin\u2019 out there"
+  - " rots gotten so goddamn bad round this road, wouldn\u2019 trust none of those
+    hitchers. "
+  - Ya havent heard? The disease thats been drivin folks mad.
+  - "Its been all ove\u2019 the news, spreadin\u2019 like wildfire."
+  - People got them weird mushrooms all ove them.
+  - 'You gotta be careful who ya pick up or theyll give ya issues. '
+  - 'See ya round Kid. '
+  - "Hitchhikers, guessin\u2019 they want out of this area, Folks will do anythin
+    to get a ride."
+  - They'll trade ya items as a way to thank ya
+  - You gotta be careful who ya pick up or theyll give ya issues.
+  - 'See ya round Kid. '
+  autoProgressLines: 0100010100010001000100
+  endDialogueLines: 0000000000000100000001
+  autoProgressDelay: 1.5
+  dialogueSpeed: 0.05
+  choices:
+  - choiceIndex: 1
+    choices:
+    - ' The rot?'
+    - Hitchers?
+    nextDialogueIndex: 0200000007000000
+  givesItem: 
