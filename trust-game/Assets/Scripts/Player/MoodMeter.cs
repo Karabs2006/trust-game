@@ -16,7 +16,6 @@ public class MoodMeter : MonoBehaviour
         moodMeter.value = fullMood;
     }
 
-    // Update is called once per frame
     void Update()
     {
         StartCoroutine("DecreaseMood");

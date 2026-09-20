@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,8 +7,9 @@ public class Interactions : MonoBehaviour
     public PlayerMovement playerMovement;
     private RaycastHit2D hit;
     private bool hasObject;
-    private bool isInteracting;
     private bool wasPressed;
+    private float delay = 1f;
+
     void FixedUpdate()
     {
         Debug.DrawRay(transform.position, Vector2.right * 3, Color.green);
@@ -18,23 +20,28 @@ public class Interactions : MonoBehaviour
         }
     }
 
-    // public DialogueController controller;
 
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!context.performed)
         {
-            if (hasObject)
+            if (!wasPressed)
             {
+               if (hasObject)
+                {
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 if (interactable != null)
-                {
+                    {
                     interactable.Interact();
+                    wasPressed = true;
+                    Invoke(nameof(Reset), delay);
                     Debug.Log("Hit");
 
-                }
-            }   
+                    }
+                }   
+            } 
         }
+            
         DialogueController controller = hit.collider.GetComponent<DialogueController>();
         if (!controller.isDialogueActive)
         {
@@ -42,12 +49,12 @@ public class Interactions : MonoBehaviour
         }
 
     }
+
+    private void Reset()
+    {
+        wasPressed = false;
+    }
+
     
-
-
-    // public void Test()
-    // {
-    //     controller.Interact(); 
-    // }
 
 }
