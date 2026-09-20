@@ -7,12 +7,28 @@ public class PuzzlePosition : MonoBehaviour
 {
     
     public TMP_Text timerText;
-    int timerInt = 10;
+    public TMP_Text loseText;
+    public TMP_Text winText;
+    public int timerInt = 30;
+    public RoadEvent roadEvent;
 
     void Start()
     {
         timerText.text = $"{timerInt}";
+        loseText.enabled = false;
+        winText.enabled = false;
         //StartCoroutine(Countdown());
+    }
+
+    void Update()
+    {
+        if(timerInt <= 0)
+            {
+                loseText.enabled = true;
+                roadEvent.puzzle.SetActive(false);
+                roadEvent.trunkInventory.SetActive(false);
+
+            }
     }
 
 
@@ -32,11 +48,13 @@ public class PuzzlePosition : MonoBehaviour
 
     public IEnumerator Countdown() //Timer for puzzle
     {   
-        for(int i = 0; i<10; i++)
+        for(int i = 30; i >=0 ; i--)
         {
             timerInt--;
             timerText.text = $"{timerInt}";
             yield return new WaitForSeconds(1f);
+
+            
         }
        
     }

@@ -4,6 +4,7 @@ using System.Collections;
 public class Obstacles : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
+    public PuzzlePosition puzzlePosition;
 
     void Start()
     {
@@ -17,9 +18,10 @@ public class Obstacles : MonoBehaviour
         
     }
 
-    IEnumerator FlashObject()
+    public IEnumerator FlashObject(Color colorOne, Color colorTwo)
     {
-        while(true)
+        
+        /*while(true)
         {
             spriteRenderer.enabled = false;
             yield return new WaitForSeconds(0.2f);
@@ -30,22 +32,32 @@ public class Obstacles : MonoBehaviour
             
 
         }
+        */
+
+        puzzlePosition.timerText.color = colorOne;
+        yield return new WaitForSeconds(0.5f);
+        puzzlePosition.timerText.color = colorTwo;
+
+
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("PuzzlePlayer"))
+        if (collision.gameObject.CompareTag("PuzzlePlayer"))
         {
             
             //Transform transform = collision.GetComponent<Transform>();
-            EventInput eventInput = collision.GetComponent<EventInput>();
+            //EventInput eventInput = collision.gameObject.GetComponent<EventInput>();
 
-            eventInput.Respawn();
-
-
-
+            //eventInput.Respawn();
+            StartCoroutine(FlashObject(Color.red, Color.white));
+            puzzlePosition.timerInt -= 3;
+            puzzlePosition.timerText.text = $"{puzzlePosition.timerInt}";
+        
         }
     }
+
+    
 
 }

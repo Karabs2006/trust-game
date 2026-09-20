@@ -16,19 +16,6 @@ public class RoadEvent : MonoBehaviour
         trunkInventory.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void StartEvent()
-    {
-        //Time.timeScale = 0f;
-
-    }
-
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
