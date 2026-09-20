@@ -514,9 +514,8 @@ GameObject:
   - component: {fileID: 209838681}
   - component: {fileID: 209838680}
   - component: {fileID: 209838683}
-  - component: {fileID: 209838684}
   - component: {fileID: 209838685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NPC_OldMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,12 +635,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209838679}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -126.4, y: 4.1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.932541, y: 5.75, z: 0}
   m_LocalScale: {x: 0.632996, y: 3.64, z: 3.64}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1437766157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &209838683
 MonoBehaviour:
@@ -657,19 +656,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCEvent
   dialogueController: {fileID: 209838685}
   playerMovement: {fileID: 1550971350}
---- !u!114 &209838684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209838679}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2a2a07cfb656f488abc5be4f14bf06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactions
-  controller: {fileID: 0}
 --- !u!114 &209838685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2542,7 +2528,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 209838684}
+      - m_Target: {fileID: 1550971355}
         m_TargetAssemblyTypeName: Interactions, Assembly-CSharp
         m_MethodName: OnInteract
         m_Mode: 0
@@ -3983,6 +3969,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacles
   spriteRenderer: {fileID: 0}
+--- !u!1 &1437766156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437766157}
+  m_Layer: 0
+  m_Name: NPC Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1437766157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437766156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -111.46746, y: -1.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 209838682}
+  - {fileID: 1829227144}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548990443
 GameObject:
   m_ObjectHideFlags: 0
@@ -4133,6 +4152,7 @@ GameObject:
   - component: {fileID: 1550971352}
   - component: {fileID: 1550971351}
   - component: {fileID: 1550971350}
+  - component: {fileID: 1550971355}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4303,6 +4323,19 @@ Transform:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1550971355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550971349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2a2a07cfb656f488abc5be4f14bf06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactions
+  playerMovement: {fileID: 1550971350}
 --- !u!1 &1661287748
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,9 +4918,8 @@ GameObject:
   - component: {fileID: 1829227143}
   - component: {fileID: 1829227142}
   - component: {fileID: 1829227141}
-  - component: {fileID: 1829227140}
   - component: {fileID: 1829227139}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NPC_Frieda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4908,19 +4940,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   dialogueData: {fileID: 11400000, guid: 1343c5d04c83f214cbe07be45f3ab8cb, type: 2}
   isDialogueActive: 0
---- !u!114 &1829227140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829227138}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2a2a07cfb656f488abc5be4f14bf06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactions
-  controller: {fileID: 0}
 --- !u!114 &1829227141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5048,12 +5067,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829227138}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -102.2, y: 4.1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.267464, y: 5.75, z: 0}
   m_LocalScale: {x: 0.632996, y: 3.64, z: 3.64}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1437766157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841506980
 GameObject:
@@ -5854,8 +5873,7 @@ SceneRoots:
   - {fileID: 1550971354}
   - {fileID: 800325425}
   - {fileID: 543525}
-  - {fileID: 209838682}
-  - {fileID: 1829227144}
+  - {fileID: 1437766157}
   - {fileID: 1196795398}
   - {fileID: 185191896}
   - {fileID: 1841506982}

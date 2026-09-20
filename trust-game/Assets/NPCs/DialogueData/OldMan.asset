@@ -27,7 +27,7 @@ MonoBehaviour:
   - They'll trade ya items as a way to thank ya
   - You gotta be careful who ya pick up or theyll give ya issues.
   - 'See ya round Kid. '
-  autoProgressLines: 0100010100010001000100
+  autoProgressLines: 0100000100010001000100
   endDialogueLines: 0000000000000100000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05

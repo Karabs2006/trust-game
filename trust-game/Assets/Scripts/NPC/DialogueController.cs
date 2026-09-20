@@ -15,6 +15,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     [HideInInspector] public bool isDialogueActive;
 
 
+
     void Start()
     {
         dialogueUI = DialogueUI.Instance;
@@ -23,15 +24,19 @@ public class DialogueController : MonoBehaviour, IInteractable
 
     public void Interact() //Call this when the player interacts with an NPC
     {
+        if (dialogueData == null)
+        {
+            return;
+        }
     
         if (isDialogueActive)
         {
             NextLine();
         }
-        else
-        {
-            StartDialogue();
-        }
+        // else
+        // {
+        //     StartDialogue();
+        // }
     }
 
     public bool IsInteractable()
@@ -43,26 +48,10 @@ public class DialogueController : MonoBehaviour, IInteractable
     {
        
         {
-            isDialogueActive = true;
-            dialogueIndex = 0;
-           dialogueUI.SetNPCInfo(dialogueData.npcSprite);
-       
-        // {
-        // //     dialogueIndex = dialogueData.inProgressIndex;
-        // // // }
-        // // else if (objectiveState == ObjectiveState.Incorrect)
-        // // {
-        // //     dialogueIndex = dialogueData.incorrectItemIndex;
+        isDialogueActive = true;
+        dialogueIndex = 0;
 
-    
-        // // }
-        // // else if (objectiveState == ObjectiveState.Correct)
-        // // {
-        // //     dialogueIndex = dialogueData.correctItemIndex;
-
-        // }
-
-
+        dialogueUI.SetNPCInfo(dialogueData.npcSprite); 
         dialogueUI.ShowDialogueUI(true); //brings up the dialogue panel 
 
         DisplayCurrentLine();
