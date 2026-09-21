@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     private bool isPaused;
     public GameObject pausePanel;
+    public Wrench wrench;
 
     void Start()
     {
@@ -29,7 +30,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Restart()
-    {
+    {   
+        wrench.usedOnce = false;
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
         Time.timeScale =1;

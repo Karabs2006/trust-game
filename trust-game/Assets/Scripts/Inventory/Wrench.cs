@@ -5,7 +5,7 @@ using System.Collections;
 [CreateAssetMenu(menuName = "Items/Wrench")]
 public class Wrench : Item
 {
-    bool usedOnce = false;
+    public bool usedOnce = false;
     public override void Use()
     {
         if (!usedOnce)

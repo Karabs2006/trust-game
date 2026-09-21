@@ -8455,6 +8455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pausePanel: {fileID: 1351558965}
+  wrench: {fileID: 11400000, guid: ab26723043d40b24b96dd1c51bf714e0, type: 2}
 --- !u!1 &1599645159
 GameObject:
   m_ObjectHideFlags: 0
