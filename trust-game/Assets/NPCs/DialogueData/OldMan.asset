@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: OldMan
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  npcSprite: {fileID: 21300000, guid: f725b7b7e8fa3f241a32dd35556c177d, type: 3}
   dialogueLines:
   - "Listen Kid\u2026 You be careful drivin\u2019 out there"
   - " rots gotten so goddamn bad round this road, wouldn\u2019 trust none of those

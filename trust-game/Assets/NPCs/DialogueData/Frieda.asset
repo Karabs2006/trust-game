@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: Frieda
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  npcSprite: {fileID: 21300000, guid: b7cc536033f514e4383e04fec428dd7b, type: 3}
   dialogueLines:
   - " Hello \u2026 um my name is Frieda"
   - like the artist!
