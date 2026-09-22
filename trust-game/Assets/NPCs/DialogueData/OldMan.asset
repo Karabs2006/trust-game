@@ -19,12 +19,12 @@ MonoBehaviour:
     hitchers. "
   - Ya havent heard? The disease thats been drivin folks mad.
   - "Its been all ove\u2019 the news, spreadin\u2019 like wildfire."
-  - People got them weird mushrooms all ove them.
+  - '*People got them weird mushrooms all ove them.*'
   - 'You gotta be careful who ya pick up or theyll give ya issues. '
   - 'See ya round Kid. '
   - "Hitchhikers, guessin\u2019 they want out of this area, Folks will do anythin
     to get a ride."
-  - They'll trade ya items as a way to thank ya
+  - '*They''ll trade ya items as a way to thank ya*'
   - You gotta be careful who ya pick up or theyll give ya issues.
   - 'See ya round Kid. '
   autoProgressLines: 0100000100010001000100

@@ -20,13 +20,13 @@ MonoBehaviour:
     but home."
   - "But can I tell you something\u2026 I feel pretty lost with my bud Moshi Moshi"
   - 'My Tomogachi! '
-  - 'if you bring us along, Moshi Moshi would make you feel all new and lively with
+  - 'if you bring us along, Moshi Moshi would make you feel all *new and lively with
     his amazing charm. '
   - 'Can I ask you to give me a lift, I promise not to annoy you and be a burden
     like how I was to my mom and dad. '
   - Thank you so much!
-  - "Mom was right\u2026 no one would give me a second chance, im just a burden to
-    all.  "
+  - "Mom was right\u2026 no one would give me a *second chance*, im just a burden
+    to all.  "
   autoProgressLines: 010000000100000000
   endDialogueLines: 000000000000000101
   autoProgressDelay: 1.5
