@@ -7,6 +7,8 @@ public class NPCInfo : ScriptableObject
 {
     [Header("NPC Details")]
     public Sprite npcSprite;
+    public Sprite itemSprite;
+    public string itemName;
 
     [Header("Dialogue")]
     public string[] dialogueLines;
@@ -14,10 +16,12 @@ public class NPCInfo : ScriptableObject
     public bool[] endDialogueLines; //if True = the dialogue doesnt continue 
     public float autoProgressDelay = 1.5f;
     public float dialogueSpeed = 0.05f;
+    public int characterIndex;
 
     [Header ("Choices")]
     public DialogueChoice[] choices;
     public bool[] givesItem; //whatever number is ticked an item will be given on that line
+    
 }
 
 [System.Serializable]

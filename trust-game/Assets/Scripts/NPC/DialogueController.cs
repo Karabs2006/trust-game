@@ -91,7 +91,7 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (dialogueData.givesItem.Length > dialogueIndex && dialogueData.givesItem[dialogueIndex])
         {
             EndDialogue();
-            //GiveReward();
+            GiveReward();
 
             return;
         }
@@ -136,13 +136,11 @@ public class DialogueController : MonoBehaviour, IInteractable
         }
     }
 
-    // void GiveReward()
-    // {
-    //     Item reward = Instantiate(dialogueData.objective.objectiveReward).GetComponent<Item>();
-    //     reward.PickUp(holdPoint);
-
-    //     Debug.Log("Reward granted");
-    // }
+    void GiveReward()
+    {
+        dialogueUI.SetItemInfo(dialogueData.itemSprite, dialogueData.itemName); 
+        Debug.Log("Reward granted");
+    }
 
     void DisplayCurrentLine()
     {

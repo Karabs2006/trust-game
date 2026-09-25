@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI; 
@@ -13,6 +14,7 @@ public class DialogueUI : MonoBehaviour
     public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
     public Image npcImage;
+    public Image itemHolder;
     
     
     void Awake() //stops there from being multiple instances of this script
@@ -35,6 +37,11 @@ public class DialogueUI : MonoBehaviour
     public void SetNPCInfo(Sprite npcSprite)
     {
        npcImage.sprite = npcSprite;
+    }
+
+    public void SetItemInfo(Sprite item, String itemname)
+    {
+        itemHolder.sprite = item; 
     }
 
     public void SetDialogueText(string text) //gets the dialogue info 
