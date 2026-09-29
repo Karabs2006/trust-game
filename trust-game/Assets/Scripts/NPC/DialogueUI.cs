@@ -28,7 +28,7 @@ public class DialogueUI : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        itemHolder.SetActive(true);
+        itemHolder.SetActive(false);
     }
 
     public void ShowDialogueUI(bool show)

@@ -5,8 +5,16 @@ using UnityEngine.UI;
 
 public class MoodMeter : MonoBehaviour
 {
+    [Header("MoodMeter")]
     Slider moodMeter;
     public int fullMood;
+    private float moodValueD = 0.005f; //the value to decrease by
+
+    [Header("Influences")]
+    private int moodIncrease = 100; //the amount the mood will increase by
+    
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +34,7 @@ public class MoodMeter : MonoBehaviour
     {
          while(moodMeter.value > 0)
         {
-            moodMeter.value -= 0.01f * Time.deltaTime;
+            moodMeter.value -= moodValueD * Time.deltaTime;
             yield return null;
         }
         //value decreases entirely (effect)
@@ -40,6 +48,20 @@ public class MoodMeter : MonoBehaviour
             if (moodMeter.value > moodMeter.maxValue) moodMeter.value = moodMeter.maxValue;
             yield return null;
         } 
+    }
+
+    public void ItemUsed() //when an item is used to increase mood
+    {
+      StartCoroutine("Reset");
+      StopCoroutine("DecreaseMood");
+      moodMeter.value += moodIncrease; 
+    }
+
+    IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(5);
+        StartCoroutine("DecreaseMood");
+        StopCoroutine("Reset");
     }
 
     public void MoodManager()
