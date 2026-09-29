@@ -6,6 +6,9 @@ public class DialogueController : MonoBehaviour, IInteractable
 {
     [Header("NPC Data")]
     public NPCInfo dialogueData;
+
+    [Header("Item Data")]
+    public Item itemInfo;
  
     [Header("Dialogue Data")]
     private DialogueUI dialogueUI;
@@ -138,7 +141,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 
     void GiveReward()
     {
-        dialogueUI.SetItemInfo(dialogueData.itemSprite, dialogueData.itemName); 
+        dialogueUI.SetItemSprite(itemInfo.icon); 
         Debug.Log("Reward granted");
     }
 

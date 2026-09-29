@@ -14,8 +14,9 @@ public class DialogueUI : MonoBehaviour
     public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
     public Image npcImage;
-    public Image itemHolder;
-    
+    public GameObject itemHolder;
+    public Image item;
+
     
     void Awake() //stops there from being multiple instances of this script
     {
@@ -27,6 +28,7 @@ public class DialogueUI : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        itemHolder.SetActive(true);
     }
 
     public void ShowDialogueUI(bool show)
@@ -39,9 +41,10 @@ public class DialogueUI : MonoBehaviour
        npcImage.sprite = npcSprite;
     }
 
-    public void SetItemInfo(Sprite item, String itemname)
+    public void SetItemSprite(Sprite itemSprite)
     {
-        itemHolder.sprite = item; 
+        itemHolder.SetActive(true);
+        item.sprite = itemSprite;
     }
 
     public void SetDialogueText(string text) //gets the dialogue info 

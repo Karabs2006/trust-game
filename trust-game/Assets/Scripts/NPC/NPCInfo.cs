@@ -7,8 +7,9 @@ public class NPCInfo : ScriptableObject
 {
     [Header("NPC Details")]
     public Sprite npcSprite;
-    public Sprite itemSprite;
-    public string itemName;
+    // public Item itemObject; 
+    // public Sprite itemSprite;
+    // public string itemName;
 
     [Header("Dialogue")]
     public string[] dialogueLines;
