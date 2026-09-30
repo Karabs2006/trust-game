@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject startInfo;
     public bool puzzleActive = true;
     private bool hasStarted;
+    public bool isMoving;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
                 currentSpeed,
                 rb.linearVelocity.y
             );
+            isMoving=true;
             } 
         }
     }
@@ -40,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         {
             hasStarted = true;
             Destroy(startInfo);
+            isMoving = false;
         }
     }
 }

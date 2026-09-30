@@ -4,7 +4,12 @@ public class NPCEvent : MonoBehaviour
 {
     public DialogueController dialogueController;
     public PlayerMovement playerMovement;
+    // public bool isDialogueActive;
     
+    // void Start()
+    // {
+    //     isDialogueActive = false;
+    // }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -14,6 +19,7 @@ public class NPCEvent : MonoBehaviour
 
             //calls dialogue
             dialogueController.StartDialogue();
+            // isDialogueActive = true;
         }
     }
 

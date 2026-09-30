@@ -93,9 +93,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         if (dialogueData.givesItem.Length > dialogueIndex && dialogueData.givesItem[dialogueIndex])
         {
-            EndDialogue();
             GiveReward();
-
             return;
         }
 

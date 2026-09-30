@@ -21,14 +21,16 @@ MonoBehaviour:
   - "Its been all ove\u2019 the news, spreadin\u2019 like wildfire."
   - '*People got them weird mushrooms all ove them.*'
   - 'You gotta be careful who ya pick up or theyll give ya issues. '
+  - This will help you stay awake
   - 'See ya round Kid. '
   - "Hitchhikers, guessin\u2019 they want out of this area, Folks will do anythin
     to get a ride."
   - '*They''ll trade ya items as a way to thank ya*'
   - You gotta be careful who ya pick up or theyll give ya issues.
+  - 'This will help you stay awake '
   - 'See ya round Kid. '
-  autoProgressLines: 0100000100010001000100
-  endDialogueLines: 0000000000000100000001
+  autoProgressLines: 01000001000100000100010000
+  endDialogueLines: 00000000000000010000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
@@ -37,5 +39,5 @@ MonoBehaviour:
     choices:
     - ' The rot?'
     - Hitchers?
-    nextDialogueIndex: 0200000007000000
+    nextDialogueIndex: 0200000008000000
   givesItem: 

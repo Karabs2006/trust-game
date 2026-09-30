@@ -12,11 +12,9 @@ public class MoodMeter : MonoBehaviour
 
     [Header("Influences")]
     private int moodIncrease = 100; //the amount the mood will increase by
-    
+    public PlayerMovement player;
+    public Interactions dialogue;
 
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         moodMeter = GetComponent<Slider>();
@@ -24,7 +22,7 @@ public class MoodMeter : MonoBehaviour
         moodMeter.value = fullMood;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         StartCoroutine("DecreaseMood");
         //MoodManager();
@@ -34,7 +32,7 @@ public class MoodMeter : MonoBehaviour
     {
          while(moodMeter.value > 0)
         {
-            moodMeter.value -= moodValueD * Time.deltaTime;
+            moodMeter.value -= moodValueD * 0.01f;//ime.deltaTime;
             yield return null;
         }
         //value decreases entirely (effect)
@@ -66,12 +64,22 @@ public class MoodMeter : MonoBehaviour
 
     public void MoodManager()
     {
-        //Anything that increases mood (As an if statement)
-        // StartCoroutine("IncreaseMood");
-        // StopCoroutine("DecreaseMood");
-        // Anything that decreases mood 
-        // StartCoroutine("DecreaseMood");
-        //  StopCoroutine("IncreaseMood");
+        if (!player.isMoving)
+        {
+          StopCoroutine("DecreaseMood");  
+        }
+        else
+        {
+        DecreaseMood();
+        }
+        if (dialogue.isDialogueActive)
+        {
+        StopCoroutine("DecreaseMood");  
+        }
+        else
+        {
+        DecreaseMood();
+        }
 
     }
     

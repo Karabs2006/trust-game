@@ -9,14 +9,16 @@ public class Interactions : MonoBehaviour
     private bool hasObject;
     private bool wasPressed;
     private float delay = 1f;
+    [HideInInspector] public bool isDialogueActive;
 
-    void FixedUpdate()
+    void FixedUpdate() 
     {
         Debug.DrawRay(transform.position, Vector2.right * 3, Color.green);
         hit = Physics2D.Raycast(transform.position, Vector2.right, 3, LayerMask.GetMask("NPC"));
         if (hit)
         {
             hasObject = true;
+            //Debug.Log(isDialogueActive);
         }
     }
 
@@ -29,14 +31,13 @@ public class Interactions : MonoBehaviour
             {
                if (hasObject)
                 {
+                isDialogueActive = true;
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 if (interactable != null)
                     {
                     interactable.Interact();
                     wasPressed = true;
                     Invoke(nameof(Reset), delay);
-                    Debug.Log("Hit");
-
                     }
                 }   
             } 
@@ -45,6 +46,7 @@ public class Interactions : MonoBehaviour
         DialogueController controller = hit.collider.GetComponent<DialogueController>();
         if (!controller.isDialogueActive)
         {
+            isDialogueActive = false;
             playerMovement.currentSpeed = 10f;
         }
 
