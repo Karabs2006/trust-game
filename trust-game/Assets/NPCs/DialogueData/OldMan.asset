@@ -29,7 +29,7 @@ MonoBehaviour:
   - You gotta be careful who ya pick up or theyll give ya issues.
   - 'This will help you stay awake '
   - 'See ya round Kid. '
-  autoProgressLines: 01000001000100000100010000
+  autoProgressLines: 
   endDialogueLines: 00000000000000010000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
@@ -40,4 +40,5 @@ MonoBehaviour:
     - ' The rot?'
     - Hitchers?
     nextDialogueIndex: 0200000008000000
-  givesItem: 
+  item: {fileID: 11400000, guid: c2a55646d2d59c042b3f912a23946f43, type: 2}
+  givesItem: 00000000000001000000000100

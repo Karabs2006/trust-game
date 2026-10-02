@@ -6,6 +6,7 @@ public abstract class Item : ScriptableObject
     public string itemName;
     public Sprite icon;
     public int inventorySlots;
+    public int itemIndex;
 
     public abstract void Use();
 }

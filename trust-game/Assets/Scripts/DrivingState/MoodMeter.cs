@@ -25,7 +25,7 @@ public class MoodMeter : MonoBehaviour
     void FixedUpdate()
     {
         StartCoroutine("DecreaseMood");
-        //MoodManager();
+        MoodManager();
     }
 
     IEnumerator DecreaseMood()

@@ -27,10 +27,11 @@ MonoBehaviour:
   - Thank you so much!
   - "Mom was right\u2026 no one would give me a *second chance*, im just a burden
     to all.  "
-  autoProgressLines: 010000000100000000
+  autoProgressLines: 
   endDialogueLines: 000000000000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.07
+  characterIndex: 0
   choices:
   - choiceIndex: 3
     choices:

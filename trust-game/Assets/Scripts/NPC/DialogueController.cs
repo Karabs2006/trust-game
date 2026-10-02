@@ -16,6 +16,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     private bool isTyping;
 
     [HideInInspector] public bool isDialogueActive;
+     [HideInInspector] public bool isGivingItem;
 
 
 
@@ -94,7 +95,7 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (dialogueData.givesItem.Length > dialogueIndex && dialogueData.givesItem[dialogueIndex])
         {
             GiveReward();
-            return;
+            return; 
         }
 
         if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
@@ -140,7 +141,8 @@ public class DialogueController : MonoBehaviour, IInteractable
     void GiveReward()
     {
         dialogueUI.SetItemSprite(itemInfo.icon); 
-        Debug.Log("Reward granted");
+        Item reward = Instantiate(dialogueData.item);
+        isGivingItem = true;
     }
 
     void DisplayCurrentLine()

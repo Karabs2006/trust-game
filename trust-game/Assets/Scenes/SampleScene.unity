@@ -1375,6 +1375,7 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 80096c72500473b4cadeed012af14e81, type: 2}
   itemInfo: {fileID: 11400000, guid: c2a55646d2d59c042b3f912a23946f43, type: 2}
   isDialogueActive: 0
+  isGivingItem: 0
 --- !u!1 &224221956
 GameObject:
   m_ObjectHideFlags: 0
@@ -10567,6 +10568,7 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 1343c5d04c83f214cbe07be45f3ab8cb, type: 2}
   itemInfo: {fileID: 0}
   isDialogueActive: 0
+  isGivingItem: 0
 --- !u!114 &1829227141
 MonoBehaviour:
   m_ObjectHideFlags: 0

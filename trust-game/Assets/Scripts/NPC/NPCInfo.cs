@@ -7,9 +7,7 @@ public class NPCInfo : ScriptableObject
 {
     [Header("NPC Details")]
     public Sprite npcSprite;
-    // public Item itemObject; 
-    // public Sprite itemSprite;
-    // public string itemName;
+    
 
     [Header("Dialogue")]
     public string[] dialogueLines;
@@ -21,6 +19,8 @@ public class NPCInfo : ScriptableObject
 
     [Header ("Choices")]
     public DialogueChoice[] choices;
+    
+    public Item item;
     public bool[] givesItem; //whatever number is ticked an item will be given on that line
     
 }

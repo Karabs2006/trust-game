@@ -18,7 +18,7 @@ public class Interactions : MonoBehaviour
         if (hit)
         {
             hasObject = true;
-            //Debug.Log(isDialogueActive);
+            isDialogueActive = true;
         }
     }
 
@@ -31,7 +31,7 @@ public class Interactions : MonoBehaviour
             {
                if (hasObject)
                 {
-                isDialogueActive = true;
+                
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 if (interactable != null)
                     {
