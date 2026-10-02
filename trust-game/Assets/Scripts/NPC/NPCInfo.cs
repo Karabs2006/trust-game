@@ -8,7 +8,6 @@ public class NPCInfo : ScriptableObject
     [Header("NPC Details")]
     public Sprite npcSprite;
     
-
     [Header("Dialogue")]
     public string[] dialogueLines;
     public bool[] autoProgressLines; //if true will autoprogress instead of a button press
@@ -20,6 +19,8 @@ public class NPCInfo : ScriptableObject
     [Header ("Choices")]
     public DialogueChoice[] choices;
     
+    [Header ("Items")]
+    public int nextDialogueIndexI;
     public Item item;
     public bool[] givesItem; //whatever number is ticked an item will be given on that line
     

@@ -40,5 +40,6 @@ MonoBehaviour:
     - ' The rot?'
     - Hitchers?
     nextDialogueIndex: 0200000008000000
+  nextDialogueIndexI: 12
   item: {fileID: 11400000, guid: c2a55646d2d59c042b3f912a23946f43, type: 2}
   givesItem: 00000000000001000000000100

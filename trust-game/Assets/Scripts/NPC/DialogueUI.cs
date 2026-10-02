@@ -15,6 +15,7 @@ public class DialogueUI : MonoBehaviour
     public GameObject choiceButtonPrefab;
     public Image npcImage;
     public GameObject itemHolder;
+    // public GameObject itemButton;
     public Image item;
 
     
@@ -64,5 +65,12 @@ public class DialogueUI : MonoBehaviour
         choiceButton.GetComponent<Button>().onClick.AddListener(onClick);
 
     }
+
+    //  public void CreateItemButton(UnityEngine.Events.UnityAction onClick)
+    // {
+    //     GameObject Button = Instantiate(itemButton);
+    //     Button.GetComponent<Button>().onClick.AddListener(onClick);
+    // }
+
 }
 
