@@ -3,20 +3,42 @@ using UnityEngine;
 
 public class Randomiser : MonoBehaviour
 {
-    public GameObject standingNPC;
-    public List<GameObject> npcs = new List<GameObject>();
-    public Transform spawnPosition;
+    public List<DialogueController> npcs = new List<DialogueController>();
+    public Transform[] spawnPosition;
+    private int spawnIndex = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
 
-    public void randomiseNPC()
-    {
-        GameObject spawnNPC = npcs[Random.Range(0,6)]; //Randomises the npc spawned
-        Instantiate(spawnNPC,spawnPosition);
-        return;
+    public void RandomiseNPC()
+    { 
+        if (spawnIndex >= 6)
+        {
+            return;
+        }
+        int randomNum = Random.Range(0,3);
+        List<DialogueController> spawnedNPC = new List<DialogueController>();
+        foreach(DialogueController npc in npcs)
+        {
+            if(randomNum == npc.npcIndex)
+            {
+                if (npc == null)
+                {
+                    spawnedNPC.Add(npc);
+                    Instantiate(npc,spawnPosition[spawnIndex]);
+                    spawnIndex++; 
+                }
+                else
+                {
+                  Debug.Log("ahhh");  
+                }
+            }
+        }
+        //GameObject spawnNPC = npcs[Random.Range(0,3)]; //Randomises the npc spawned
+        // Instantiate(spawnNPC,spawnPosition[spawnIndex]);
+        // spawnIndex++; 
     }
 
 }

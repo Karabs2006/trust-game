@@ -6,6 +6,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 {
     [Header("NPC Data")]
     public NPCInfo dialogueData;
+     public int npcIndex;
 
     [Header("Item Data")]
     public Item itemInfo;

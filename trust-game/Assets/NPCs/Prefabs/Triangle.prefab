@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2739544118328805577}
   - component: {fileID: 1366181872547245436}
+  - component: {fileID: -4891355625763452844}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -91,3 +92,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &-4891355625763452844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954631808886332683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02c04a59d7ed7b49bdd17e21cf34d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueController
+  dialogueData: {fileID: 11400000, guid: 1343c5d04c83f214cbe07be45f3ab8cb, type: 2}
+  npcIndex: 1
+  itemInfo: {fileID: 0}
+  isDialogueActive: 0
