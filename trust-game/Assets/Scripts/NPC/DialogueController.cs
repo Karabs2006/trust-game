@@ -24,6 +24,11 @@ public class DialogueController : MonoBehaviour, IInteractable
         dialogueUI.ShowDialogueUI(false); 
     }
 
+    public DialogueController(int npcIndex)
+    {
+       this.npcIndex = npcIndex; 
+    }
+
     public void Interact() //Call this when the player interacts with an NPC
     {
         if (dialogueData == null)

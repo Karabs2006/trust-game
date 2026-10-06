@@ -12,11 +12,16 @@ public class Randomiser : MonoBehaviour
         
     }
 
-    public void RandomiseNPC()
+    public void Onpress()
+    {
+        RandomiseNPC();
+    }
+
+    public DialogueController RandomiseNPC()
     { 
         if (spawnIndex >= 6)
         {
-            return;
+            return null;
         }
         int randomNum = Random.Range(0,3);
         List<DialogueController> spawnedNPC = new List<DialogueController>();
@@ -36,6 +41,7 @@ public class Randomiser : MonoBehaviour
                 }
             }
         }
+        return null;
         //GameObject spawnNPC = npcs[Random.Range(0,3)]; //Randomises the npc spawned
         // Instantiate(spawnNPC,spawnPosition[spawnIndex]);
         // spawnIndex++; 

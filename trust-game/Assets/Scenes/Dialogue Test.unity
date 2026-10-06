@@ -702,7 +702,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 393526965}
         m_TargetAssemblyTypeName: Randomiser, Assembly-CSharp
-        m_MethodName: RandomiseNPC
+        m_MethodName: Onpress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1659,6 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   dialogueData: {fileID: 11400000, guid: 80096c72500473b4cadeed012af14e81, type: 2}
+  npcIndex: 0
   itemInfo: {fileID: 0}
   isDialogueActive: 0
 --- !u!1 &1669508214
