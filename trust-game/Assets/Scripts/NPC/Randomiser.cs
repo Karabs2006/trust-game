@@ -16,14 +16,14 @@ public class Randomiser : MonoBehaviour
 
     public void Onpress()
     {
-        randomNum = Random.Range(1,3);
+        randomNum = Random.Range(1,7);
         Debug.Log(randomNum);
         RandomiseNPC();
     }
 
     public DialogueController RandomiseNPC()
     { 
-        if (spawnIndex >= 6)
+        if (spawnIndex >= 5)
         {
             return null;
         }

@@ -3,13 +3,13 @@ using UnityEngine;
 public class NPCEvent : MonoBehaviour
 {
     public DialogueController dialogueController;
-    public PlayerMovement playerMovement;
+    private PlayerMovement playerMovement;
     // public bool isDialogueActive;
     
-    // void Start()
-    // {
-    //     isDialogueActive = false;
-    // }
+    void Start()
+    {
+         playerMovement = FindAnyObjectByType<PlayerMovement>();
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
