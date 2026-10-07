@@ -74,6 +74,7 @@ public class DialogueController : MonoBehaviour, IInteractable
             StopAllCoroutines();
 
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
+            Debug.Log("Thing");
             isTyping = false;
         }
 
@@ -144,13 +145,9 @@ public class DialogueController : MonoBehaviour, IInteractable
     void GiveReward()
     {
         dialogueUI.SetItemSprite(itemInfo.icon); 
-        //Item reward = Instantiate(dialogueData.item);
+        Item reward = Instantiate(dialogueData.item); //gets the information of the item
     }
 
-    // void rewardNextLine(int nextIndex)
-    // {
-    //    dialogueIndex = nextIndex; 
-    // }
 
     void DisplayCurrentLine()
     {
@@ -178,6 +175,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     {
         StopAllCoroutines();
 
+        dialogueUI.itemHolder.SetActive(false);
         isDialogueActive = false;
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);

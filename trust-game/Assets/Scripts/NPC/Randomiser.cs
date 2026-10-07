@@ -8,23 +8,22 @@ public class Randomiser : MonoBehaviour
     public Transform[] spawnPosition;
     private int randomNum;
     private int spawnIndex = 0;
+    private bool stopSpawning;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void FixedUpdate()
     {
-        
+        if (!stopSpawning)
+        {
+           randomNum = Random.Range(1,7);
+           // Debug.Log(randomNum);
+            RandomiseNPC(); 
+        } 
     }
-
-    public void Onpress()
-    {
-        randomNum = Random.Range(1,7);
-        Debug.Log(randomNum);
-        RandomiseNPC();
-    }
-
     public DialogueController RandomiseNPC()
     { 
         if (spawnIndex >= 5)
         {
+            stopSpawning=true;
             return null;
         }
         
@@ -40,13 +39,12 @@ public class Randomiser : MonoBehaviour
             if(randomNum == npc.npcIndex)
             {
                 spawnedNPC.Add(npc);
-                Debug.Log(spawnedNPC);
+                // Debug.Log(spawnedNPC);
                 Instantiate(npc,spawnPosition[spawnIndex]);
                 spawnIndex++; 
             }
         }
         
-        // return null;
         return null;
         //GameObject spawnNPC = npcs[Random.Range(0,3)]; //Randomises the npc spawned
         // Instantiate(spawnNPC,spawnPosition[spawnIndex]);
