@@ -4,7 +4,9 @@ using UnityEngine;
 public class Randomiser : MonoBehaviour
 {
     public List<DialogueController> npcs = new List<DialogueController>();
+    List<DialogueController> spawnedNPC = new List<DialogueController>();
     public Transform[] spawnPosition;
+    private int randomNum;
     private int spawnIndex = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +16,8 @@ public class Randomiser : MonoBehaviour
 
     public void Onpress()
     {
+        randomNum = Random.Range(1,3);
+        Debug.Log(randomNum);
         RandomiseNPC();
     }
 
@@ -23,24 +27,26 @@ public class Randomiser : MonoBehaviour
         {
             return null;
         }
-        int randomNum = Random.Range(0,3);
-        List<DialogueController> spawnedNPC = new List<DialogueController>();
+        
+        foreach(DialogueController npc in spawnedNPC)
+        {
+            if(randomNum == npc.npcIndex)
+            {
+                return null;  
+            }
+        }
         foreach(DialogueController npc in npcs)
         {
             if(randomNum == npc.npcIndex)
             {
-                if (npc == null)
-                {
-                    spawnedNPC.Add(npc);
-                    Instantiate(npc,spawnPosition[spawnIndex]);
-                    spawnIndex++; 
-                }
-                else
-                {
-                  Debug.Log("ahhh");  
-                }
+                spawnedNPC.Add(npc);
+                Debug.Log(spawnedNPC);
+                Instantiate(npc,spawnPosition[spawnIndex]);
+                spawnIndex++; 
             }
         }
+        
+        // return null;
         return null;
         //GameObject spawnNPC = npcs[Random.Range(0,3)]; //Randomises the npc spawned
         // Instantiate(spawnNPC,spawnPosition[spawnIndex]);
