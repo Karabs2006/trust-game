@@ -11,6 +11,8 @@ public class PuzzlePosition : MonoBehaviour
     public TMP_Text winText;
     public int timerInt = 30;
     public RoadEvent roadEvent;
+    public EventInput eventInput;
+    private bool timerStarted = false;
 
     void Start()
     {
@@ -22,6 +24,12 @@ public class PuzzlePosition : MonoBehaviour
 
     void Update()
     {
+        if (eventInput.playerMovedOnce && !timerStarted)
+        {
+            timerStarted = true;
+            StartCoroutine(Countdown());
+        }
+
         if(timerInt <= 0)
             {
                 loseText.enabled = true;
@@ -48,14 +56,18 @@ public class PuzzlePosition : MonoBehaviour
 
     public IEnumerator Countdown() //Timer for puzzle
     {   
-        for(int i = 30; i >=0 ; i--)
+        if(eventInput.playerMovedOnce)
         {
-            timerInt--;
-            timerText.text = $"{timerInt}";
-            yield return new WaitForSeconds(1f);
+            for(int i = 30; i >=0 ; i--)
+            {
+                timerInt--;
+                timerText.text = $"{timerInt}";
+                yield return new WaitForSeconds(1f);
 
-            
+            }
         }
        
     }
+
+
 }

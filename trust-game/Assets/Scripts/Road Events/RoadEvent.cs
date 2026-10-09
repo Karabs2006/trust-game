@@ -30,7 +30,7 @@ public class RoadEvent : MonoBehaviour
 
             puzzle.SetActive(true);
             trunkInventory.SetActive(true);
-            puzzlePosition.StartCoroutine(puzzlePosition.Countdown());
+            //puzzlePosition.StartCoroutine(puzzlePosition.Countdown());
         }
     }
 }

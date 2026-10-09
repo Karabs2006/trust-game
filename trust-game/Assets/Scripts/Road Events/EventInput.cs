@@ -9,6 +9,7 @@ public class EventInput : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 originalPosition;
+    public bool playerMovedOnce = false;
 
 
 
@@ -24,6 +25,11 @@ public class EventInput : MonoBehaviour
     {
         // Read the Vector2 value from the input action
         moveInput = context.ReadValue<Vector2>();
+
+        if (moveInput != Vector2.zero)
+        {
+            playerMovedOnce = true;
+        }
     }
 
     public void Respawn()
