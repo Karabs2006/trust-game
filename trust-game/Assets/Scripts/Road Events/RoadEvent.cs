@@ -8,6 +8,7 @@ public class RoadEvent : MonoBehaviour
     public PuzzlePosition puzzlePosition;
     public GameObject trunkInventory;
     public PlayerMovement playerMovement;
+    public GameObject moodMeter;
 
 
     void Start()
@@ -26,6 +27,8 @@ public class RoadEvent : MonoBehaviour
             //playerMovement.currentSpeed = 0;
             playerMovement.puzzleActive = true;
             playerMovement.rb.linearVelocity = Vector2.zero;
+
+            moodMeter.SetActive(false);
     
 
             puzzle.SetActive(true);
