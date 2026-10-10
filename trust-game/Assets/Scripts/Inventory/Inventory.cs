@@ -24,7 +24,10 @@ public class Inventory : MonoBehaviour
 
             //Run the use function for each respective item
             Button buttonArea = button.GetComponent<Button>();
-            buttonArea.onClick.AddListener(() => item.Use());
+            buttonArea.onClick.AddListener(() =>{ 
+            item.Use();
+            button.SetActive(false);
+            });
         }
         
     }

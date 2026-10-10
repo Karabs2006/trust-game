@@ -8,9 +8,7 @@ public class Wrench : Item
     public bool usedOnce = false;
     public override void Use()
     {
-        if (!usedOnce)
-        {
-
+        
             GameObject timer = GameObject.Find("Timer");
             GameObject puzzlePlayer = GameObject.Find("Puzzle One");
             GameObject obstacle = GameObject.Find("MainObstacle");
@@ -28,7 +26,8 @@ public class Wrench : Item
             tMP_Text.text = $"{puzzlePosition.timerInt}";
             Debug.Log(tMP_Text.text);
             usedOnce = true;
-        }
+        
+        
         
 
     }
