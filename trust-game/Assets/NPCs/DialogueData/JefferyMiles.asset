@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: JefferyMiles
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 0}
-  dialogueLines: []
+  npcSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueLines:
+  - His dialogue is a work in progress however removing him breaks the randomisation
+  - 'You can restart to get other characters '
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 0001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
   choices: []
+  nextDialogueIndexI: 0
+  item: {fileID: 0}
   givesItem: 

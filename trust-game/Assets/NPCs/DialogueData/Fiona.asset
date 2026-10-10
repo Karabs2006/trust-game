@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: Fiona
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 0}
-  dialogueLines: []
+  npcSprite: {fileID: 21300000, guid: b7cc536033f514e4383e04fec428dd7b, type: 3}
+  dialogueLines:
+  - Her dialogue is a work in progress. please excuse this. Restart to randomise
+    the characters
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 01
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
   choices: []
+  nextDialogueIndexI: 0
+  item: {fileID: 0}
   givesItem: 

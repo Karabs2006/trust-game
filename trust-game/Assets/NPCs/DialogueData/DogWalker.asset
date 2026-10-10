@@ -12,12 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: DogWalker
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 0}
-  dialogueLines: []
+  npcSprite: {fileID: 21300000, guid: 2666aa86a17f9d241af41e162986939a, type: 3}
+  dialogueLines:
+  - "Please\u2026 Just give me a chance\u2026 to explain\u2026"
+  - "Thank you\u2026 I don\u2019t have much time left"
+  - "I just need a lift to the next stop\u2026 "
+  - "And for someone to take care of Dog\u2026 luckily dogs don\u2019t get affected
+    by this disease."
+  - 'Not so lucky for us *coughing* '
+  - I won't be much trouble, I just ask you to take care of Dog when I'm gone.
+  - 'You''re a kind soul, thank you. (Get Dog , slows mood bar+ Money) '
+  - ' I understand. (Causes Road Event: where you see the dog alone)  '
+  - " Yes\u2026 I understand that I'll put you at risk\u2026"
+  - " I just needed someone to take care of Dog\u2026 but I won\u2019t bother you
+    anymore.  (Causes Road Event: you see the dog alone) "
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 00000000000001010001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
-  choices: []
+  choices:
+  - choiceIndex: 0
+    choices:
+    - I'm listening.
+    - "You're very infected\u2026  "
+    nextDialogueIndex: 0100000008000000
+  - choiceIndex: 5
+    choices:
+    - 'I''ll take care of Dog  '
+    - "Its not very safe\u2026"
+    nextDialogueIndex: 0600000007000000
+  nextDialogueIndexI: 0
+  item: {fileID: 0}
   givesItem: 

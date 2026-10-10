@@ -12,12 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: Acelot Tags
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 0}
-  dialogueLines: []
+  npcSprite: {fileID: 21300000, guid: 20b69976941efb64b9294b276e459719, type: 3}
+  dialogueLines:
+  - '*You get handed a note in barely legible writing*'
+  - 'mY NamE iS AcELot tAGs, LeT mE iN yOur CAR :)  '
+  - '(Mood bar decreases faster) '
+  - (Causes Road Event)
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 00000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
-  choices: []
+  choices:
+  - choiceIndex: 1
+    choices:
+    - Sure come on in
+    - '*Drive off*'
+    nextDialogueIndex: 0200000003000000
+  nextDialogueIndexI: 0
+  item: {fileID: 0}
   givesItem: 

@@ -12,12 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: Officer West
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 0}
-  dialogueLines: []
+  npcSprite: {fileID: 21300000, guid: 4e0e3543e10232746b5e679f88be4599, type: 3}
+  dialogueLines:
+  - Howdy fella. *Coughing*
+  - 'You got space in that car for a man of the law? *Coughing* '
+  - "Well somebody has to be out here killin them zombies\u2026"
+  - 'I still have a duty as a law man to protect my neighbourhood. '
+  - However I only have *one bullet left*
+  - ' gotta keep it in case something bad happens. '
+  - 'So what you say? Gonna give this officer a lift? '
+  - "Eh, been smokin since my 20s\u2026 Bad habits die hard."
+  - 'So what you say? Gonna give this officer a lift? '
+  - "You\u2019ll regret this.     (He causes a road event later on)   "
+  - 'Good choice.  (Player gets a gun with one bullet) '
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 0000000000000000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
-  choices: []
+  choices:
+  - choiceIndex: 1
+    choices:
+    - "You\u2019re covered in blood\u2026"
+    - ' Why are you coughing so much? '
+    nextDialogueIndex: 0200000007000000
+  - choiceIndex: 6
+    choices:
+    - ' I don''t trust you.'
+    - Come on in.
+    nextDialogueIndex: 090000000a000000
+  - choiceIndex: 8
+    choices:
+    - ' I don''t trust you.'
+    - Come on in.
+    nextDialogueIndex: 090000000a000000
+  nextDialogueIndexI: 0
+  item: {fileID: 0}
   givesItem: 

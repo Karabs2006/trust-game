@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: Frieda
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 21300000, guid: b7cc536033f514e4383e04fec428dd7b, type: 3}
+  npcSprite: {fileID: 21300000, guid: 77988c6fe81d2c348b034fb1df212c39, type: 3}
   dialogueLines:
   - " Hello \u2026 um my name is Frieda"
   - like the artist!
@@ -24,7 +24,7 @@ MonoBehaviour:
     his amazing charm. '
   - 'Can I ask you to give me a lift, I promise not to annoy you and be a burden
     like how I was to my mom and dad. '
-  - Thank you so much!
+  - Thank you so much! (Player gets a tomogatchi that allows them to save)
   - "Mom was right\u2026 no one would give me a *second chance*, im just a burden
     to all.  "
   autoProgressLines: 
@@ -48,4 +48,6 @@ MonoBehaviour:
     - Sure you can come along
     - Sorry...
     nextDialogueIndex: 0700000008000000
+  nextDialogueIndexI: 0
+  item: {fileID: 0}
   givesItem: 

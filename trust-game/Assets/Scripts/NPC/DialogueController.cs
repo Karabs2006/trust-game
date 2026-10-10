@@ -74,7 +74,6 @@ public class DialogueController : MonoBehaviour, IInteractable
             StopAllCoroutines();
 
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
-            Debug.Log("Thing");
             isTyping = false;
         }
 
