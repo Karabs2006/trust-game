@@ -29,6 +29,13 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void Resume()
+    {
+        pausePanel.SetActive(false);
+        Time.timeScale =1; 
+        isPaused = false; 
+    }
+
     public void Restart()
     {   
         wrench.usedOnce = false;

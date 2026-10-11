@@ -108,6 +108,17 @@ public class DialogueController : MonoBehaviour, IInteractable
             return;
         }
 
+        if (dialogueData.giveLiftIndex.Length > dialogueIndex && dialogueData.giveLiftIndex[dialogueIndex])
+        {
+            //does soemthing
+           EndDialogue();  
+        }
+        if (dialogueData.leaveBehindIndex.Length > dialogueIndex && dialogueData.leaveBehindIndex[dialogueIndex])
+        {
+            //does soemthing
+           EndDialogue();  
+        }
+        
         if (++dialogueIndex < dialogueData.dialogueLines.Length)
         {
             DisplayCurrentLine();

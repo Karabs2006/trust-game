@@ -14,6 +14,7 @@ public class MoodMeter : MonoBehaviour
     private int moodIncrease = 100; //the amount the mood will increase by
     public PlayerMovement player;
     public Interactions dialogue;
+    public Reststop restStop;
 
     void Start()
     {
@@ -24,7 +25,6 @@ public class MoodMeter : MonoBehaviour
 
     void FixedUpdate()
     {
-        StartCoroutine("DecreaseMood");
         MoodManager();
     }
 
@@ -79,6 +79,16 @@ public class MoodMeter : MonoBehaviour
         else
         {
         DecreaseMood();
+        }
+        if (restStop.restStopActive)
+        {
+          StopCoroutine("DecreaseMood");  
+          StartCoroutine("IncreaseMood");
+        }
+        else
+        {
+          StartCoroutine("DecreaseMood");  
+          StopCoroutine("IncreaseMood"); 
         }
 
     }

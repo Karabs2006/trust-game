@@ -19,9 +19,11 @@ public class NPCInfo : ScriptableObject
 
     [Header ("Choices")]
     public DialogueChoice[] choices;
+    public bool[] giveLiftIndex;
+    public bool[] leaveBehindIndex;
     
     [Header ("Items")]
-    public int nextDialogueIndexI;
+    public int nextDialogueIndexI; //after given item the dialogue goes here
     public Item item;
     public bool[] givesItem; //whatever number is ticked an item will be given on that line
     
