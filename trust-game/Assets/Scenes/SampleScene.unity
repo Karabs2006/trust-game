@@ -8392,7 +8392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WinPuzzle
   puzzlePosition: {fileID: 1722795539}
   roadEvent: {fileID: 1841506983}
-  moodMeter: {fileID: 0}
+  moodMeter: {fileID: 2144262398}
 --- !u!1 &1148379571
 GameObject:
   m_ObjectHideFlags: 0

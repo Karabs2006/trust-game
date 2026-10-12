@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02c04a59d7ed7b49bdd17e21cf34d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
-  dialogueData: {fileID: 11400000, guid: e9bbe3d4536125145a64168b2bf3fb4d, type: 2}
+  dialogueData: {fileID: 11400000, guid: 8fd88b3e550ece341be13fcf1eaa1e85, type: 2}
   npcIndex: 5
   itemInfo: {fileID: 0}
   isDialogueActive: 0
