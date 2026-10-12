@@ -24,7 +24,7 @@ public class RoadEvent : MonoBehaviour
             //Stop Player Movement when puzzle is active
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
 
-            //playerMovement.currentSpeed = 0;
+            playerMovement.currentSpeed = 0;
             playerMovement.puzzleActive = true;
             playerMovement.rb.linearVelocity = Vector2.zero;
 

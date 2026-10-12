@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 isMoving= false;
-                 Debug.Log(isMoving);
             }
         }
     }

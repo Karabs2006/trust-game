@@ -14,14 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 21300000, guid: b7cc536033f514e4383e04fec428dd7b, type: 3}
   dialogueLines:
-  - Her dialogue is a work in progress. please excuse this. Restart to randomise
-    the characters
+  - ' I''m really sorry to bother you'
+  - 'anyway you got space in your car?  '
+  - 'I got some *old movies I can trade you to help make things seem a bit more normal* '
+  - 'Im sure you can even *sell them*... if you wanted. '
+  - 'Thank you! I promise not to talk your ear off about movies (Player gets old
+    movies but this causes a road event) '
+  - Sigh, I understand
   autoProgressLines: 
-  endDialogueLines: 01
+  endDialogueLines: 000000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
-  choices: []
+  choices:
+  - choiceIndex: 3
+    choices:
+    - 'Plenty of space '
+    - 'I have to be cautious about who I let it '
+    nextDialogueIndex: 0400000005000000
+  giveLiftIndex: 
+  leaveBehindIndex: 
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

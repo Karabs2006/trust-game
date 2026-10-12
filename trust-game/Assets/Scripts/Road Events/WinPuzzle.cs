@@ -15,10 +15,12 @@ public class WinPuzzle : MonoBehaviour
     {
         if (other.CompareTag("PuzzlePlayer"))
         {
+            player.puzzleActive=false;
             player.currentSpeed = 10;
             //puzzlePosition.winText.enabled = true;
             roadEvent.puzzle.SetActive(false);
             roadEvent.trunkInventory.SetActive(false);
+            
             
         }
     }

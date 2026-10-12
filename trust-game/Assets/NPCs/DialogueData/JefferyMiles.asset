@@ -14,14 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogueLines:
-  - His dialogue is a work in progress however removing him breaks the randomisation
-  - 'You can restart to get other characters '
+  - 'Yooo, sick car ur driving, mind if I hop in? '
+  - Jeffery, Jeffery Miles
+  - "I'm sure you've heard of me if you have a good ear for music. I\u2019m kind
+    of a celebrity around here.  "
+  - "How bout this, I\u2019ll give you a signed *mix tape to lighten the mood* if
+    you give me a lift?  "
+  - Sickkkk (You recieve a mix tape)
+  - 'Pssh whatever man. (causes road event) '
+  - ' You know what screw you man, and your awful car '
+  - "\u2026"
+  - "So is that a no on the lift\u2026?"
+  - 'Loser (Causes road event)  '
+  - ...
   autoProgressLines: 
-  endDialogueLines: 0001
+  endDialogueLines: 0000000001010000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
-  choices: []
+  choices:
+  - choiceIndex: 0
+    choices:
+    - Who are you?
+    - "I don't think that's a good idea\u2026"
+    nextDialogueIndex: 0100000006000000
+  - choiceIndex: 3
+    choices:
+    - "You\u2019ve got yourself a deal. "
+    - "A mix tape doesn\u2019t seem worth the risk.  "
+    nextDialogueIndex: 0400000005000000
+  - choiceIndex: 8
+    choices:
+    - ' I''m not giving you a lift  '
+    - '*Drive off* '
+    nextDialogueIndex: 090000000a000000
+  giveLiftIndex: 
+  leaveBehindIndex: 
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 
