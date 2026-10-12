@@ -5,6 +5,7 @@ public class WinPuzzle : MonoBehaviour
     public PuzzlePosition puzzlePosition;
     public RoadEvent roadEvent;
     private PlayerMovement player;
+    public GameObject moodMeter;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class WinPuzzle : MonoBehaviour
     {
         if (other.CompareTag("PuzzlePlayer"))
         {
+            moodMeter.SetActive(true);
             player.puzzleActive=false;
             player.currentSpeed = 10;
             //puzzlePosition.winText.enabled = true;
