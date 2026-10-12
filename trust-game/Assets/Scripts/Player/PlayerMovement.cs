@@ -27,12 +27,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if(!puzzleActive)
             {
-                rb.linearVelocity = new Vector2(
-                currentSpeed,
-                rb.linearVelocity.y
-            );
-            isMoving=true;
-            } 
+                rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
+                isMoving=true;
+            }
+            else
+            {
+                isMoving= false;
+                 Debug.Log(isMoving);
+            }
         }
     }
 
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         {
             hasStarted = true;
             Destroy(startInfo);
-            isMoving = false;
+            isMoving = true; 
         }
     }
 }

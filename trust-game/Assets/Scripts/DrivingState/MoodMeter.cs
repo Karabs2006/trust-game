@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -8,7 +7,7 @@ public class MoodMeter : MonoBehaviour
     [Header("MoodMeter")]
     Slider moodMeter;
     public int fullMood;
-    private float moodValueD = 0.005f; //the value to decrease by
+    private float moodValueD = 0.01f; //the value to decrease by
 
     [Header("Influences")]
     private int moodIncrease = 100; //the amount the mood will increase by
@@ -26,6 +25,7 @@ public class MoodMeter : MonoBehaviour
     void FixedUpdate()
     {
         MoodManager();
+        //Debug.Log(moodMeter.value);
     }
 
     IEnumerator DecreaseMood()
@@ -64,33 +64,25 @@ public class MoodMeter : MonoBehaviour
 
     public void MoodManager()
     {
-        if (!player.isMoving)
-        {
-          StopCoroutine("DecreaseMood");  
-        }
-        else
-        {
-        DecreaseMood();
-        }
-        if (dialogue.isDialogueActive)
-        {
-        StopCoroutine("DecreaseMood");  
-        }
-        else
-        {
-        DecreaseMood();
-        }
+       
         if (restStop.restStopActive)
         {
           StopCoroutine("DecreaseMood");  
           StartCoroutine("IncreaseMood");
         }
         else
-        {
-          StartCoroutine("DecreaseMood");  
+        { 
           StopCoroutine("IncreaseMood"); 
+          if (player.isMoving && !dialogue.isDialogueActive)
+            {
+                StartCoroutine("DecreaseMood"); 
+            }
+            else if (!player.isMoving || dialogue.isDialogueActive)
+            {
+                StopCoroutine("DecreaseMood"); 
+            }
         }
-
+       
     }
     
 }

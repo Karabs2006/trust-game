@@ -20,6 +20,10 @@ public class Interactions : MonoBehaviour
             hasObject = true;
             isDialogueActive = true;
         }
+        else
+        {
+           isDialogueActive = false; 
+        }
     }
 
 
