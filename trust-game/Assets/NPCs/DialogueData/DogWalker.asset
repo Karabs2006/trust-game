@@ -23,9 +23,10 @@ MonoBehaviour:
   - I won't be much trouble, I just ask you to take care of Dog when I'm gone.
   - 'You''re a kind soul, thank you. (Get Dog , slows mood bar+ Money) '
   - ' I understand. (Causes Road Event: where you see the dog alone)  '
-  - " Yes\u2026 I understand that I'll put you at risk\u2026"
-  - " I just needed someone to take care of Dog\u2026 but I won\u2019t bother you
-    anymore.  (Causes Road Event: you see the dog alone) "
+  - " I know.. I won't be around you long enough for the infection to spread\u2026"
+  - 'please I just need to get to the next stop and for someone to take care of Dog. '
+  - 'Thank you... thank you '
+  - I understand
   autoProgressLines: 
   endDialogueLines: 00000000000001010001
   autoProgressDelay: 1.5
@@ -42,6 +43,13 @@ MonoBehaviour:
     - 'I''ll take care of Dog  '
     - "Its not very safe\u2026"
     nextDialogueIndex: 0600000007000000
+  - choiceIndex: 9
+    choices:
+    - I'll take you to the next stop
+    - 'Im sorry, its too much of a risk '
+    nextDialogueIndex: 0a0000000b000000
+  giveLiftIndex: 
+  leaveBehindIndex: 
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 
