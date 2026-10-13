@@ -28,7 +28,7 @@ MonoBehaviour:
   - 'Thank you... thank you '
   - I understand
   autoProgressLines: 
-  endDialogueLines: 00000000000001010001
+  endDialogueLines: 000000000000010100000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
