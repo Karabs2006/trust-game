@@ -44,7 +44,7 @@ public class Obstacles : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("PuzzlePlayer"))
+        if (collision.gameObject.CompareTag("PuzzlePlayer") || collision.gameObject.CompareTag("PuzzlePlayerTwo"))
         {
             
             //Transform transform = collision.GetComponent<Transform>();
