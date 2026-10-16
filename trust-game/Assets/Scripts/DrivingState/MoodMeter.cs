@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MoodMeter : MonoBehaviour
 {
     [Header("MoodMeter")]
-    Slider moodMeter;
+    public Slider moodMeter;
     public int fullMood;
     private float moodValueD = 0.01f; //the value to decrease by
 

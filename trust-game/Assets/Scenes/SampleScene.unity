@@ -3321,6 +3321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniInventory
   countText: {fileID: 928156575}
+  moodMeterScript: {fileID: 1252406157}
   amount: 2
 --- !u!1 &326321232
 GameObject:
@@ -11737,6 +11738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniInventory
   countText: {fileID: 1171710462}
+  moodMeterScript: {fileID: 1252406157}
   amount: 7
 --- !u!1 &1044130547
 GameObject:
@@ -14664,6 +14666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085d04bb5bbb0a54cafa5edb5451cfa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoodMeter
+  moodMeter: {fileID: 0}
   fullMood: 1000
   player: {fileID: 1550971350}
   dialogue: {fileID: 1550971355}
@@ -22960,6 +22963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniInventory
   countText: {fileID: 1548990445}
+  moodMeterScript: {fileID: 1252406157}
   amount: 5
 --- !u!1 &2104329537
 GameObject:

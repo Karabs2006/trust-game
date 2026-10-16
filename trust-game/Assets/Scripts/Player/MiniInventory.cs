@@ -4,6 +4,7 @@ using TMPro;
 public class MiniInventory : MonoBehaviour
 {
     public TMP_Text countText;
+    public MoodMeter moodMeterScript;
     
     public int amount;
 
@@ -18,6 +19,7 @@ public class MiniInventory : MonoBehaviour
         {
             amount--;
             countText.text = $"{amount}";
+            moodMeterScript.moodMeter.value += 100; 
         }
         
     }
