@@ -50,6 +50,6 @@ MonoBehaviour:
     nextDialogueIndex: 0a0000000b000000
   giveLiftIndex: 
   leaveBehindIndex: 
-  nextDialogueIndexI: 0
+  nextDialogueIndexI: 10
   item: {fileID: 0}
-  givesItem: 
+  givesItem: 000000000000010000000100

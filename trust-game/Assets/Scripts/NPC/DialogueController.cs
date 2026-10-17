@@ -16,6 +16,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     private DialogueUI dialogueUI;
     private int dialogueIndex;
     private bool isTyping;
+    private float delay = 2f;
 
     [HideInInspector] public bool isDialogueActive;
   
@@ -80,12 +81,24 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         dialogueUI.ClearChoices();
 
+        //Reward
+        if (dialogueData.givesItem.Length > dialogueIndex && dialogueData.givesItem[dialogueIndex])
+        {
+            Debug.Log("GiveReward");
+            GiveReward();
+            dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueData.nextDialogueIndexI]); 
+        }
+
+
+        //Ends Dialogue
         if(dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
         {
-            EndDialogue();
+            StartCoroutine("Wait");
             return;
         }
 
+
+        //Choices
         foreach(DialogueChoice dialogueChoice in dialogueData.choices)
         {
             if (dialogueChoice.choiceIndex == dialogueIndex)
@@ -95,20 +108,7 @@ public class DialogueController : MonoBehaviour, IInteractable
             }
         }
 
-
-        if (dialogueData.givesItem.Length > dialogueIndex && dialogueData.givesItem[dialogueIndex])
-        {
-            GiveReward();
-            dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueData.nextDialogueIndexI]); 
-        }
-
-        if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
-        {
-            EndDialogue();
-
-            return;
-        }
-
+        //Options
         if (dialogueData.giveLiftIndex.Length > dialogueIndex && dialogueData.giveLiftIndex[dialogueIndex])
         {
             //does soemthing
@@ -120,13 +120,14 @@ public class DialogueController : MonoBehaviour, IInteractable
            EndDialogue();  
         }
         
+        //NextLine
         if (++dialogueIndex < dialogueData.dialogueLines.Length)
         {
             DisplayCurrentLine();
         }
         else
         {
-            EndDialogue();
+            StartCoroutine("Wait");
         }
     }
 
@@ -157,6 +158,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     {
         dialogueUI.SetItemSprite(itemInfo.icon); 
         Item reward = Instantiate(dialogueData.item); //gets the information of the item
+        Debug.Log(reward);
         
 
         if(itemInfo.inventoryGroup == "Trunk")
@@ -210,6 +212,13 @@ public class DialogueController : MonoBehaviour, IInteractable
         isDialogueActive = false;
         dialogueUI.SetDialogueText("");
         dialogueUI.ShowDialogueUI(false);
+    }
+
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(delay);
+        Debug.Log("Wait");
+        EndDialogue();
     }
 
 }
