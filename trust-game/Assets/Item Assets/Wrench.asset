@@ -15,3 +15,7 @@ MonoBehaviour:
   itemName: Wrench
   icon: {fileID: 0}
   inventorySlots: 0
+  itemIndex: 0
+  inventoryGroup: Trunk
+  miniInvSubGroup: 
+  usedOnce: 1

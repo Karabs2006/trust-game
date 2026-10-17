@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -156,6 +157,26 @@ public class DialogueController : MonoBehaviour, IInteractable
     {
         dialogueUI.SetItemSprite(itemInfo.icon); 
         Item reward = Instantiate(dialogueData.item); //gets the information of the item
+        
+
+        if(itemInfo.inventoryGroup == "Trunk")
+        {
+            GameObject inventoryObject = GameObject.Find("ScriptHolderInv");
+            Inventory inventoryScript = inventoryObject.GetComponent<Inventory>();
+
+            inventoryScript.AddItem(itemInfo);
+        }
+
+        if(itemInfo.inventoryGroup == "Mini")
+        {
+            GameObject subGroupObj = GameObject.Find($"{itemInfo.miniInvSubGroup}");
+            GameObject scriptHolder = subGroupObj.transform.Find("Script").gameObject;
+            MiniInventory miniInventory = scriptHolder.GetComponent<MiniInventory>();
+
+            miniInventory.amount++;
+            miniInventory.countText.text = $"{miniInventory.amount}";
+
+        }
     }
 
 

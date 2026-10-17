@@ -15,3 +15,6 @@ MonoBehaviour:
   itemName: Mixtape
   icon: {fileID: 0}
   inventorySlots: 0
+  itemIndex: 0
+  inventoryGroup: Trunk
+  miniInvSubGroup: 

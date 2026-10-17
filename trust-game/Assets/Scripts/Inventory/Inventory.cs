@@ -29,9 +29,26 @@ public class Inventory : MonoBehaviour
             button.SetActive(false);
             });
         }
-        
+
+
     }
 
+    public void AddItem(Item newItem)
+    {
+        items.Add(newItem);
+
+        GameObject button = Instantiate(buttonPrefab, inventoryPanel);
+        TMP_Text tMP_Text = button.GetComponentInChildren<TMP_Text>();
+        tMP_Text.text = $"{newItem.itemName}";
+        Debug.Log(newItem.itemName);
+
+        Button buttonArea = button.GetComponent<Button>();
+        buttonArea.onClick.AddListener(() =>
+        {
+            newItem.Use();
+            button.SetActive(false);
+        });
+    }
 
 
 
