@@ -2530,7 +2530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   dialogueData: {fileID: 11400000, guid: 80096c72500473b4cadeed012af14e81, type: 2}
   npcIndex: 0
-  itemInfo: {fileID: 11400000, guid: c2a55646d2d59c042b3f912a23946f43, type: 2}
+  itemInfo: {fileID: 11400000, guid: 750132db648d02143ac57b612f4e5d8b, type: 2}
   isDialogueActive: 0
 --- !u!1 &224221956
 GameObject:
@@ -7471,21 +7471,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645310631}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
   m_Padding:
-    m_Left: 0
+    m_Left: -332
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: 10, y: 10}
+  m_CellSize: {x: 100, y: 25}
+  m_Spacing: {x: 44.3, y: 0.4}
   m_Constraint: 1
   m_ConstraintCount: 3
 --- !u!1 &655341769
@@ -20983,7 +20983,7 @@ Transform:
   m_GameObject: {fileID: 1841506980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -112.7, y: 1.7988698, z: 0}
+  m_LocalPosition: {x: -150, y: 1.7988698, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
