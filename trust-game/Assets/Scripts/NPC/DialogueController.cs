@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class DialogueController : MonoBehaviour, IInteractable
@@ -18,7 +19,9 @@ public class DialogueController : MonoBehaviour, IInteractable
     private bool isTyping;
 
     [HideInInspector] public bool isDialogueActive;
-  
+    
+    public Transform passengerPanel;
+
     void Start()
     {
         dialogueUI = DialogueUI.Instance;
@@ -62,6 +65,14 @@ public class DialogueController : MonoBehaviour, IInteractable
         dialogueUI.SetNPCInfo(dialogueData.npcSprite); 
         dialogueUI.ShowDialogueUI(true); //brings up the dialogue panel 
 
+        
+            GameObject passenger = new GameObject(dialogueData.name);
+            passenger.transform.SetParent(passengerPanel, false);
+
+
+            Image passengerSprite = passenger.AddComponent<Image>();
+            passengerSprite.sprite = dialogueData.npcSprite;
+
         DisplayCurrentLine();
     }
     }
@@ -99,6 +110,10 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (dialogueData.givesItem.Length > dialogueIndex && dialogueData.givesItem[dialogueIndex])
         {
             GiveReward();
+            //Sprite passengerSprite= Instantiate(dialogueData.npcSprite, passengerPanel);
+
+
+
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueData.nextDialogueIndexI]); 
         }
 
