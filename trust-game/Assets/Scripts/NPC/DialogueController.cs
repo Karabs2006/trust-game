@@ -8,7 +8,8 @@ public class DialogueController : MonoBehaviour, IInteractable
 {
     [Header("NPC Data")]
     public NPCInfo dialogueData;
-     public int npcIndex;
+    public int npcIndex;
+    public GameObject npcController;
 
      private CarHolder pickupActions;
 
@@ -19,7 +20,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     private DialogueUI dialogueUI;
     private int dialogueIndex;
     private bool isTyping;
-    private float delay = 2f;
+    private bool givenLift;
 
     [HideInInspector] public bool isDialogueActive;
 
@@ -64,6 +65,7 @@ public class DialogueController : MonoBehaviour, IInteractable
        
         {
         isDialogueActive = true;
+        givenLift = false;
         dialogueIndex = 0;
 
         dialogueUI.SetNPCInfo(dialogueData.npcSprite); 
@@ -106,8 +108,11 @@ public class DialogueController : MonoBehaviour, IInteractable
         //Ends Dialogue
         if(dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
         {
+            
+            //Debug.Log("Ended");
             StartCoroutine("Wait");
-            return;
+            return;  
+
         }
 
 
@@ -125,15 +130,18 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (dialogueData.giveLiftIndex.Length > dialogueIndex && dialogueData.giveLiftIndex[dialogueIndex])
         {
             //Give a lift option
-            Debug.Log("Pickup");
-           pickupActions.PickUp();
-           //EndDialogue();  
+            givenLift = true;
+            // pickupActions.PickUp();
+            StartCoroutine("Wait");
+            return;
         }
         if (dialogueData.leaveBehindIndex.Length > dialogueIndex && dialogueData.leaveBehindIndex[dialogueIndex])
         {
             //Leave Behind option
-            pickupActions.LeaveBehind();
-           EndDialogue();  
+            givenLift = false;
+            //pickupActions.LeaveBehind();
+            StartCoroutine("Wait");
+            return;  
         }
         
         //NextLine
@@ -230,11 +238,22 @@ public class DialogueController : MonoBehaviour, IInteractable
         dialogueUI.ShowDialogueUI(false);
     }
 
-    public IEnumerator Wait()
+    IEnumerator Wait()
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(1f);
+        if (givenLift)
+        {
+            pickupActions.PickUp();
+        }
+        else
+        {
+            pickupActions.LeaveBehind();
+        }
+
+        yield return new WaitForSeconds(1f);
         Debug.Log("Wait");
-        EndDialogue();
+        EndDialogue();  
     }
+
 
 }

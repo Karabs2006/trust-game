@@ -167,5 +167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueController
   dialogueData: {fileID: 11400000, guid: 1343c5d04c83f214cbe07be45f3ab8cb, type: 2}
   npcIndex: 1
+  npcController: {fileID: 6611866737597763429}
   itemInfo: {fileID: 11400000, guid: 750132db648d02143ac57b612f4e5d8b, type: 2}
   isDialogueActive: 0

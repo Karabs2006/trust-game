@@ -7,19 +7,13 @@ public class CarHolder : MonoBehaviour
     public Interactions interactions;
     
     [Header ("Pick Up")]
-    public GameObject[] carSlots;
+    public Transform[] carSlots;
     private int slotIndex = 0;
 
-    // [Header ("Leave")]
-    // public GameObject[] openSlots;
-    // private int openSlotIndex = 0;
+    [Header ("Leave Behind")]
+    public Transform[] openSlots;
+    private int openSlotIndex = 0;
     
-
-    void Start()
-    {
-        interactions = FindAnyObjectByType<Interactions>();
-    }
-   
     public void PickUp()
     {
         if(slotIndex >= 4)
@@ -29,14 +23,13 @@ public class CarHolder : MonoBehaviour
         }
         else
         {
-            interactions.hit.collider.GetComponent<DialogueController>();
-            if (interactions.hit)
+            DialogueController npc = interactions.hit.collider.GetComponent<DialogueController>();
+            if (npc != null)
             {
-                DialogueController npc = GetComponent<DialogueController>();
-                Debug.Log(npc.npcIndex);
-                //Instantiate(thenpcObject, carSlots[slotIndex])
+                //Debug.Log(npc.npcIndex);
+                Instantiate(npc.npcController, carSlots[slotIndex]);
+                //Debug.Log("Picked up");
                 slotIndex++;
-                //move the npc to a slot
             }
             
         }
@@ -44,6 +37,22 @@ public class CarHolder : MonoBehaviour
 
     public void LeaveBehind()
     {
-        
+        if(openSlotIndex >= 7)
+        {
+           Debug.Log("Break"); 
+            return;
+        }
+        else
+        {
+           DialogueController npc = interactions.hit.collider.GetComponent<DialogueController>();
+            if (npc != null)
+            {
+                //Debug.Log(npc.npcIndex);
+                Instantiate(npc.npcController, openSlots[openSlotIndex]);
+                //Debug.Log("Picked up");
+                openSlotIndex++;
+            } 
+        }
+         
     }
 }
