@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class Interactions : MonoBehaviour
 {
     public PlayerMovement playerMovement;
-    private RaycastHit2D hit;
+    public RaycastHit2D hit;
     private bool hasObject;
     private bool wasPressed;
     private float delay = 1f;

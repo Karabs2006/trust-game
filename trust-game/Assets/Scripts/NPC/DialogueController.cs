@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class DialogueController : MonoBehaviour, IInteractable
@@ -8,6 +9,8 @@ public class DialogueController : MonoBehaviour, IInteractable
     [Header("NPC Data")]
     public NPCInfo dialogueData;
      public int npcIndex;
+
+     private CarHolder pickupActions;
 
     [Header("Item Data")]
     public Item itemInfo;
@@ -19,11 +22,14 @@ public class DialogueController : MonoBehaviour, IInteractable
     private float delay = 2f;
 
     [HideInInspector] public bool isDialogueActive;
+
+    //public Transform passengerPanel;
   
     void Start()
     {
         dialogueUI = DialogueUI.Instance;
         dialogueUI.ShowDialogueUI(false); 
+        pickupActions = FindAnyObjectByType<CarHolder>();
     }
 
     public DialogueController(int npcIndex)
@@ -64,6 +70,12 @@ public class DialogueController : MonoBehaviour, IInteractable
         dialogueUI.ShowDialogueUI(true); //brings up the dialogue panel 
 
         DisplayCurrentLine();
+
+        // GameObject passenger = new GameObject(dialogueData.name);
+        // passenger.transform.SetParent(passengerPanel, false);
+
+        // Image passengerSprite = passenger.AddComponent<Image>();
+        // passengerSprite.sprite = dialogueData.npcSprite;
     }
     }
 
@@ -87,6 +99,7 @@ public class DialogueController : MonoBehaviour, IInteractable
             Debug.Log("GiveReward");
             GiveReward();
             dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueData.nextDialogueIndexI]); 
+            //Sprite passengerSprite = Instantiate(dialogueData.npcSprite, passengerPanel);
         }
 
 
@@ -111,12 +124,15 @@ public class DialogueController : MonoBehaviour, IInteractable
         //Options
         if (dialogueData.giveLiftIndex.Length > dialogueIndex && dialogueData.giveLiftIndex[dialogueIndex])
         {
-            //does soemthing
-           EndDialogue();  
+            //Give a lift option
+            Debug.Log("Pickup");
+           pickupActions.PickUp();
+           //EndDialogue();  
         }
         if (dialogueData.leaveBehindIndex.Length > dialogueIndex && dialogueData.leaveBehindIndex[dialogueIndex])
         {
-            //does soemthing
+            //Leave Behind option
+            pickupActions.LeaveBehind();
            EndDialogue();  
         }
         
