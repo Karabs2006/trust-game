@@ -32,8 +32,8 @@ MonoBehaviour:
     - 'Plenty of space '
     - 'I have to be cautious about who I let it '
     nextDialogueIndex: 0400000005000000
-  giveLiftIndex: 
-  leaveBehindIndex: 
+  giveLiftIndex: 000000000100
+  leaveBehindIndex: 000000000001
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

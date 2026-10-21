@@ -29,6 +29,8 @@ MonoBehaviour:
     - Sure come on in
     - '*Drive off*'
     nextDialogueIndex: 0200000003000000
+  giveLiftIndex: 00000100
+  leaveBehindIndex: 00000001
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

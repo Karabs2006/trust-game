@@ -20,7 +20,8 @@ MonoBehaviour:
     of a celebrity around here.  "
   - "How bout this, I\u2019ll give you a signed *mix tape to lighten the mood* if
     you give me a lift?  "
-  - Sickkkk (You recieve a mix tape)
+  - Sickkkk
+  - This is the best music you'll hear
   - 'Pssh whatever man. (causes road event) '
   - ' You know what screw you man, and your awful car '
   - "\u2026"
@@ -28,7 +29,7 @@ MonoBehaviour:
   - 'Loser (Causes road event)  '
   - ...
   autoProgressLines: 
-  endDialogueLines: 0000000001010000000101
+  endDialogueLines: 000000000001010000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   characterIndex: 0
@@ -37,19 +38,19 @@ MonoBehaviour:
     choices:
     - Who are you?
     - "I don't think that's a good idea\u2026"
-    nextDialogueIndex: 0100000006000000
+    nextDialogueIndex: 0100000007000000
   - choiceIndex: 3
     choices:
     - "You\u2019ve got yourself a deal. "
     - "A mix tape doesn\u2019t seem worth the risk.  "
-    nextDialogueIndex: 0400000005000000
+    nextDialogueIndex: 0400000006000000
   - choiceIndex: 8
     choices:
     - ' I''m not giving you a lift  '
     - '*Drive off* '
-    nextDialogueIndex: 090000000a000000
-  giveLiftIndex: 
-  leaveBehindIndex: 
+    nextDialogueIndex: 0a0000000b000000
+  giveLiftIndex: 000000000100000000000000
+  leaveBehindIndex: 000000000000000000010101
   nextDialogueIndexI: 4
   item: {fileID: 11400000, guid: 750132db648d02143ac57b612f4e5d8b, type: 2}
   givesItem: 0000000001000000000000

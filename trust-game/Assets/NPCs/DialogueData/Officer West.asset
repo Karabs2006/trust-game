@@ -46,6 +46,8 @@ MonoBehaviour:
     - ' I don''t trust you.'
     - Come on in.
     nextDialogueIndex: 090000000a000000
+  giveLiftIndex: 0000000000000000000001
+  leaveBehindIndex: 0000000000000000000100
   nextDialogueIndexI: 0
   item: {fileID: 0}
-  givesItem: 
+  givesItem: 0000000000000000000001

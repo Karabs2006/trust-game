@@ -5,6 +5,7 @@ public class CarHolder : MonoBehaviour
     //holds the information about the car, i,e who is in the car and how many slots there are, the atate the cae is in
     [Header ("General")]
     public Interactions interactions;
+    private DialogueController npc;
     
     [Header ("Pick Up")]
     public Transform[] carSlots;
@@ -13,7 +14,9 @@ public class CarHolder : MonoBehaviour
     [Header ("Leave Behind")]
     public Transform[] openSlots;
     private int openSlotIndex = 0;
+    private int ranNum;
     
+
     public void PickUp()
     {
         if(slotIndex >= 4)
@@ -23,7 +26,7 @@ public class CarHolder : MonoBehaviour
         }
         else
         {
-            DialogueController npc = interactions.hit.collider.GetComponent<DialogueController>();
+            npc = interactions.hit.collider.GetComponent<DialogueController>();
             if (npc != null)
             {
                 //Debug.Log(npc.npcIndex);
@@ -44,7 +47,7 @@ public class CarHolder : MonoBehaviour
         }
         else
         {
-           DialogueController npc = interactions.hit.collider.GetComponent<DialogueController>();
+            npc = interactions.hit.collider.GetComponent<DialogueController>();
             if (npc != null)
             {
                 //Debug.Log(npc.npcIndex);
@@ -54,5 +57,25 @@ public class CarHolder : MonoBehaviour
             } 
         }
          
+    }
+
+    public void RoadEventRandomiser()
+    {
+        ranNum = Random.Range(0,8);
+        Debug.Log(ranNum);
+        foreach (Transform npcTransform in openSlots)
+        {
+            npc = npcTransform.GetComponent<DialogueController>();
+            if (ranNum == npc.npcIndex)
+            {
+                //set specific road event active
+                //npc.RoadEvent.SetActive(True)
+            }
+        }
+    }
+
+    public void CarState()
+    {
+        
     }
 }

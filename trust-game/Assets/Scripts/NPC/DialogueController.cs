@@ -131,7 +131,6 @@ public class DialogueController : MonoBehaviour, IInteractable
         {
             //Give a lift option
             givenLift = true;
-            // pickupActions.PickUp();
             StartCoroutine("Wait");
             return;
         }
@@ -139,7 +138,6 @@ public class DialogueController : MonoBehaviour, IInteractable
         {
             //Leave Behind option
             givenLift = false;
-            //pickupActions.LeaveBehind();
             StartCoroutine("Wait");
             return;  
         }
@@ -244,10 +242,12 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (givenLift)
         {
             pickupActions.PickUp();
+            Debug.Log("PickedUp");
         }
-        else
+        else if (!givenLift)
         {
             pickupActions.LeaveBehind();
+            Debug.Log("LeftBehind");
         }
 
         yield return new WaitForSeconds(1f);

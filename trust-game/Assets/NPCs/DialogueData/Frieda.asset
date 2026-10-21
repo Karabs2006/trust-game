@@ -48,6 +48,8 @@ MonoBehaviour:
     - Sure you can come along
     - Sorry...
     nextDialogueIndex: 0700000008000000
+  giveLiftIndex: 000000000000000100
+  leaveBehindIndex: 000000000000000001
   nextDialogueIndexI: 0
   item: {fileID: 0}
-  givesItem: 
+  givesItem: 000000000000000100
