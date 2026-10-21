@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CarHolder : MonoBehaviour
 {
-    //holds the information about the car, i,e who is in the car and how many slots there are, the atate the cae is in
+    //holds the information about the car, i,e who is in the car and how many slots there are, the state the cae is in
     [Header ("General")]
     public Interactions interactions;
     private DialogueController npc;
@@ -10,12 +10,20 @@ public class CarHolder : MonoBehaviour
     [Header ("Pick Up")]
     public Transform[] carSlots;
     private int slotIndex = 0;
+    public MoodMeter moodBar;
 
     [Header ("Leave Behind")]
     public Transform[] openSlots;
     private int openSlotIndex = 0;
     private int ranNum;
-    
+    public Transform[] puzzleSpawnPoint;
+    private int puzzleNum = 0;
+    private RoadEvent REcollider;
+
+    public void FixedUpdate()
+    {
+        CarState();
+    }
 
     public void PickUp()
     {
@@ -33,6 +41,11 @@ public class CarHolder : MonoBehaviour
                 Instantiate(npc.npcController, carSlots[slotIndex]);
                 //Debug.Log("Picked up");
                 slotIndex++;
+                if(npc.npcIndex == 5) //Fiona 
+                {
+                Instantiate(npc.npcController, openSlots[openSlotIndex]);
+                 openSlotIndex++;
+                }
             }
             
         }
@@ -50,32 +63,55 @@ public class CarHolder : MonoBehaviour
             npc = interactions.hit.collider.GetComponent<DialogueController>();
             if (npc != null)
             {
-                //Debug.Log(npc.npcIndex);
+                if(npc.npcIndex == 5) //Fiona
+                {
+                    return;
+                }
+                else
+                {
                 Instantiate(npc.npcController, openSlots[openSlotIndex]);
-                //Debug.Log("Picked up");
-                openSlotIndex++;
+                openSlotIndex++; 
+                }
+                
             } 
         }
          
     }
 
-    public void RoadEventRandomiser()
+    public void Randomise()
     {
         ranNum = Random.Range(0,8);
         Debug.Log(ranNum);
+    }
+    public void RoadEventRandomiser()
+    {
         foreach (Transform npcTransform in openSlots)
         {
             npc = npcTransform.GetComponent<DialogueController>();
             if (ranNum == npc.npcIndex)
             {
-                //set specific road event active
-                //npc.RoadEvent.SetActive(True)
+                Instantiate(npc.puzzleHolder,puzzleSpawnPoint[puzzleNum]);
+                puzzleNum++;
+            }
+            else
+            {
+                REcollider = FindFirstObjectByType<RoadEvent>();
+                REcollider.Randomise();
             }
         }
     }
 
     public void CarState()
     {
-        
+        foreach (Transform npcTransform in carSlots)
+        npc = npcTransform.GetComponent<DialogueController>();
+        if (npc.npcIndex == 3) //Acelot Tags
+        {
+           moodBar.moodValueD = 0.5f; 
+        }
+        else
+        {
+            moodBar.moodValueD = 0.01f; 
+        }
     }
 }

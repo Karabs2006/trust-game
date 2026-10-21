@@ -9,6 +9,7 @@ public class RoadEvent : MonoBehaviour
     public GameObject trunkInventory;
     public PlayerMovement playerMovement;
     public GameObject moodMeter;
+    public CarHolder puzzleRandomiser;
 
 
     void Start()
@@ -23,10 +24,11 @@ public class RoadEvent : MonoBehaviour
         {
             //Stop Player Movement when puzzle is active
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
-
             playerMovement.currentSpeed = 0;
-            playerMovement.puzzleActive = true;
             playerMovement.rb.linearVelocity = Vector2.zero;
+            playerMovement.puzzleActive = true;
+            Randomise();
+           
 
             moodMeter.SetActive(false);
     
@@ -35,6 +37,12 @@ public class RoadEvent : MonoBehaviour
             trunkInventory.SetActive(true);
             //puzzlePosition.StartCoroutine(puzzlePosition.Countdown());
         }
+    }
+
+    public void Randomise()
+    {
+        puzzleRandomiser.Randomise();
+        puzzleRandomiser.RoadEventRandomiser(); //This sets the puzzle to the position
     }
 }
 

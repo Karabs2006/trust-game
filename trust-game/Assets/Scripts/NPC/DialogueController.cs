@@ -24,6 +24,9 @@ public class DialogueController : MonoBehaviour, IInteractable
 
     [HideInInspector] public bool isDialogueActive;
 
+    [Header("RoadEvents")]
+    public GameObject puzzleHolder; // assign specific puzzle here
+
     //public Transform passengerPanel;
   
     void Start()

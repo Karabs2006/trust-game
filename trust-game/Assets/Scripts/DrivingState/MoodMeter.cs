@@ -7,7 +7,7 @@ public class MoodMeter : MonoBehaviour
     [Header("MoodMeter")]
     public Slider moodMeter;
     public int fullMood;
-    private float moodValueD = 0.01f; //the value to decrease by
+    public float moodValueD = 0.01f; //the value to decrease by
 
     [Header("Influences")]
     private int moodIncrease = 100; //the amount the mood will increase by

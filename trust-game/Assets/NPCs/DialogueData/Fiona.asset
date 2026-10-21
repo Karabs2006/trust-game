@@ -18,22 +18,22 @@ MonoBehaviour:
   - 'anyway you got space in your car?  '
   - 'I got some *old movies I can trade you to help make things seem a bit more normal* '
   - 'Im sure you can even *sell them*... if you wanted. '
-  - 'Thank you! I promise not to talk your ear off about movies (Player gets old
-    movies but this causes a road event) '
+  - 'Thank you! '
+  - ' I promise not to talk your ear off about movies (Player gets old movies but
+    this causes a road event)'
   - Sigh, I understand
   autoProgressLines: 
-  endDialogueLines: 000000000101
+  endDialogueLines: 00000000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  characterIndex: 0
   choices:
   - choiceIndex: 3
     choices:
     - 'Plenty of space '
     - 'I have to be cautious about who I let it '
     nextDialogueIndex: 0400000005000000
-  giveLiftIndex: 000000000100
-  leaveBehindIndex: 000000000001
+  giveLiftIndex: 000000000001
+  leaveBehindIndex: 00000000000001
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

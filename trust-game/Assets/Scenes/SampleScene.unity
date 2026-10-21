@@ -2671,6 +2671,7 @@ MonoBehaviour:
   npcController: {fileID: 209838679}
   itemInfo: {fileID: 11400000, guid: 750132db648d02143ac57b612f4e5d8b, type: 2}
   isDialogueActive: 0
+  puzzleHolder: {fileID: 0}
 --- !u!1 &224221956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,6 +3184,10 @@ PrefabInstance:
     - target: {fileID: 4250875372482796741, guid: d63137ac32116664a9e5ef94fc99d706, type: 3}
       propertyPath: m_Name
       value: NPC_Miles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250875372482796741, guid: d63137ac32116664a9e5ef94fc99d706, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6443861991732584950, guid: d63137ac32116664a9e5ef94fc99d706, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15658,6 +15663,7 @@ MonoBehaviour:
   - {fileID: 1879872508}
   - {fileID: 2135227797}
   - {fileID: 325912955}
+  puzzleSpawnPoint: []
 --- !u!4 &1331515296
 Transform:
   m_ObjectHideFlags: 0
@@ -19442,6 +19448,7 @@ MonoBehaviour:
   npcController: {fileID: 0}
   itemInfo: {fileID: 11400000, guid: 750132db648d02143ac57b612f4e5d8b, type: 2}
   isDialogueActive: 0
+  puzzleHolder: {fileID: 0}
 --- !u!114 &1628503202
 MonoBehaviour:
   m_ObjectHideFlags: 0

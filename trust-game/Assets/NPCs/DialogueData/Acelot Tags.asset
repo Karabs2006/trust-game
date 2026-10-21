@@ -19,10 +19,9 @@ MonoBehaviour:
   - '(Mood bar decreases faster) '
   - (Causes Road Event)
   autoProgressLines: 
-  endDialogueLines: 00000101
+  endDialogueLines: 00000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  characterIndex: 0
   choices:
   - choiceIndex: 1
     choices:

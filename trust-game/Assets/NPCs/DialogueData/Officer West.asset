@@ -26,10 +26,9 @@ MonoBehaviour:
   - "You\u2019ll regret this.     (He causes a road event later on)   "
   - 'Good choice.  (Player gets a gun with one bullet) '
   autoProgressLines: 
-  endDialogueLines: 0000000000000000000101
+  endDialogueLines: 0000000000000000000100
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  characterIndex: 0
   choices:
   - choiceIndex: 1
     choices:

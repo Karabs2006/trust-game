@@ -15,7 +15,7 @@ public class NPCInfo : ScriptableObject
     public bool[] endDialogueLines; //if True = the dialogue doesnt continue 
     public float autoProgressDelay = 1.5f;
     public float dialogueSpeed = 0.05f;
-    public int characterIndex;
+    //public int characterIndex;
 
     [Header ("Choices")]
     public DialogueChoice[] choices;
