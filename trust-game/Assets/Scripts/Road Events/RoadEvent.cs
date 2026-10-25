@@ -27,7 +27,7 @@ public class RoadEvent : MonoBehaviour
             playerMovement.currentSpeed = 0;
             playerMovement.rb.linearVelocity = Vector2.zero;
             playerMovement.puzzleActive = true;
-            Randomise();
+            //Randomise();
            
 
             moodMeter.SetActive(false);
