@@ -10,6 +10,8 @@ public class PuzzleThree : MonoBehaviour
     public Color currentColor;
     private Image background;
     private Button button;
+    public ColourTrack colourTrack;
+    
 
     void Start()
     {
@@ -26,7 +28,36 @@ public class PuzzleThree : MonoBehaviour
 
     void callColour()
     {
-        Debug.Log(currentColor);
+        //Debug.Log(currentColor);
+
+        colourTrack.inputColours.Add(currentColor);
+
+        if(colourTrack.inputColours.Count == 4)
+        {
+            colourTrack.inputList = string.Join(", ",colourTrack.inputColours.ConvertAll(colour =>
+
+                colour == Color.red ? "Red" :
+                colour == Color.blue ? "Blue" :
+                colour == Color.green ? "Green" :
+                colour == Color.yellow ? "Yellow" : "Unknown"
+            
+            ) );
+
+
+
+            //Debug.Log("Input list:" + colourTrack.inputList);
+
+            if(colourTrack.inputList == colourTrack.setList)
+            {
+                Debug.Log("YOU MATCHED THE COLOURS!");
+                colourTrack.randomise();
+            }
+            else
+            {
+                Debug.Log("YOU'RE A DINGUS THEY DONT MATCH!");
+                colourTrack.randomise();
+            }
+        }
     }
 
     IEnumerator flashColours()

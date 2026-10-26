@@ -7345,6 +7345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleThree
   currentColor: {r: 0, g: 0, b: 1, a: 1}
+  colourTrack: {fileID: 743033079}
 --- !u!1 &549615479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4250875372482796741, guid: d63137ac32116664a9e5ef94fc99d706, type: 3}
@@ -9471,8 +9472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af6342290575784f92dea02c62e52a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColourTrack
+  inputColours: []
   coolDown: 0
   image: {fileID: 0}
+  setList: 
+  inputList: 
 --- !u!1 &741191089
 GameObject:
   m_ObjectHideFlags: 0
@@ -9670,8 +9674,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af6342290575784f92dea02c62e52a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColourTrack
+  inputColours: []
   coolDown: 0
   image: {fileID: 733063016}
+  setList: 
+  inputList: 
 --- !u!1 &750588051
 GameObject:
   m_ObjectHideFlags: 0
@@ -17280,6 +17287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleThree
   currentColor: {r: 0, g: 1, b: 0, a: 1}
+  colourTrack: {fileID: 743033079}
 --- !u!1 &1351558965
 GameObject:
   m_ObjectHideFlags: 0
@@ -18159,6 +18167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleThree
   currentColor: {r: 1, g: 0, b: 0, a: 1}
+  colourTrack: {fileID: 743033079}
 --- !u!1 &1437766156
 GameObject:
   m_ObjectHideFlags: 0
@@ -26290,6 +26299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleThree
   currentColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  colourTrack: {fileID: 743033079}
 --- !u!1 &2117897076
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,9 +15,13 @@ public class ColourTrack : MonoBehaviour
 
     List<Color> criteriaColours = new List<Color>{};
 
-    public float coolDown;
+    public List<Color> inputColours = new List<Color>{};
 
+    public float coolDown;
     public Image image;
+
+    public string setList;
+    public string inputList;
     
     void Start()
     {
@@ -32,8 +36,9 @@ public class ColourTrack : MonoBehaviour
         
     }
 
-    void randomise()
-    {
+    public void randomise()
+    {   
+        inputColours.Clear();
         criteriaColours.Clear();
         criteriaColours.AddRange(colors);
 
@@ -46,10 +51,16 @@ public class ColourTrack : MonoBehaviour
             criteriaColours[randomIndex] = temp;
         }
 
-        foreach (Color colour in criteriaColours)
-        {
-            Debug.Log(string.Join(", ", criteriaColours));
-        }
+        
+            setList = string.Join(", ", criteriaColours.ConvertAll(colour =>
+
+                colour == Color.red ? "Red" :
+                colour == Color.blue ? "Blue" :
+                colour == Color.green ? "Green" :
+                colour == Color.yellow ? "Yellow" : "Unknown"));
+
+            Debug.Log(setList);
+
     }
 
     IEnumerator flashColours()
