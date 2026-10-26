@@ -11,6 +11,7 @@ public class PuzzleThree : MonoBehaviour
     private Image background;
     private Button button;
     public ColourTrack colourTrack;
+    public PuzzleThreeTimer puzzleThreeTimer;
     
 
     void Start()
@@ -51,6 +52,8 @@ public class PuzzleThree : MonoBehaviour
             {
                 Debug.Log("YOU MATCHED THE COLOURS!");
                 colourTrack.randomise();
+                puzzleThreeTimer.solvedInt++;
+                puzzleThreeTimer.solvedText.text = $"{puzzleThreeTimer.solvedInt}";
             }
             else
             {
