@@ -2,31 +2,31 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
 
 public class PuzzleThree : MonoBehaviour
 {   
-    List<Color> colors = new List<Color>{
-
-        Color.red,
-        Color.blue,
-        Color.green,
-        Color.orange
-    };
-
+    
     public Color currentColor;
-    float coolDown;
-
     private Image background;
+    private Button button;
 
     void Start()
     {
         background = GetComponent<Image>();
-        background.color = currentColor;        
+        background.color = currentColor; 
+        button = GetComponent<Button>();       
+        button.onClick.AddListener(callColour);
     }
 
     void Update()
     {
-        
+        //button.onClick.AddListener(callColour);
+    }
+
+    void callColour()
+    {
+        Debug.Log(currentColor);
     }
 
     IEnumerator flashColours()
