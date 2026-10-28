@@ -32,6 +32,9 @@ public class PuzzleThree : MonoBehaviour
         //Debug.Log(currentColor);
 
         colourTrack.inputColours.Add(currentColor);
+        colourTrack.playerIndicators[colourTrack.indicatorIndex].color = currentColor;
+        colourTrack.indicatorIndex++;
+    
 
         if(colourTrack.inputColours.Count == 4)
         {
@@ -54,17 +57,41 @@ public class PuzzleThree : MonoBehaviour
                 colourTrack.randomise();
                 puzzleThreeTimer.solvedInt++;
                 puzzleThreeTimer.solvedText.text = $"{puzzleThreeTimer.solvedInt}";
+                //StartCoroutine(flashColours(Color.green));
+                ResetIndicators();
+                
             }
             else
             {
                 Debug.Log("YOU'RE A DINGUS THEY DONT MATCH!");
                 colourTrack.randomise();
+                //StartCoroutine(flashColours(Color.red));
+                ResetIndicators();
+        
             }
         }
     }
 
-    IEnumerator flashColours()
+    public void ResetIndicators()
     {
-        yield return new WaitForSeconds(1f);
+        colourTrack.indicatorIndex = 0;
+        colourTrack.inputColours.Clear();
+        colourTrack.inputList = "";
+    
+        foreach(Image image in colourTrack.playerIndicators)
+        {
+            image.color = Color.white;
+        }
+    }
+
+    IEnumerator flashColours(Color color)
+    {
+        foreach(Image image in colourTrack.playerIndicators )
+        {
+            image.color = color;
+            yield return new WaitForSeconds(0.4f);
+            image.color = Color.white;
+        }
+        
     }
 }
