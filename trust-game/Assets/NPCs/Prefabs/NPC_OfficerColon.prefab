@@ -168,5 +168,8 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: e626d825fa54c9141af55593f609a612, type: 2}
   npcIndex: 2
   npcController: {fileID: 4888326026836911794}
+  isInfected: 1
+  spores: {fileID: 0}
   itemInfo: {fileID: 11400000, guid: 750132db648d02143ac57b612f4e5d8b, type: 2}
   isDialogueActive: 0
+  puzzleHolder: {fileID: 0}

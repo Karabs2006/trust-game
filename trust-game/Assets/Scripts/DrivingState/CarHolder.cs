@@ -11,6 +11,7 @@ public class CarHolder : MonoBehaviour
     public Transform[] carSlots;
     private int slotIndex = 0;
     public MoodMeter moodBar;
+    public InfectionBar infectionBar;
 
     [Header ("Leave Behind")]
     public Transform[] openSlots;
@@ -46,6 +47,12 @@ public class CarHolder : MonoBehaviour
                 Instantiate(npc.npcController, openSlots[openSlotIndex]);
                  openSlotIndex++;
                 }
+            }
+            if (npc.isInfected)
+            {
+                infectionBar.StartCoroutine("SetVisibile");
+                //visual effect
+                //infection bar goes up
             }
             
         }

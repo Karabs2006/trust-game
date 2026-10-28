@@ -36,6 +36,7 @@ public class MoodMeter : MonoBehaviour
             yield return null;
         }
         //value decreases entirely (effect)
+        //crash, game over
        
     }
     IEnumerator IncreaseMood()

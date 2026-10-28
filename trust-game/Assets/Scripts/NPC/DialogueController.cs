@@ -10,6 +10,8 @@ public class DialogueController : MonoBehaviour, IInteractable
     public NPCInfo dialogueData;
     public int npcIndex;
     public GameObject npcController;
+    public bool isInfected;
+    public ParticleSystem spores;
 
      private CarHolder pickupActions;
 
@@ -65,8 +67,6 @@ public class DialogueController : MonoBehaviour, IInteractable
 
     public void StartDialogue()
     {
-       
-        {
         isDialogueActive = true;
         givenLift = false;
         dialogueIndex = 0;
@@ -76,12 +76,17 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         DisplayCurrentLine();
 
+        if(isInfected)
+        {
+           spores.Play(); 
+        }
+
         // GameObject passenger = new GameObject(dialogueData.name);
         // passenger.transform.SetParent(passengerPanel, false);
 
         // Image passengerSprite = passenger.AddComponent<Image>();
         // passengerSprite.sprite = dialogueData.npcSprite;
-    }
+    
     }
 
 
