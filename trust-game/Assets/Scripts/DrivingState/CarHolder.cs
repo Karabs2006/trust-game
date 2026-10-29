@@ -1,3 +1,5 @@
+
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CarHolder : MonoBehaviour
@@ -11,7 +13,8 @@ public class CarHolder : MonoBehaviour
     public Transform[] carSlots;
     private int slotIndex = 0;
     public MoodMeter moodBar;
-    public InfectionBar infectionBar;
+    private InfectionBar infectionBar;
+    public List<DialogueController> npcIcons = new List<DialogueController>();
 
     [Header ("Leave Behind")]
     public Transform[] openSlots;
@@ -23,7 +26,7 @@ public class CarHolder : MonoBehaviour
 
     public void FixedUpdate()
     {
-        CarState();
+        //CarState();
     }
 
     public void PickUp()
@@ -37,22 +40,32 @@ public class CarHolder : MonoBehaviour
         {
             npc = interactions.hit.collider.GetComponent<DialogueController>();
             if (npc != null)
-            {
-                //Debug.Log(npc.npcIndex);
-                Instantiate(npc.npcController, carSlots[slotIndex]);
-                //Debug.Log("Picked up");
-                slotIndex++;
-                if(npc.npcIndex == 5) //Fiona 
+            {   
+                foreach (DialogueController icon in npcIcons)
                 {
-                Instantiate(npc.npcController, openSlots[openSlotIndex]);
-                 openSlotIndex++;
+                    if (npc.npcIndex == icon.npcIndex)
+                    {
+                        Instantiate(icon.npcController, carSlots[slotIndex]); 
+                        slotIndex++;
+                        Debug.Log("Picked up");
+
+                        if(npc.npcIndex == 5) //Fiona 
+                        {
+                        Instantiate(icon.npcController, openSlots[openSlotIndex]);
+                        openSlotIndex++;
+                        }
+                    }
                 }
+                
+            
             }
             if (npc.isInfected)
             {
-                infectionBar.StartCoroutine("SetVisibile");
+                infectionBar = FindAnyObjectByType<InfectionBar>();
+                infectionBar.StartCoroutine("SetVisible"); //infection bar goes up
+                Debug.Log("Infected");
                 //visual effect
-                //infection bar goes up
+                
             }
             
         }
@@ -112,13 +125,16 @@ public class CarHolder : MonoBehaviour
     {
         foreach (Transform npcTransform in carSlots)
         npc = npcTransform.GetComponent<DialogueController>();
-        if (npc.npcIndex == 3) //Acelot Tags
         {
-           moodBar.moodValueD = 0.5f; 
-        }
-        else
-        {
+            if (npc.npcIndex == 3) //Acelot Tags
+            {
+            moodBar.moodValueD = 0.5f;
+            }
+            else
+            {
             moodBar.moodValueD = 0.01f; 
+            }  
         }
+        
     }
 }

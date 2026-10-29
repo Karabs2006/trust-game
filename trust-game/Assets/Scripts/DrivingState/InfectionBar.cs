@@ -4,13 +4,17 @@ using UnityEngine.UI;
 
 public class InfectionBar : MonoBehaviour
 {
-    public UnityEngine.UI.Image infectionBar;
+    public Image infectionBar;
     private float currentInfection;
     private float maxInfection =60;
     public GameObject holder;
     private float increase =21;
     private float decrease;
 
+    void Start()
+    {
+        //holder.SetActive(false);
+    }
 
     IEnumerator SetVisible()
     {

@@ -79,6 +79,7 @@ public class DialogueController : MonoBehaviour, IInteractable
         if(isInfected)
         {
            spores.Play(); 
+           Debug.Log("spores");
         }
 
         // GameObject passenger = new GameObject(dialogueData.name);
