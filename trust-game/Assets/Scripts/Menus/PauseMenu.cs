@@ -6,6 +6,8 @@ public class PauseMenu : MonoBehaviour
 {
     private bool isPaused;
     public GameObject pausePanel;
+    public GameObject settingScreen;
+    public GameObject keyBind;
     public Wrench wrench;
 
     void Start()
@@ -47,5 +49,20 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Back()
+    {
+        settingScreen.SetActive(false);
+        keyBind.SetActive(false);
+    }
+
+    public void Keybinds()
+    {
+        keyBind.SetActive(true);
+    }
+    public void Settings()
+    {
+        settingScreen.SetActive(true);
     }
 }

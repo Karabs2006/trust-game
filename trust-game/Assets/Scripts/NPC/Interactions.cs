@@ -6,6 +6,7 @@ public class Interactions : MonoBehaviour
 {
     public PlayerMovement playerMovement;
     public RaycastHit2D hit;
+    public GameObject text;
     private bool hasObject;
     private bool wasPressed;
     private float delay = 1f;
@@ -35,7 +36,7 @@ public class Interactions : MonoBehaviour
             {
                if (hasObject)
                 {
-                
+                text.SetActive(true);
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 if (interactable != null)
                     {
@@ -52,6 +53,7 @@ public class Interactions : MonoBehaviour
         {
             isDialogueActive = false;
             playerMovement.currentSpeed = 10f;
+            text.SetActive(false);
         }
 
     }
