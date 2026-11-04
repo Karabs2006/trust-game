@@ -9,17 +9,21 @@ public class MainMenu : MonoBehaviour
     public DialogueController cutscene;
     public Button evacuate;
     public GameObject credits;
+    public Animator cutsceneAnim;
     private string nextSceneName = "SampleScene";
     [HideInInspector] public bool mainMenuActive;
    
     public void Start()
     {
         mainMenuActive = true;
+        GetComponent<SoundEffectManager>();
     }
     public void Play()
     {
+        cutsceneAnim.SetBool("isActive", true);
         mainMenu.SetActive(false);
         cutscene.StartDialogue();
+        SoundEffectManager.Play("TV"); 
     }
 
     public void Quit()

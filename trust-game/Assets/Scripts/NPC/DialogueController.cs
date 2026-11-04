@@ -29,6 +29,8 @@ public class DialogueController : MonoBehaviour, IInteractable
     [Header("RoadEvents")]
     public GameObject puzzleHolder; // assign specific puzzle here
 
+    public bool isCutscene;
+
     //public Transform passengerPanel;
   
     void Start()
@@ -255,8 +257,15 @@ public class DialogueController : MonoBehaviour, IInteractable
         }
         else if (!givenLift)
         {
+            if (!isCutscene)
+            {
             pickupActions.LeaveBehind();
-            Debug.Log("LeftBehind");
+            Debug.Log("LeftBehind");  
+            }
+            else
+            {
+              EndDialogue();    
+            }  
         }
 
         yield return new WaitForSeconds(1f);

@@ -14,17 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogueLines:
+  - '                                                         .'
   - This is a National Emergency Broadcast. Pay close attention to the announcenmnets
     that follow
   - If you are a resident of ******* Evacuate the area Immediately
   - 'Find your nearest Government facility marked on the map. '
   - 'Do not Interact with people you don''t know '
   - 'If you see anyone with these signs of infection: Do not get close, Do not Interact.  '
-  - 'Continue driving anf Call the Emergency Service Hotline: *********'
-  autoProgressLines: 010101010101
-  endDialogueLines: 000000000001
-  autoProgressDelay: 2
-  dialogueSpeed: 0.04
+  - 'Continue driving and Call the Emergency Service Hotline: *********'
+  autoProgressLines: 01010101010101
+  endDialogueLines: 00000000000001
+  autoProgressDelay: 1
+  dialogueSpeed: 0.055
   choices: []
   giveLiftIndex: 
   leaveBehindIndex: 
