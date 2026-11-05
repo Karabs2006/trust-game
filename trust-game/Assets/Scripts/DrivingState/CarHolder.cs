@@ -15,6 +15,7 @@ public class CarHolder : MonoBehaviour
     public MoodMeter moodBar;
     private InfectionBar infectionBar;
     public List<DialogueController> npcIcons = new List<DialogueController>();
+    public bool hasPickedup;
 
     [Header ("Leave Behind")]
     public Transform[] openSlots;
@@ -24,9 +25,12 @@ public class CarHolder : MonoBehaviour
     private int puzzleNum = 0;
     private RoadEvent REcollider;
 
-    public void FixedUpdate()
+    void FixedUpdate()
     {
-        //CarState();
+        if (!hasPickedup)
+        {
+          CarState();  
+        } 
     }
 
     public void PickUp()
@@ -123,17 +127,21 @@ public class CarHolder : MonoBehaviour
 
     public void CarState()
     {
-        foreach (Transform npcTransform in carSlots)
-        npc = npcTransform.GetComponent<DialogueController>();
+        foreach (Transform transform in carSlots)
         {
-            if (npc.npcIndex == 3) //Acelot Tags
+            DialogueController npcinfo = transform.GetComponentInChildren<DialogueController>();
+            if (npcinfo != null)
+            {
+            if (npcinfo.npcIndex == 3) //Acelot Tags
             {
             moodBar.moodValueD = 0.5f;
+            hasPickedup = true;
             }
             else
             {
             moodBar.moodValueD = 0.01f; 
-            }  
+            }   
+            }
         }
         
     }

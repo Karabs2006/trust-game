@@ -269,7 +269,7 @@ public class DialogueController : MonoBehaviour, IInteractable
         }
 
         yield return new WaitForSeconds(1f);
-        Debug.Log("Wait");
+        //Debug.Log("Wait");
         EndDialogue();  
     }
 
