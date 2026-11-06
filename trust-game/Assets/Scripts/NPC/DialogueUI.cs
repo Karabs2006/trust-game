@@ -9,18 +9,25 @@ public class DialogueUI : MonoBehaviour
 {
     public static DialogueUI Instance { get; private set; }
 
+[Header ("Main Dialogue")]
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
     public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
     public Image npcImage;
     public GameObject itemHolder;
-    // public GameObject itemButton;
     public Image item;
+
+[Header ("RestStop Dialogue")]
+    private Reststop reststop;
+    public TMP_Text restStopText;
+    public GameObject restStopPanel;
+    public Image iconImage;
 
     
     void Awake() //stops there from being multiple instances of this script
     {
+        reststop = FindAnyObjectByType<Reststop>();
         if (Instance == null)
         {
             Instance = this;
@@ -34,12 +41,28 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowDialogueUI(bool show)
     {
-        dialoguePanel.SetActive(show);
+        if (!reststop.restStopActive)
+        {
+          dialoguePanel.SetActive(show);  
+        }
+        else
+        {
+         restStopPanel.SetActive(show); 
+        }
+        
     }
 
     public void SetNPCInfo(Sprite npcSprite)
     {
-       npcImage.sprite = npcSprite;
+        if (!reststop.restStopActive)
+        {
+          npcImage.sprite = npcSprite;  
+        }
+        else
+        {
+           iconImage.sprite = npcSprite; 
+        }
+       
     }
 
     public void SetItemSprite(Sprite itemSprite)
@@ -50,7 +73,15 @@ public class DialogueUI : MonoBehaviour
 
     public void SetDialogueText(string text) //gets the dialogue info 
     {
-        dialogueText.text = text;
+        if (!reststop.restStopActive)
+        {
+          dialogueText.text = text;  
+        }
+        else
+        {
+            restStopText.text = text;
+        }
+        
     }
 
     public void ClearChoices()

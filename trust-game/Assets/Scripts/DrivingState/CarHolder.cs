@@ -15,7 +15,7 @@ public class CarHolder : MonoBehaviour
     public MoodMeter moodBar;
     private InfectionBar infectionBar;
     public List<DialogueController> npcIcons = new List<DialogueController>();
-    public bool hasPickedup;
+  
 
     [Header ("Leave Behind")]
     public Transform[] openSlots;
@@ -27,10 +27,7 @@ public class CarHolder : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!hasPickedup)
-        {
-          CarState();  
-        } 
+         CarState();  
     }
 
     public void PickUp()
@@ -51,12 +48,17 @@ public class CarHolder : MonoBehaviour
                     {
                         Instantiate(icon.npcController, carSlots[slotIndex]); 
                         slotIndex++;
-                        Debug.Log("Picked up");
+                        // Debug.Log("Picked up");
 
                         if(npc.npcIndex == 5) //Fiona 
                         {
                         Instantiate(icon.npcController, openSlots[openSlotIndex]);
                         openSlotIndex++;
+                        }
+
+                        if(npc.npcIndex == 6) //Dog Walker
+                        {
+                          //Instantiate dog  
                         }
                     }
                 }
@@ -135,7 +137,6 @@ public class CarHolder : MonoBehaviour
             if (npcinfo.npcIndex == 3) //Acelot Tags
             {
             moodBar.moodValueD = 0.5f;
-            hasPickedup = true;
             }
             else
             {
