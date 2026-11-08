@@ -12,13 +12,13 @@ public class PuzzleThreeTimer : MonoBehaviour
     public GameObject puzzle;
     public PlayerMovement playerMovement;
 
-    bool start = false;
+    public bool start = false;
 
     void Start()
     {
         timerText.text = $"{timeInt}";
         //StartCoroutine(Countdown());
-        start = true;
+        //start = true;
     }
 
     void FixedUpdate()

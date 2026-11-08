@@ -12,6 +12,8 @@ public class PuzzleThree : MonoBehaviour
     private Button button;
     public ColourTrack colourTrack;
     public PuzzleThreeTimer puzzleThreeTimer;
+
+    //public float cooldownInt = 1f;
     
 
     void Start()
@@ -53,7 +55,9 @@ public class PuzzleThree : MonoBehaviour
 
             if(colourTrack.inputList == colourTrack.setList)
             {
+                
                 Debug.Log("YOU MATCHED THE COLOURS!");
+                colourTrack.coolDown -= 0.1f;
                 colourTrack.randomise();
                 puzzleThreeTimer.solvedInt++;
                 puzzleThreeTimer.solvedText.text = $"{puzzleThreeTimer.solvedInt}";

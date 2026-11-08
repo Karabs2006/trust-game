@@ -20,7 +20,7 @@ public class ColourTrack : MonoBehaviour
     public List<Color> inputColours = new List<Color>{};
 
 
-    public float coolDown = 0.5f;
+    public float coolDown = 1f;
     public Image image;
     public string setList;
     public string inputList;

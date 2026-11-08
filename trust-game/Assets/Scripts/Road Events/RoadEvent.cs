@@ -11,6 +11,7 @@ public class RoadEvent : MonoBehaviour
     public GameObject moodMeter;
     public CarHolder puzzleRandomiser;
 
+    
 
     void Start()
     {
@@ -23,6 +24,9 @@ public class RoadEvent : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //Stop Player Movement when puzzle is active
+            
+            SoundEffectManager.Play("carBreakdown");
+            SoundEffectManager.SetVolume(1f);
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
             playerMovement.currentSpeed = 0;
             playerMovement.rb.linearVelocity = Vector2.zero;

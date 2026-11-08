@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class Inventory : MonoBehaviour
 {
     public List<Item> items = new List<Item>();
+
+    //Trunk inventory
     public GameObject buttonPrefab;
     public Transform inventoryPanel;
-    
+
+    //Mini Inventory
+    public GameObject buttonPrefabMini;
+    public Transform inventoryPanelMini;
+
     void Start()
     {
         foreach(Item item in items)
@@ -33,11 +40,11 @@ public class Inventory : MonoBehaviour
 
     }
 
-    public void AddItem(Item newItem)
+    public void AddItem(Item newItem,GameObject prefab, Transform itemArea)
     {
         items.Add(newItem);
 
-        GameObject button = Instantiate(buttonPrefab, inventoryPanel);
+        GameObject button = Instantiate(prefab, itemArea);
         TMP_Text tMP_Text = button.GetComponentInChildren<TMP_Text>();
         tMP_Text.text = $"{newItem.itemName}";
         Debug.Log(newItem.itemName);

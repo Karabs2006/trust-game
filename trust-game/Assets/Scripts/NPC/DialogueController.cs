@@ -192,24 +192,28 @@ public class DialogueController : MonoBehaviour, IInteractable
         dialogueUI.SetItemSprite(itemInfo.icon); 
         Item reward = Instantiate(dialogueData.item); //gets the information of the item
         Debug.Log(reward);
+
+        GameObject inventoryObject = GameObject.Find("ScriptHolderInv");
+        Inventory inventoryScript = inventoryObject.GetComponent<Inventory>();
         
 
         if(itemInfo.inventoryGroup == "Trunk")
         {
-            GameObject inventoryObject = GameObject.Find("ScriptHolderInv");
-            Inventory inventoryScript = inventoryObject.GetComponent<Inventory>();
-
-            inventoryScript.AddItem(itemInfo);
+            inventoryScript.AddItem(itemInfo,inventoryScript.buttonPrefab, inventoryScript.inventoryPanel);
+            Debug.Log("ITEM IN TRUNK");
         }
 
         if(itemInfo.inventoryGroup == "Mini")
         {
-            GameObject subGroupObj = GameObject.Find($"{itemInfo.miniInvSubGroup}");
-            GameObject scriptHolder = subGroupObj.transform.Find("Script").gameObject;
-            MiniInventory miniInventory = scriptHolder.GetComponent<MiniInventory>();
+            //GameObject subGroupObj = GameObject.Find($"{itemInfo.miniInvSubGroup}");
+            //GameObject scriptHolder = subGroupObj.transform.Find("Script").gameObject;
+            //MiniInventory miniInventory = scriptHolder.GetComponent<MiniInventory>();
 
-            miniInventory.amount++;
-            miniInventory.countText.text = $"{miniInventory.amount}";
+            //miniInventory.amount++;
+            //miniInventory.countText.text = $"{miniInventory.amount}";
+
+            inventoryScript.AddItem(itemInfo,inventoryScript.buttonPrefabMini, inventoryScript.inventoryPanelMini);
+            Debug.Log("ITEM IN MINI");
 
         }
     }

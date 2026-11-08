@@ -8,7 +8,6 @@ public class WinPuzzle : MonoBehaviour
     public GameObject moodMeter;
 
     public GameObject puzzleTwo;
-
     void Start()
     {
         player = FindAnyObjectByType<PlayerMovement>();
