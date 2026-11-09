@@ -13,7 +13,7 @@ public class MoodMeter : MonoBehaviour
     private int moodIncrease = 100; //the amount the mood will increase by
     public PlayerMovement player;
     public Interactions dialogue;
-    public Reststop restStop; 
+    public Reststop restStop;
 
     void Start()
     {

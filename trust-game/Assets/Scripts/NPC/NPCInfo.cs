@@ -15,6 +15,7 @@ public class NPCInfo : ScriptableObject
     public bool[] endDialogueLines; //if True = the dialogue doesnt continue 
     public float autoProgressDelay = 1.5f;
     public float dialogueSpeed = 0.05f;
+    public int carFullIndex;
     //public int characterIndex;
 
     [Header ("Choices")]

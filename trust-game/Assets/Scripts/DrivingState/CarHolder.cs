@@ -15,6 +15,10 @@ public class CarHolder : MonoBehaviour
     public MoodMeter moodBar;
     private InfectionBar infectionBar;
     public List<DialogueController> npcIcons = new List<DialogueController>();
+    public GameObject dog;
+    private bool daDog;
+    //[HideInInspector] 
+    public bool carFull;
   
 
     [Header ("Leave Behind")]
@@ -27,7 +31,14 @@ public class CarHolder : MonoBehaviour
 
     void FixedUpdate()
     {
-         CarState();  
+        if (!daDog)
+        {
+           CarState();   
+        } 
+        if (slotIndex >= 4)
+        {
+            carFull = true;
+        }
     }
 
     public void PickUp()
@@ -52,13 +63,15 @@ public class CarHolder : MonoBehaviour
 
                         if(npc.npcIndex == 5) //Fiona 
                         {
-                        Instantiate(icon.npcController, openSlots[openSlotIndex]);
+                        Instantiate(icon.npcController, openSlots[openSlotIndex]); //she leaves after causing the road event
                         openSlotIndex++;
                         }
 
                         if(npc.npcIndex == 6) //Dog Walker
                         {
                           //Instantiate dog  
+                            Instantiate(dog, carSlots[slotIndex]); 
+                            slotIndex++;
                         }
                     }
                 }
@@ -134,15 +147,22 @@ public class CarHolder : MonoBehaviour
             DialogueController npcinfo = transform.GetComponentInChildren<DialogueController>();
             if (npcinfo != null)
             {
-            if (npcinfo.npcIndex == 3) //Acelot Tags
+            if (npcinfo.npcIndex == 7)
+            {
+               moodBar.moodValueD = 0.005f; 
+               daDog = true;
+            }
+            else if (npcinfo.npcIndex == 3 && !daDog) //Acelot Tags
             {
             moodBar.moodValueD = 0.5f;
             }
             else
             {
-            moodBar.moodValueD = 0.01f; 
-            }   
+               moodBar.moodValueD = 0.01f;      
             }
+            
+            }
+            
         }
         
     }
