@@ -141,9 +141,22 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (dialogueData.giveLiftIndex.Length > dialogueIndex && dialogueData.giveLiftIndex[dialogueIndex])
         {
             //Give a lift option
+            if (!pickupActions.carFull)
+            {
             givenLift = true;
             StartCoroutine("Wait");
-            return;
+            return;  
+            }
+            else
+            {
+                //Full Line
+            dialogueUI.SetDialogueText(dialogueData.dialogueLines[dialogueData.carFullIndex]); 
+            givenLift = false;
+            StartCoroutine("Wait");
+            return;  
+            }
+           
+           
         }
         if (dialogueData.leaveBehindIndex.Length > dialogueIndex && dialogueData.leaveBehindIndex[dialogueIndex])
         {
@@ -257,14 +270,14 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (givenLift)
         {
             pickupActions.PickUp();
-            Debug.Log("PickedUp");
+            //Debug.Log("PickedUp");
         }
         else if (!givenLift)
         {
             if (!isCutscene)
             {
             pickupActions.LeaveBehind();
-            Debug.Log("LeftBehind");  
+            //Debug.Log("LeftBehind");  
             }
             else
             {
@@ -272,7 +285,7 @@ public class DialogueController : MonoBehaviour, IInteractable
             }  
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         //Debug.Log("Wait");
         EndDialogue();  
     }

@@ -10,9 +10,11 @@ public class InfectionBar : MonoBehaviour
     public GameObject holder;
     private float increase =21;
     private float decrease;
+    private EndingManager ending;
 
     void Start()
     {
+        ending = FindAnyObjectByType<EndingManager>();
         //holder.SetActive(false);
     }
 
@@ -38,6 +40,7 @@ public class InfectionBar : MonoBehaviour
     {
         if (currentInfection >= maxInfection)
         {
+            ending.Ending();
             Debug.Log("Youre infected");
             //game over screen 
         }
