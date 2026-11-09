@@ -7,7 +7,8 @@ using UnityEditor;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> items = new List<Item>();
+    public List<Item> trunkItems = new List<Item>();
+    public List<Item> miniItems = new List<Item>();
 
     //Trunk inventory
     public GameObject buttonPrefab;
@@ -18,7 +19,8 @@ public class Inventory : MonoBehaviour
     public Transform inventoryPanelMini;
 
     void Start()
-    {
+    {   
+        /*
         foreach(Item item in items)
         {
             //Reuse this to put item in the inventory
@@ -36,13 +38,14 @@ public class Inventory : MonoBehaviour
             button.SetActive(false);
             });
         }
+        */
 
 
     }
 
-    public void AddItem(Item newItem,GameObject prefab, Transform itemArea)
+    public void AddItem(List<Item> itemList, Item newItem,GameObject prefab, Transform itemArea)
     {
-        items.Add(newItem);
+        itemList.Add(newItem);
 
         GameObject button = Instantiate(prefab, itemArea);
         TMP_Text tMP_Text = button.GetComponentInChildren<TMP_Text>();
@@ -57,11 +60,4 @@ public class Inventory : MonoBehaviour
         });
     }
 
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

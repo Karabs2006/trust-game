@@ -212,7 +212,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         if(itemInfo.inventoryGroup == "Trunk")
         {
-            inventoryScript.AddItem(itemInfo,inventoryScript.buttonPrefab, inventoryScript.inventoryPanel);
+            inventoryScript.AddItem(inventoryScript.trunkItems, itemInfo,inventoryScript.buttonPrefab, inventoryScript.inventoryPanel);
             Debug.Log("ITEM IN TRUNK");
         }
 
@@ -225,7 +225,7 @@ public class DialogueController : MonoBehaviour, IInteractable
             //miniInventory.amount++;
             //miniInventory.countText.text = $"{miniInventory.amount}";
 
-            inventoryScript.AddItem(itemInfo,inventoryScript.buttonPrefabMini, inventoryScript.inventoryPanelMini);
+            inventoryScript.AddItem(inventoryScript.miniItems, itemInfo,inventoryScript.buttonPrefabMini, inventoryScript.inventoryPanelMini);
             Debug.Log("ITEM IN MINI");
 
         }

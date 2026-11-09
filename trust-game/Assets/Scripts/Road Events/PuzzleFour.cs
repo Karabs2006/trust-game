@@ -14,7 +14,7 @@ public class PuzzleFour : MonoBehaviour
 
     bool started = false;
 
-    int timeInt = 30;
+    public int timeInt = 30;
 
     void Start()
     {
