@@ -4,6 +4,7 @@ public class Reststop : MonoBehaviour
 {
     private PlayerMovement playerMovement;
     public GameObject restStopView;
+    public GameObject inventory;
     public bool restStopActive;
     
     void Start()
@@ -19,7 +20,7 @@ public class Reststop : MonoBehaviour
             playerMovement.currentSpeed = 0;
             restStopView.SetActive(true);
             restStopActive = true;
-           
+            inventory.SetActive(true);
         }
     }
 
@@ -28,5 +29,6 @@ public class Reststop : MonoBehaviour
         restStopView.SetActive(false);
         playerMovement.currentSpeed = 10;
         restStopActive = false;
+        inventory.SetActive(false);
     }
 }
