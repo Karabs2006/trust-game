@@ -4,11 +4,12 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
 using UnityEditor;
+using System;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> trunkItems = new List<Item>();
-    public List<Item> miniItems = new List<Item>();
+    //public List<Item> trunkItems = new List<Item>();
+    //public List<Item> miniItems = new List<Item>();
 
     //Trunk inventory
     public GameObject buttonPrefab;
@@ -43,9 +44,17 @@ public class Inventory : MonoBehaviour
 
     }
 
-    public void AddItem(List<Item> itemList, Item newItem,GameObject prefab, Transform itemArea)
+    public void AddItem(String group, Item newItem,GameObject prefab, Transform itemArea)
     {
-        itemList.Add(newItem);
+        if(group == "trunk")
+        {
+            ItemLists.AddTrunk(newItem);
+        }
+
+        if(group == "mini")
+        {
+            ItemLists.AddMini(newItem);
+        }
 
         GameObject button = Instantiate(prefab, itemArea);
         TMP_Text tMP_Text = button.GetComponentInChildren<TMP_Text>();

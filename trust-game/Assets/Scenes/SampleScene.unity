@@ -1327,6 +1327,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &103317416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103317417}
+  m_Layer: 0
+  m_Name: TomogachiSpawnTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &103317417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103317416}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -158.2, y: 2.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115346734
 GameObject:
   m_ObjectHideFlags: 0
@@ -9126,6 +9157,7 @@ MonoBehaviour:
   particleSystem: {fileID: 1866494825}
   puzzle: {fileID: 335486737}
   playerMovement: {fileID: 1550971350}
+  timeInt: 30
 --- !u!1 &595335698
 GameObject:
   m_ObjectHideFlags: 0
@@ -17642,8 +17674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d563dacfcd8e844fa423bd95a0e6fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  items:
-  - {fileID: 11400000, guid: ab26723043d40b24b96dd1c51bf714e0, type: 2}
   buttonPrefab: {fileID: 4179426380965780573, guid: 7255f2082bae58d40b38a5c903a58bbb, type: 3}
   inventoryPanel: {fileID: 645310632}
   buttonPrefabMini: {fileID: 4179426380965780573, guid: 2ff789b3921a36945b92cf89a2316ea8, type: 3}
@@ -17695,6 +17725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Reststop
   restStopView: {fileID: 1141037210}
   restStopActive: 0
+  inventory: {fileID: 0}
 --- !u!61 &1151557456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19341,6 +19372,10 @@ PrefabInstance:
       propertyPath: spores
       value: 
       objectReference: {fileID: 4622519005055453225, guid: 0afb40cb4ca3f4a4db629b04bff3fb02, type: 3}
+    - target: {fileID: 2541017915578431456, guid: 4729456419daac24e9056efcc9524e75, type: 3}
+      propertyPath: itemInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ab3a5017e3d7ba4095da231f55df810, type: 2}
     - target: {fileID: 6485080322086581041, guid: 4729456419daac24e9056efcc9524e75, type: 3}
       propertyPath: m_LocalPosition.x
       value: -230.55
@@ -20617,6 +20652,7 @@ MonoBehaviour:
   - {fileID: 4242469702088010985, guid: a78ef363bdc032a4da0712691422eba6, type: 3}
   - {fileID: 2287500823909423132, guid: 2c1f54c2771ba4d4da8048b77bbbfcd7, type: 3}
   dog: {fileID: 5803868017654263848, guid: e4fb375874c072541822e7b927a3adb5, type: 3}
+  carFull: 0
   openSlots:
   - {fileID: 1841172674}
   - {fileID: 2042218311}
@@ -36891,3 +36927,4 @@ SceneRoots:
   - {fileID: 1331515296}
   - {fileID: 1232186106}
   - {fileID: 1225504073}
+  - {fileID: 103317417}
