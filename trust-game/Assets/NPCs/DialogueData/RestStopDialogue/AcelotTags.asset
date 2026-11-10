@@ -13,14 +13,26 @@ MonoBehaviour:
   m_Name: AcelotTags
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  dialogueLines: []
+  dialogueLines:
+  - '*Looking at it makes you feel dread*'
+  - '*Still Doesnt say anything*'
+  - Let them continue to travel with you?
+  - '*You ask them to leave*'
+  - '*they get up slowly and walk off almost tripping over their feet*'
+  - '*You decide to keep them around*'
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 000000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  choices: []
+  carFullIndex: 0
+  choices:
+  - choiceIndex: 2
+    choices:
+    - Yes
+    - No
+    nextDialogueIndex: 0500000003000000
   giveLiftIndex: 
-  leaveBehindIndex: 
+  leaveBehindIndex: 000000000100
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

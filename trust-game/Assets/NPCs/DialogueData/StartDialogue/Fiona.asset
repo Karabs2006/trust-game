@@ -17,15 +17,17 @@ MonoBehaviour:
   - ' I''m really sorry to bother you'
   - 'anyway you got space in your car?  '
   - 'I got some *old movies I can trade you to help make things seem a bit more normal* '
-  - 'Im sure you can even *sell them*... if you wanted. '
+  - 'Will help us stay awake, not that we can really sleep nowadays, heh '
   - 'Thank you! '
   - ' I promise not to talk your ear off about movies (Player gets old movies but
     this causes a road event)'
   - Sigh, I understand
+  - Actually, I dont think Ill fit. thanks anyways.
   autoProgressLines: 
   endDialogueLines: 00000000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
+  carFullIndex: 7
   choices:
   - choiceIndex: 3
     choices:

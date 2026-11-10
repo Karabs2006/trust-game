@@ -14,6 +14,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     public ParticleSystem spores;
 
      private CarHolder pickupActions;
+     private Reststop reststop;
 
     [Header("Item Data")]
     public Item itemInfo;
@@ -38,6 +39,7 @@ public class DialogueController : MonoBehaviour, IInteractable
         dialogueUI = DialogueUI.Instance;
         dialogueUI.ShowDialogueUI(false); 
         pickupActions = FindAnyObjectByType<CarHolder>();
+        reststop = FindAnyObjectByType<Reststop>();
     }
 
     public DialogueController(int npcIndex)
@@ -163,7 +165,8 @@ public class DialogueController : MonoBehaviour, IInteractable
             //Leave Behind option
             givenLift = false;
             StartCoroutine("Wait");
-            return;  
+            return;    
+    
         }
         
         //NextLine
@@ -288,6 +291,10 @@ public class DialogueController : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(0.5f);
         //Debug.Log("Wait");
         EndDialogue();  
+        if (reststop.restStopActive)
+        {
+            Destroy(gameObject);
+        }
     }
 
 

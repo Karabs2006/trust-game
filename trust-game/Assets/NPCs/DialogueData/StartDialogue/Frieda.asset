@@ -24,13 +24,16 @@ MonoBehaviour:
     his amazing charm. '
   - 'Can I ask you to give me a lift, I promise not to annoy you and be a burden
     like how I was to my mom and dad. '
-  - Thank you so much! (Player gets a tomogatchi that allows them to save)
+  - 'Thank you so much! '
+  - I promise we will be of help!
   - "Mom was right\u2026 no one would give me a *second chance*, im just a burden
     to all.  "
+  - I know Im small but I dont think Ill fit in there
   autoProgressLines: 
-  endDialogueLines: 000000000000000001
+  endDialogueLines: 0000000000000000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.07
+  carFullIndex: 10
   choices:
   - choiceIndex: 3
     choices:
@@ -47,8 +50,8 @@ MonoBehaviour:
     - Sure you can come along
     - Sorry...
     nextDialogueIndex: 0700000008000000
-  giveLiftIndex: 000000000000000100
-  leaveBehindIndex: 000000000000000001
-  nextDialogueIndexI: 0
-  item: {fileID: 0}
+  giveLiftIndex: 000000000000000001
+  leaveBehindIndex: 0000000000000000000101
+  nextDialogueIndexI: 8
+  item: {fileID: 11400000, guid: 7543d7701506f4344a17d2d8f8f0d8b4, type: 2}
   givesItem: 000000000000000100

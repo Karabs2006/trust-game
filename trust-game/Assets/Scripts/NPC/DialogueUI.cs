@@ -22,6 +22,7 @@ public class DialogueUI : MonoBehaviour
     private Reststop reststop;
     public TMP_Text restStopText;
     public GameObject restStopPanel;
+    public Transform restStopContainer;
     public Image iconImage;
 
     
@@ -91,9 +92,19 @@ public class DialogueUI : MonoBehaviour
 
     public void CreateChoiceButton(string choiceText, UnityEngine.Events.UnityAction onClick)
     {
+        if (reststop !=null && !reststop.restStopActive)
+        {
         GameObject choiceButton = Instantiate(choiceButtonPrefab, choiceContainer);
         choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
-        choiceButton.GetComponent<Button>().onClick.AddListener(onClick);
+        choiceButton.GetComponent<Button>().onClick.AddListener(onClick); 
+        }
+        else
+        {
+        GameObject choiceButton = Instantiate(choiceButtonPrefab, restStopContainer);
+        choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
+        choiceButton.GetComponent<Button>().onClick.AddListener(onClick);   
+        }
+        
 
     }
 

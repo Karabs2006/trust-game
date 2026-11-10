@@ -13,14 +13,25 @@ MonoBehaviour:
   m_Name: Frieda
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 0}
-  dialogueLines: []
+  dialogueLines:
+  - Wow, this place is so cool! My parents never let me come to places like this
+  - 'Im really glad I ran into you! '
+  - Oh...
+  - I understand, my parents always said I was a bit much
+  - You, me and Moshi Moshi are going to be the best of friends!
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 0000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  choices: []
+  carFullIndex: 0
+  choices:
+  - choiceIndex: 1
+    choices:
+    - I think you should stay here
+    - Im glad too
+    nextDialogueIndex: 0200000004000000
   giveLiftIndex: 
-  leaveBehindIndex: 
+  leaveBehindIndex: 0000000100
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

@@ -13,14 +13,26 @@ MonoBehaviour:
   m_Name: Officer
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 0}
-  dialogueLines: []
+  dialogueLines:
+  - '*Coughing*'
+  - You want something pal?
+  - Are you questioning me? Acting like Im a threat??
+  - IVE BEEN TAKING CARE OF THOSE INFECTED FREAKS
+  - Ill show you a real threat...
+  - Just old age and old lungs, nothing to worry bout
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 000000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  choices: []
+  carFullIndex: 0
+  choices:
+  - choiceIndex: 1
+    choices:
+    - I think your infected
+    - You doing okay?
+    nextDialogueIndex: 0200000005000000
   giveLiftIndex: 
-  leaveBehindIndex: 
+  leaveBehindIndex: 0000000001
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

@@ -13,12 +13,22 @@ MonoBehaviour:
   m_Name: Dog
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 0}
-  dialogueLines: []
+  dialogueLines:
+  - '*Its nice having a friend to accompany you*'
+  - Pet the dog?
+  - '*You pet the dogs head, his tail starts wagging*'
+  - '*You''re still unsure if the dog is uninfected*'
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 00000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  choices: []
+  carFullIndex: 0
+  choices:
+  - choiceIndex: 1
+    choices:
+    - Absolutely
+    - Not sure
+    nextDialogueIndex: 0200000003000000
   giveLiftIndex: 
   leaveBehindIndex: 
   nextDialogueIndexI: 0

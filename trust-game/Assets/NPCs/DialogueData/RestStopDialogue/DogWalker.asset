@@ -13,14 +13,21 @@ MonoBehaviour:
   m_Name: DogWalker
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 0}
-  dialogueLines: []
+  dialogueLines:
+  - Listen I really appreiciate the kindness youve shown me today
+  - I wish there was more that I could do for you
+  - '*Coughing*'
+  - I should get going before things get worse
+  - Take good care of Dog for me
+  - '*He hugs Dog one last time before walking off*'
   autoProgressLines: 
   endDialogueLines: 
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
+  carFullIndex: 0
   choices: []
   giveLiftIndex: 
-  leaveBehindIndex: 
+  leaveBehindIndex: 000000000001
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

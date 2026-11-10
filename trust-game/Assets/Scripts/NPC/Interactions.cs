@@ -7,7 +7,7 @@ public class Interactions : MonoBehaviour
     public PlayerMovement playerMovement;
     public RaycastHit2D hit;
     public GameObject text;
-    private bool hasObject;
+   [HideInInspector] public bool hasObject;
     private bool wasPressed;
     private float delay = 1f;
     [HideInInspector] public bool isDialogueActive;

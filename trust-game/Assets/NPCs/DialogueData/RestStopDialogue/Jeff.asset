@@ -13,14 +13,26 @@ MonoBehaviour:
   m_Name: Jeff
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 0}
-  dialogueLines: []
+  dialogueLines:
+  - Yo man, you got any cash on ya?
+  - Im joking... Its the end of the world no one cares about money anymore
+  - I can just take whateva I want
+  - WHAT? come on man it was a joke
+  - Whatever
+  - ...
   autoProgressLines: 
-  endDialogueLines: 
+  endDialogueLines: 000000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  choices: []
+  carFullIndex: 0
+  choices:
+  - choiceIndex: 2
+    choices:
+    - You should stay here then
+    - '*Walk away*'
+    nextDialogueIndex: 0300000005000000
   giveLiftIndex: 
-  leaveBehindIndex: 
+  leaveBehindIndex: 000000000100
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

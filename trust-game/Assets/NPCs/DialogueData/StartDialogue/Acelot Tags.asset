@@ -16,12 +16,14 @@ MonoBehaviour:
   dialogueLines:
   - '*You get handed a note in barely legible writing*'
   - 'mY NamE iS AcELot tAGs, LeT mE iN yOur CAR :)  '
-  - '(Mood bar decreases faster) '
-  - (Causes Road Event)
+  - '*You feel a sense of unease*'
+  - '*Despite not seeing its face, you can tell its not happy*'
+  - '*your car is full, it wanders off*'
   autoProgressLines: 
-  endDialogueLines: 00000001
+  endDialogueLines: 0000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
+  carFullIndex: 4
   choices:
   - choiceIndex: 1
     choices:
@@ -29,7 +31,7 @@ MonoBehaviour:
     - '*Drive off*'
     nextDialogueIndex: 0200000003000000
   giveLiftIndex: 00000100
-  leaveBehindIndex: 00000001
+  leaveBehindIndex: 0000000101
   nextDialogueIndexI: 0
   item: {fileID: 0}
   givesItem: 

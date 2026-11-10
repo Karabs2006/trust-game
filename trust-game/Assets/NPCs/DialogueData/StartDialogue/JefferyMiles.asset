@@ -22,17 +22,18 @@ MonoBehaviour:
     you give me a lift?  "
   - Sickkkk
   - This is the best music you'll hear
-  - 'Pssh whatever man. (causes road event) '
+  - 'Pssh whatever man.  '
   - ' You know what screw you man, and your awful car '
   - "\u2026"
   - "So is that a no on the lift\u2026?"
-  - 'Loser (Causes road event)  '
+  - 'Loser  '
   - ...
+  - Ay man, maybe next time, all these people will cramp my personal space
   autoProgressLines: 
-  endDialogueLines: 000000000001010000000101
+  endDialogueLines: 00000000000101000000010101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
-  characterIndex: 0
+  carFullIndex: 12
   choices:
   - choiceIndex: 0
     choices:

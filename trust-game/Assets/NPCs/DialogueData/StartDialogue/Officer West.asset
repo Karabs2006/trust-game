@@ -23,12 +23,15 @@ MonoBehaviour:
   - 'So what you say? Gonna give this officer a lift? '
   - "Eh, been smokin since my 20s\u2026 Bad habits die hard."
   - 'So what you say? Gonna give this officer a lift? '
-  - "You\u2019ll regret this.     (He causes a road event later on)   "
-  - 'Good choice.  (Player gets a gun with one bullet) '
+  - "You\u2019ll regret this.      "
+  - 'Good choice.   '
+  - Ill help you if youre ever in trouble.
+  - 'Hmm, maybe not, too many folks. '
   autoProgressLines: 
-  endDialogueLines: 0000000000000000000100
+  endDialogueLines: 00000000000000000001000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
+  carFullIndex: 12
   choices:
   - choiceIndex: 1
     choices:
@@ -46,7 +49,7 @@ MonoBehaviour:
     - Come on in.
     nextDialogueIndex: 090000000a000000
   giveLiftIndex: 0000000000000000000001
-  leaveBehindIndex: 0000000000000000000100
-  nextDialogueIndexI: 0
-  item: {fileID: 0}
+  leaveBehindIndex: 000000000000000000010001
+  nextDialogueIndexI: 11
+  item: {fileID: 11400000, guid: 31176f24d51c449489c93b29b6bef4ed, type: 2}
   givesItem: 0000000000000000000001

@@ -21,16 +21,18 @@ MonoBehaviour:
     by this disease."
   - 'Not so lucky for us *coughing* '
   - I won't be much trouble, I just ask you to take care of Dog when I'm gone.
-  - 'You''re a kind soul, thank you. (Get Dog , slows mood bar+ Money) '
-  - ' I understand. (Causes Road Event: where you see the dog alone)  '
+  - 'You''re a kind soul, thank you. '
+  - ' I understand... '
   - " I know.. I won't be around you long enough for the infection to spread\u2026"
   - 'please I just need to get to the next stop and for someone to take care of Dog. '
   - 'Thank you... thank you '
   - I understand
+  - Doesnt seem like you have enough space, Thank you for the offer anyways
   autoProgressLines: 
-  endDialogueLines: 000000000000000100000001
+  endDialogueLines: 00000000000000010000000101
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
+  carFullIndex: 12
   choices:
   - choiceIndex: 0
     choices:
