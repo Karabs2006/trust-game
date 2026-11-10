@@ -11417,7 +11417,7 @@ MonoBehaviour:
   inputList: 
   indicatorIndex: 0
   playerIndicators: []
-  puzzleThreeTimer: {fileID: 0}
+  puzzleThreeTimer: {fileID: 743033080}
 --- !u!114 &743033080
 MonoBehaviour:
   m_ObjectHideFlags: 0
