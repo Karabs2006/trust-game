@@ -32,6 +32,8 @@ public class DialogueController : MonoBehaviour, IInteractable
 
     public bool isCutscene;
 
+    public string puzzleGameObjName;
+
     //public Transform passengerPanel;
   
     void Start()
@@ -40,6 +42,18 @@ public class DialogueController : MonoBehaviour, IInteractable
         dialogueUI.ShowDialogueUI(false); 
         pickupActions = FindAnyObjectByType<CarHolder>();
         reststop = FindAnyObjectByType<Reststop>();
+
+        puzzleHolder = GameObject.Find(puzzleGameObjName);
+
+        if(puzzleHolder !=null )
+        {
+            //Puzzle Trigger
+            GameObject colliderObj = puzzleHolder.transform.Find("PuzzleTrigger").gameObject;
+            //Collider2D collider = colliderObj.GetComponent<Collider2D>();
+            //colliderObj.SetActive(true);
+            colliderObj.transform.position = transform.position + Vector3.right * 10f;
+        }
+
     }
 
     public DialogueController(int npcIndex)

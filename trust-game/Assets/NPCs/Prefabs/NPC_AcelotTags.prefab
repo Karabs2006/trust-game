@@ -174,3 +174,4 @@ MonoBehaviour:
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}
   isCutscene: 0
+  puzzleGameObjName: RoadEvent
