@@ -41,7 +41,7 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowDialogueUI(bool show)
     {
-        if (!reststop.restStopActive)
+        if (reststop != null && !reststop.restStopActive)
         {
           dialoguePanel.SetActive(show);  
         }
@@ -54,7 +54,7 @@ public class DialogueUI : MonoBehaviour
 
     public void SetNPCInfo(Sprite npcSprite)
     {
-        if (!reststop.restStopActive)
+        if (reststop != null && !reststop.restStopActive)
         {
           npcImage.sprite = npcSprite;  
         }
@@ -73,7 +73,7 @@ public class DialogueUI : MonoBehaviour
 
     public void SetDialogueText(string text) //gets the dialogue info 
     {
-        if (!reststop.restStopActive)
+        if (reststop !=null && !reststop.restStopActive)
         {
           dialogueText.text = text;  
         }
