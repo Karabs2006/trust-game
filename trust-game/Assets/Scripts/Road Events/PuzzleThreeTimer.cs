@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class PuzzleThreeTimer : MonoBehaviour
@@ -11,9 +12,13 @@ public class PuzzleThreeTimer : MonoBehaviour
     public int solvedInt = 0;
     public GameObject puzzle;
     public PlayerMovement playerMovement;
+    public ColourTrack colourTrack;
 
     public bool start = false;
 
+    private Coroutine timerCoroutine;
+
+    
     void Start()
     {
         timerText.text = $"{timeInt}";
@@ -26,7 +31,13 @@ public class PuzzleThreeTimer : MonoBehaviour
         if (start)
         {
             start = false;
-            StartCoroutine(Countdown());
+
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+        }
+
+        timerCoroutine = StartCoroutine(Countdown());
         }
 
         if(solvedInt == 5)
@@ -45,7 +56,34 @@ public class PuzzleThreeTimer : MonoBehaviour
             timeInt--;
             timerText.text = $"{timeInt}";
             yield return new WaitForSecondsRealtime(1f);
-
         }
+
+        timerCoroutine = null;
+    }
+
+    public void Reset()
+    {   
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+            timerCoroutine = null;
+        }
+
+        solvedInt = 0;
+        timeInt = 60;
+        start = true;
+        solvedText.text =$"{solvedInt}";
+        timerText.text = $"{timeInt}";
+        colourTrack.coolDown = 1f;
+        colourTrack.indicatorIndex = 0;
+        colourTrack.inputColours.Clear();
+        colourTrack.inputList = "";
+    
+        foreach(Image image in colourTrack.playerIndicators)
+        {
+            image.color = Color.white;
+        }
+        colourTrack.randomise();
+
     }
 }

@@ -12,6 +12,7 @@ public class MoveTest : MonoBehaviour
     public bool isMoving = false;
 
     private float nextJumpTime = 0f;
+    public Vector3 originalPosition;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class MoveTest : MonoBehaviour
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        originalPosition = transform.localPosition;
     }
 
     void Update()
@@ -38,5 +40,10 @@ public class MoveTest : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(currentSpeed, rb.linearVelocity.y);
         isMoving = true;
+    }
+
+    public void Respawn()
+    {
+        transform.localPosition = originalPosition;
     }
 }

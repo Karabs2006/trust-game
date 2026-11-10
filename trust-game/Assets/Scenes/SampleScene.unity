@@ -2600,6 +2600,7 @@ Transform:
   m_Children:
   - {fileID: 1841506982}
   - {fileID: 1722795538}
+  - {fileID: 1905528761}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204225442
@@ -3781,6 +3782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntCounter
   tryCount: 4
   lossText: {fileID: 1812304437}
+  timerText: {fileID: 0}
 --- !u!114 &320099306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4868,6 +4870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntCounter
   tryCount: 4
   lossText: {fileID: 1812304437}
+  timerText: {fileID: 1922997871}
 --- !u!1 &369443405
 GameObject:
   m_ObjectHideFlags: 0
@@ -6223,6 +6226,7 @@ MonoBehaviour:
   jumpCooldown: 0.1
   puzzleActive: 1
   isMoving: 0
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &420502805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7962,6 +7966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntCounter
   tryCount: 4
   lossText: {fileID: 1812304437}
+  timerText: {fileID: 0}
 --- !u!114 &511557101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11072,6 +11077,7 @@ MonoBehaviour:
   inputList: 
   indicatorIndex: 0
   playerIndicators: []
+  puzzleThreeTimer: {fileID: 743033080}
 --- !u!1 &740055275
 GameObject:
   m_ObjectHideFlags: 0
@@ -11411,6 +11417,7 @@ MonoBehaviour:
   inputList: 
   indicatorIndex: 0
   playerIndicators: []
+  puzzleThreeTimer: {fileID: 0}
 --- !u!114 &743033080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11429,6 +11436,7 @@ MonoBehaviour:
   solvedInt: 0
   puzzle: {fileID: 148589229}
   playerMovement: {fileID: 1550971350}
+  colourTrack: {fileID: 743033079}
   start: 0
 --- !u!1 &750588051
 GameObject:
@@ -12415,7 +12423,7 @@ Transform:
   m_GameObject: {fileID: 782567130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.6, y: 2, z: 0}
+  m_LocalPosition: {x: -156, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16377,6 +16385,7 @@ MonoBehaviour:
   jumpCooldown: 0
   puzzleActive: 1
   isMoving: 0
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!58 &1062684079
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -23791,7 +23800,7 @@ MonoBehaviour:
   puzzlePosition: {fileID: 320099306}
   trunkInventory: {fileID: 579298149}
   playerMovement: {fileID: 1550971350}
-  moodMeter: {fileID: 0}
+  moodMeter: {fileID: 1252406155}
   puzzleRandomiser: {fileID: 0}
 --- !u!61 &1543637739
 BoxCollider2D:
@@ -23848,7 +23857,7 @@ Transform:
   m_GameObject: {fileID: 1543637736}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 107.5, y: 2, z: 0}
+  m_LocalPosition: {x: -118.7, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24170,7 +24179,7 @@ Transform:
   m_GameObject: {fileID: 1550971349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -247.2, y: 3.84, z: 0}
+  m_LocalPosition: {x: -220.5, y: 3.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25581,7 +25590,7 @@ Transform:
   m_GameObject: {fileID: 1674074331}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0.57, z: 0}
+  m_LocalPosition: {x: -90.3, y: 0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26787,6 +26796,7 @@ MonoBehaviour:
   jumpCooldown: 0
   puzzleActive: 1
   isMoving: 0
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!58 &1772657176
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -28020,7 +28030,7 @@ Transform:
   m_GameObject: {fileID: 1841506980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.2, y: 2, z: 0}
+  m_LocalPosition: {x: -116.1, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33644,6 +33654,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901609805}
   m_CullTransparentMesh: 1
+--- !u!1 &1905528760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1905528761}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1905528761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905528760}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -54.9, y: 5.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 185191896}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1907114903
 GameObject:
   m_ObjectHideFlags: 0

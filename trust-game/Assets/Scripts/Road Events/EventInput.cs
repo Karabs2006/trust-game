@@ -11,8 +11,6 @@ public class EventInput : MonoBehaviour
     private Vector2 originalPosition;
     public bool playerMovedOnce = false;
 
-
-
     private void Awake()
     {
         // Get references to components
@@ -34,8 +32,16 @@ public class EventInput : MonoBehaviour
 
     public void Respawn()
     {
-        rb.position = originalPosition;
-        rb.linearVelocity = Vector2.zero;
+       // rb.position = originalPosition;
+       // rb.linearVelocity = Vector2.zero;
+
+        Vector3 screenPosition = new Vector3(
+            Screen.width * 0.75f,
+            Screen.height * 0.9f,
+            10f
+        );
+
+        transform.position = Camera.main.ScreenToWorldPoint(screenPosition);
     }
 
     private void FixedUpdate()

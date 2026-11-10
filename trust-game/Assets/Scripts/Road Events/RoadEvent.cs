@@ -39,6 +39,8 @@ public class RoadEvent : MonoBehaviour
 
             puzzle.SetActive(true);
             trunkInventory.SetActive(true);
+            PuzzleCheck.currentPuzzle = puzzle;
+            PuzzleCheck.trunkInv = trunkInventory;
             //puzzlePosition.StartCoroutine(puzzlePosition.Countdown());
         }
     }

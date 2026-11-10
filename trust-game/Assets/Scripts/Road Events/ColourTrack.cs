@@ -26,6 +26,9 @@ public class ColourTrack : MonoBehaviour
     public string inputList;
     public int indicatorIndex = 0;
     public List<Image> playerIndicators = new List<Image>(); //List of images to show players what colour order they inputed
+
+    private Coroutine flashCoroutine;
+    public PuzzleThreeTimer puzzleThreeTimer;
     
     void Start()
     {
@@ -71,7 +74,14 @@ public class ColourTrack : MonoBehaviour
 
             Debug.Log(setList);
             image.enabled = true;
-            StartCoroutine(flashColours());
+
+            if (flashCoroutine != null)
+            {
+                StopCoroutine(flashCoroutine);
+            }
+
+            flashCoroutine = StartCoroutine(flashColours());
+            puzzleThreeTimer.start = true;
 
     }
 
@@ -85,6 +95,9 @@ public class ColourTrack : MonoBehaviour
         }
 
         image.enabled = false;
+        flashCoroutine = null;
     }
+
+    
 
 }
