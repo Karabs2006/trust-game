@@ -1945,7 +1945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1081902545
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2369,6 +2369,7 @@ MonoBehaviour:
   item: {fileID: 0}
   restStopText: {fileID: 1586238562}
   restStopPanel: {fileID: 2131476962}
+  restStopContainer: {fileID: 0}
   iconImage: {fileID: 903321523}
 --- !u!114 &1349926966
 MonoBehaviour:
@@ -2386,11 +2387,11 @@ MonoBehaviour:
   npcIndex: 0
   npcController: {fileID: 903321521}
   isInfected: 0
-  spores: {fileID: 0}
   itemInfo: {fileID: 0}
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}
   isCutscene: 1
+  puzzleGameObjName: 
 --- !u!1 &1462023659
 GameObject:
   m_ObjectHideFlags: 0
