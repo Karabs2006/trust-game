@@ -291,9 +291,17 @@ public class DialogueController : MonoBehaviour, IInteractable
         }
         else if (!givenLift)
         {
-            if (!isCutscene || !reststop.restStopActive)
+            if (!isCutscene)
             {
-            pickupActions.LeaveBehind();
+                if (!reststop.restStopActive)
+                {
+                    pickupActions.LeaveBehind();
+                }
+                else
+                {
+                  EndDialogue();     
+                }
+            
             //Debug.Log("LeftBehind");  
             }
             else

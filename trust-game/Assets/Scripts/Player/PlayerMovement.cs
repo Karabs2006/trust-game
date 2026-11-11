@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public bool puzzleActive = true;
     private bool hasStarted;
     public bool isMoving;
+   
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         hasStarted = false;
+
     }
 
     
@@ -41,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            // SoundEffectManager.Play("CarDriving");
             hasStarted = true;
             Destroy(startInfo);
             isMoving = true; 

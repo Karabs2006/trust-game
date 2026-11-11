@@ -37,10 +37,10 @@ public class Interactions : MonoBehaviour
             {
                if (hasObject)
                 {
-                text.SetActive(true);
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 if (interactable != null)
                     {
+                    text.SetActive(true);
                     interactable.Interact();
                     wasPressed = true;
                     Invoke(nameof(Reset), delay);
@@ -66,7 +66,7 @@ public class Interactions : MonoBehaviour
 
     private IEnumerator Delay()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         text.SetActive(false);
     }
 

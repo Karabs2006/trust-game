@@ -11,6 +11,7 @@ public class DialogueUI : MonoBehaviour
 
 [Header ("Main Dialogue")]
     public GameObject dialoguePanel;
+    public GameObject textBox;
     public TMP_Text dialogueText;
     public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
@@ -18,12 +19,12 @@ public class DialogueUI : MonoBehaviour
     public GameObject itemHolder;
     public Image item;
 
-[Header ("RestStop Dialogue")]
-    private Reststop reststop;
+// [Header ("RestStop Dialogue")]
+       private Reststop reststop;
     public TMP_Text restStopText;
-    public GameObject restStopPanel;
-    public Transform restStopContainer;
-    public Image iconImage;
+        public GameObject restStopPanel;
+    // public Transform restStopContainer;
+       public Image iconImage;
 
     
     void Awake() //stops there from being multiple instances of this script
@@ -44,9 +45,10 @@ public class DialogueUI : MonoBehaviour
     {
         if (reststop != null && !reststop.restStopActive)
         {
-          dialoguePanel.SetActive(show);  
+          dialoguePanel.SetActive(show); 
+          textBox.SetActive(show); 
         }
-        else
+        else 
         {
          restStopPanel.SetActive(show); 
         }
@@ -55,14 +57,7 @@ public class DialogueUI : MonoBehaviour
 
     public void SetNPCInfo(Sprite npcSprite)
     {
-        if (reststop != null && !reststop.restStopActive)
-        {
-          npcImage.sprite = npcSprite;  
-        }
-        else
-        {
-           iconImage.sprite = npcSprite; 
-        }
+        npcImage.sprite = npcSprite;  
        
     }
 
@@ -76,11 +71,12 @@ public class DialogueUI : MonoBehaviour
     {
         if (reststop !=null && !reststop.restStopActive)
         {
-          dialogueText.text = text;  
+          dialogueText.text = text; 
         }
-        else
+        else  
         {
             restStopText.text = text;
+            
         }
         
     }
@@ -92,18 +88,18 @@ public class DialogueUI : MonoBehaviour
 
     public void CreateChoiceButton(string choiceText, UnityEngine.Events.UnityAction onClick)
     {
-        if (reststop !=null && !reststop.restStopActive)
-        {
+        // if (reststop !=null && !reststop.restStopActive)
+        // {
         GameObject choiceButton = Instantiate(choiceButtonPrefab, choiceContainer);
         choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
         choiceButton.GetComponent<Button>().onClick.AddListener(onClick); 
-        }
-        else
-        {
-        GameObject choiceButton = Instantiate(choiceButtonPrefab, restStopContainer);
-        choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
-        choiceButton.GetComponent<Button>().onClick.AddListener(onClick);   
-        }
+        // }
+        // else
+        // {
+        // GameObject choiceButton = Instantiate(choiceButtonPrefab, restStopContainer);
+        // choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
+        // choiceButton.GetComponent<Button>().onClick.AddListener(onClick);   
+        // }
         
 
     }

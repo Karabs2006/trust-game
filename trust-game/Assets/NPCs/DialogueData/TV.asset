@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
   npcSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogueLines:
-  - '                                                         .'
+  - '                                                    .'
   - This is a National Emergency Broadcast. Pay close attention to the announcenmnets
     that follow
   - If you are a resident of ******* Evacuate the area Immediately
@@ -26,6 +26,7 @@ MonoBehaviour:
   endDialogueLines: 00000000000001
   autoProgressDelay: 1
   dialogueSpeed: 0.055
+  carFullIndex: 0
   choices: []
   giveLiftIndex: 
   leaveBehindIndex: 

@@ -251,8 +251,8 @@ Transform:
   m_GameObject: {fileID: 543522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.1105, y: 1.4, z: 0}
-  m_LocalScale: {x: 428.7437, y: 1, z: 1}
+  m_LocalPosition: {x: -41.1219, y: 1.4, z: 0}
+  m_LocalScale: {x: 430.7588, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3015,6 +3015,7 @@ RectTransform:
   - {fileID: 1812304439}
   - {fileID: 1148379573}
   - {fileID: 1170462175}
+  - {fileID: 861363876}
   - {fileID: 887571031}
   - {fileID: 178046472}
   m_Father: {fileID: 0}
@@ -11589,7 +11590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &758696369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11745,7 +11746,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758696368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11773,7 +11774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &771286031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11786,8 +11787,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1239897892}
   - {fileID: 1481976109}
+  - {fileID: 1239897892}
   - {fileID: 1035302110}
   m_Father: {fileID: 1141037214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13054,18 +13055,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861363875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1681351194}
   - {fileID: 800044150}
-  m_Father: {fileID: 1170462175}
+  m_Father: {fileID: 224221960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 466, y: 226}
+  m_AnchoredPosition: {x: -444, y: 226}
   m_SizeDelta: {x: 800, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861363877
@@ -17676,7 +17677,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 47026122}
-  - {fileID: 861363876}
   - {fileID: 620388322}
   - {fileID: 800282683}
   - {fileID: 2117897077}
@@ -17700,16 +17700,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
   dialoguePanel: {fileID: 1170462174}
+  textBox: {fileID: 861363875}
   dialogueText: {fileID: 1681351195}
   choiceContainer: {fileID: 620388322}
   choiceButtonPrefab: {fileID: 943427476519236572, guid: beacb041e30b94a48b589781b817cad2, type: 3}
   npcImage: {fileID: 800282685}
   itemHolder: {fileID: 2117897076}
   item: {fileID: 145431483}
-  restStopText: {fileID: 1481976110}
-  restStopPanel: {fileID: 771286030}
-  restStopContainer: {fileID: 1035302110}
-  iconImage: {fileID: 1239897893}
+  restStopText: {fileID: 1681351195}
+  restStopPanel: {fileID: 861363875}
+  iconImage: {fileID: 0}
 --- !u!1 &1170708716
 GameObject:
   m_ObjectHideFlags: 0
@@ -19124,7 +19124,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.196
+  m_Volume: 0.053
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19723,7 +19723,7 @@ Transform:
   m_GameObject: {fileID: 1286376606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -210, y: -131, z: 0}
+  m_LocalPosition: {x: -1361, y: -23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19737,7 +19737,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286376606}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -19993,9 +19993,9 @@ RectTransform:
   - {fileID: 1318237077}
   m_Father: {fileID: 1141037214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -1691, y: -214}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 266, y: 421}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1290207919
@@ -20020,7 +20020,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.5703409, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -25379,7 +25379,7 @@ Transform:
   m_GameObject: {fileID: 1697546808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105, y: -125, z: 0}
+  m_LocalPosition: {x: -1046, y: -17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25393,7 +25393,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697546808}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -26185,7 +26185,7 @@ Transform:
   m_GameObject: {fileID: 1772624682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97, y: 131, z: 0}
+  m_LocalPosition: {x: -1054, y: 239, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26199,7 +26199,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772624682}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -26667,7 +26667,7 @@ Transform:
   m_GameObject: {fileID: 1787694162}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -204, y: 135, z: 0}
+  m_LocalPosition: {x: -1355, y: 243, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26681,7 +26681,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787694162}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -34247,7 +34247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -749, y: 414}
+  m_AnchoredPosition: {x: -801, y: 477}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2031001165
@@ -34270,8 +34270,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This is a placeholder for now: This is the rest stop, manage resources,
-    speak to NPCS and refill your mood bar. Dialogue is a work in progress....'
+  m_text: This is a Rest Stop. Refill your tiredness bar. Speak With NPCs by pressing
+    their icon, do the same to continue dialogue.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -34337,7 +34337,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -521.4625, w: 0}
+  m_margin: {x: 0, y: 0, z: -850.204, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
