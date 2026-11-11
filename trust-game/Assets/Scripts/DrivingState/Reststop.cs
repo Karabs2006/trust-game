@@ -17,6 +17,7 @@ public class Reststop : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //Stop Player Movement when dialogue is active
+            SoundEffectManager.Play("GasStation");
             playerMovement.currentSpeed = 0;
             restStopView.SetActive(true);
             restStopActive = true;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Snackbar
   m_EditorClassIdentifier: Assembly-CSharp::SnackBar
   itemName: Snackbar
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 5508725064705088119, guid: 6d0015f2061b5514b8f73f7a2f61e779, type: 3}
   inventorySlots: 0
   itemIndex: 0
   inventoryGroup: Mini

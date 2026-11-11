@@ -169,8 +169,7 @@ MonoBehaviour:
   npcIndex: 3
   npcController: {fileID: 7313738723355858222}
   isInfected: 1
-  spores: {fileID: 4622519005055453225, guid: 0afb40cb4ca3f4a4db629b04bff3fb02, type: 3}
-  itemInfo: {fileID: 11400000, guid: 750132db648d02143ac57b612f4e5d8b, type: 2}
+  itemInfo: {fileID: 0}
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}
   isCutscene: 0

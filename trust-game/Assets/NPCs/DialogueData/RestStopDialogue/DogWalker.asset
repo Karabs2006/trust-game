@@ -20,7 +20,7 @@ MonoBehaviour:
   - I should get going before things get worse
   - Take good care of Dog for me
   - '*He hugs Dog one last time before walking off*'
-  autoProgressLines: 
+  autoProgressLines: 000000000000
   endDialogueLines: 
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05

@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
+            // SoundEffectManager.Play("CarDriving");
             hasStarted = true;
             Destroy(startInfo);
             isMoving = true; 

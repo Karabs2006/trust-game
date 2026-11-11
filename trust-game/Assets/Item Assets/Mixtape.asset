@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mixtape
   m_EditorClassIdentifier: Assembly-CSharp::Mixtape
   itemName: Mixtape
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: -68751727340038015, guid: 6d0015f2061b5514b8f73f7a2f61e779, type: 3}
   inventorySlots: 0
   itemIndex: 0
   inventoryGroup: Trunk

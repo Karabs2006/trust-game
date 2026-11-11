@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -53,7 +54,7 @@ public class Interactions : MonoBehaviour
         {
             isDialogueActive = false;
             playerMovement.currentSpeed = 10f;
-            text.SetActive(false);
+           StartCoroutine("Delay");
         }
 
     }
@@ -63,6 +64,10 @@ public class Interactions : MonoBehaviour
         wasPressed = false;
     }
 
-    
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(1f);
+        text.SetActive(false);
+    }
 
 }

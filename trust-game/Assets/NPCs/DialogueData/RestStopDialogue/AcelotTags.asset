@@ -20,7 +20,7 @@ MonoBehaviour:
   - '*You ask them to leave*'
   - '*they get up slowly and walk off almost tripping over their feet*'
   - '*You decide to keep them around*'
-  autoProgressLines: 
+  autoProgressLines: 000000000000
   endDialogueLines: 000000000001
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
