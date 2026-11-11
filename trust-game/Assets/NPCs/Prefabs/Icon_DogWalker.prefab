@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 45, y: 30}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &445683428814190840
 CanvasRenderer:
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestStopDialogue
   npcDialogue: {fileID: 2601176967856141455}
+  npcActive: 0
 --- !u!1 &5555119649873020966
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,9 +255,10 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 61c12c6d7eb80d948905138ae8683c8d, type: 2}
   npcIndex: 6
   npcController: {fileID: 5555119649873020966}
-  isInfected: 1
+  isInfected: 0
   spores: {fileID: 0}
   itemInfo: {fileID: 0}
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}
   isCutscene: 0
+  puzzleGameObjName: 

@@ -33,7 +33,7 @@ MonoBehaviour:
     choices:
     - 'Plenty of space '
     - 'I have to be cautious about who I let it '
-    nextDialogueIndex: 0400000005000000
+    nextDialogueIndex: 0400000006000000
   giveLiftIndex: 000000000001
   leaveBehindIndex: 00000000000001
   nextDialogueIndexI: 0

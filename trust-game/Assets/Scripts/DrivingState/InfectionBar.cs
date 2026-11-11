@@ -20,14 +20,9 @@ public class InfectionBar : MonoBehaviour
 
     IEnumerator SetVisible()
     {
-        holder.SetActive(true);
-        yield return new WaitForSeconds (0.2f);
         IncreaseInfection();
         yield return new WaitForSeconds (0.5f);
         CheckInfection();
-        yield return new WaitForSeconds (10f);
-        StopCoroutine("SetVisible");
-        holder.SetActive(false);
     }
 
     public void IncreaseInfection()

@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class Reststop : MonoBehaviour
+public class Reststop : MonoBehaviour 
 {
     private PlayerMovement playerMovement;
     public GameObject restStopView;
     public bool restStopActive;
     public GameObject inventory;
+    //private CarHolder carHolder;
     void Start()
     {
         playerMovement = FindAnyObjectByType<PlayerMovement>();
@@ -23,6 +24,18 @@ public class Reststop : MonoBehaviour
            
         }
     }
+
+    // public void Interact()
+    // {
+    //     foreach (Transform transform in carHolder.carSlots)
+    //     {
+    //         RestStopDialogue npc = transform.GetComponentInChildren<RestStopDialogue>();
+    //         if (npc.npcActive)
+    //         {
+    //             npc.NextLine();
+    //         }
+    //     }
+    // }
 
     public void EndRestStop()
     {

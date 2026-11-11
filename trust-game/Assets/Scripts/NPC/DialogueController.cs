@@ -11,7 +11,7 @@ public class DialogueController : MonoBehaviour, IInteractable
     public int npcIndex;
     public GameObject npcController;
     public bool isInfected;
-    public ParticleSystem spores;
+    //public ParticleSystem spores;
 
      private CarHolder pickupActions;
      private Reststop reststop;
@@ -96,7 +96,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         if(isInfected)
         {
-           spores.Play(); 
+           //spores.Play(); 
            Debug.Log("spores");
         }
 
@@ -291,7 +291,7 @@ public class DialogueController : MonoBehaviour, IInteractable
         }
         else if (!givenLift)
         {
-            if (!isCutscene)
+            if (!isCutscene || !reststop.restStopActive)
             {
             pickupActions.LeaveBehind();
             //Debug.Log("LeftBehind");  
@@ -305,9 +305,10 @@ public class DialogueController : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(0.5f);
         //Debug.Log("Wait");
         EndDialogue();  
-        if (reststop.restStopActive)
+        if (reststop.restStopActive || givenLift)
         {
-            Destroy(gameObject);
+            //npcController.SetActive(false);
+           // Destroy(gameObject);
         }
     }
 

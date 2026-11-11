@@ -49,12 +49,13 @@ MonoBehaviour:
   dialogueData: {fileID: 11400000, guid: 9f24bd97c5645474bbe260a70b946846, type: 2}
   npcIndex: 3
   npcController: {fileID: 3299491024699093953}
-  isInfected: 1
+  isInfected: 0
   spores: {fileID: 0}
   itemInfo: {fileID: 0}
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}
   isCutscene: 0
+  puzzleGameObjName: 
 --- !u!212 &6815124376688707331
 SpriteRenderer:
   serializedVersion: 2
@@ -151,7 +152,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -6.0146, y: 0}
-  m_SizeDelta: {x: 45, y: 30}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4556211629455426188
 CanvasRenderer:
