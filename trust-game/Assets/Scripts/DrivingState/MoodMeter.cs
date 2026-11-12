@@ -61,7 +61,7 @@ public class MoodMeter : MonoBehaviour
     {
          while(moodMeter.value < 5000)
         {
-            moodMeter.value += 2f /200f;
+            moodMeter.value += 10f /200f;
             if (moodMeter.value > moodMeter.maxValue) moodMeter.value = moodMeter.maxValue;
             yield return null;
         } 
