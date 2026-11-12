@@ -100,7 +100,16 @@ public class DialogueController : MonoBehaviour, IInteractable
         if(isInfected)
         {
            //spores.Play(); 
-           Debug.Log("spores");
+           if (npcIndex == 3)
+            {
+                return;
+            }
+            else
+            {
+              SoundEffectManager.Play("Coughing");  
+            }
+           
+          
         }
 
         // GameObject passenger = new GameObject(dialogueData.name);

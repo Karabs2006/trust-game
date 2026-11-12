@@ -1,4 +1,5 @@
 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class CarHolder : MonoBehaviour
     private int slotIndex = 0;
     public MoodMeter moodBar;
     private InfectionBar infectionBar;
+    public Animator Feedback;
     public List<DialogueController> npcIcons = new List<DialogueController>();
     public GameObject dog;
     private bool daDog;
@@ -81,8 +83,10 @@ public class CarHolder : MonoBehaviour
             }
             if (npc.isInfected)
             {
+                Feedback.SetBool("isActive", true);
                 infectionBar = FindAnyObjectByType<InfectionBar>();
                 infectionBar.StartCoroutine("SetVisible"); //infection bar goes up
+                StartCoroutine("Reset");
                 Debug.Log("Infected");
                 //visual effect
                 
@@ -166,5 +170,11 @@ public class CarHolder : MonoBehaviour
             
         }
         
+    }
+
+    private IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(1f);
+        Feedback.SetBool("isActive", false);
     }
 }

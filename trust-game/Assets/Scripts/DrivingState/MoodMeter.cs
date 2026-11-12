@@ -36,7 +36,7 @@ public class MoodMeter : MonoBehaviour
         {
             decreasing = false;
         }
-        Debug.Log(moodMeter.value);
+        //Debug.Log(moodMeter.value);
         
     }
 

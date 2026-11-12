@@ -16,11 +16,11 @@ MonoBehaviour:
   dialogueLines:
   - ' I''m really sorry to bother you'
   - 'anyway you got space in your car?  '
-  - 'I got some *old movies I can trade you to help make things seem a bit more normal* '
+  - 'I got some *energy drinks I can trade you to help make things seem a bit more
+    normal* '
   - 'Will help us stay awake, not that we can really sleep nowadays, heh '
   - 'Thank you! '
-  - ' I promise not to talk your ear off about movies (Player gets old movies but
-    this causes a road event)'
+  - ' I promise not to talk your ear off about movies '
   - Sigh, I understand
   - Actually, I dont think Ill fit. thanks anyways.
   autoProgressLines: 
