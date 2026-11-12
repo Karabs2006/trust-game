@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VHS
   m_EditorClassIdentifier: Assembly-CSharp::VHS
   itemName: VHS
-  icon: {fileID: 0}
+  icon: {fileID: 6099581493293703690, guid: 6d0015f2061b5514b8f73f7a2f61e779, type: 3}
   inventorySlots: 0
   itemIndex: 0
   inventoryGroup: Mini

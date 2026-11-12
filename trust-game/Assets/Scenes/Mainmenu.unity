@@ -585,7 +585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITLE
+  m_text: TRUST
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -63.06067, w: 0}
+  m_margin: {x: 0, y: 0, z: -92.07727, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1657,6 +1657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
   dialoguePanel: {fileID: 1526221992}
+  textBox: {fileID: 0}
   dialogueText: {fileID: 1586238562}
   choiceContainer: {fileID: 2131476963}
   choiceButtonPrefab: {fileID: 2131476962}
@@ -1665,7 +1666,6 @@ MonoBehaviour:
   item: {fileID: 0}
   restStopText: {fileID: 1586238562}
   restStopPanel: {fileID: 2131476962}
-  restStopContainer: {fileID: 0}
   iconImage: {fileID: 903321523}
 --- !u!114 &1349926966
 MonoBehaviour:

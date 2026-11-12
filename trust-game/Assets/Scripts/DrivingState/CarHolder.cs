@@ -150,16 +150,16 @@ public class CarHolder : MonoBehaviour
             {
             if (npcinfo.npcIndex == 7)
             {
-               moodBar.moodValueD = 0.005f; 
+               moodBar.moodValueD = 0.2f; 
                daDog = true;
             }
             else if (npcinfo.npcIndex == 3 && !daDog) //Acelot Tags
             {
-            moodBar.moodValueD = 0.5f;
+            moodBar.moodValueD = 4f;
             }
             else
             {
-               moodBar.moodValueD = 0.01f;      
+               moodBar.moodValueD = 2f;      
             }
             
             }

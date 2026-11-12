@@ -19,7 +19,7 @@ MonoBehaviour:
   - '*You pet the dogs head, his tail starts wagging*'
   - '*You''re still unsure if the dog is uninfected*'
   autoProgressLines: 
-  endDialogueLines: 00000101
+  endDialogueLines: 00000000
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   carFullIndex: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
     - Absolutely
     - Not sure
     nextDialogueIndex: 0200000003000000
-  giveLiftIndex: 
+  giveLiftIndex: 00000101
   leaveBehindIndex: 
   nextDialogueIndexI: 0
   item: {fileID: 0}

@@ -7,34 +7,52 @@ public class MoodMeter : MonoBehaviour
     [Header("MoodMeter")]
     public Slider moodMeter;
     public int fullMood;
-    public float moodValueD = 0.01f; //the value to decrease by
+    public float moodValueD = 2f; //the value to decrease by
+    private bool decreasing;
 
     [Header("Influences")]
     private int moodIncrease = 100; //the amount the mood will increase by
     public PlayerMovement player;
     public Interactions dialogue;
     public Reststop restStop;
+    private EndingManager ending;
+    public GameObject text;
 
     void Start()
     {
         moodMeter = GetComponent<Slider>();
         moodMeter.maxValue = fullMood;
         moodMeter.value = fullMood;
+        ending = FindAnyObjectByType<EndingManager>();
     }
 
     void FixedUpdate()
     {
-        MoodManager();
-        //Debug.Log(moodMeter.value);
+        if (!decreasing)
+        {
+            MoodManager(); 
+        }
+        if (dialogue.isDialogueActive || restStop.restStopActive)
+        {
+            decreasing = false;
+        }
+        Debug.Log(moodMeter.value);
+        
     }
 
     IEnumerator DecreaseMood()
     {
-         while(moodMeter.value > 0)
+        if (decreasing)
+        {
+          while(moodMeter.value > 0)
         {
             moodMeter.value -= moodValueD * 0.01f;//ime.deltaTime;
             yield return null;
         }
+        ending.Ending();
+        text.SetActive(true);  
+        }
+         
         //value decreases entirely (effect)
         //crash, game over
        
@@ -43,7 +61,7 @@ public class MoodMeter : MonoBehaviour
     {
          while(moodMeter.value < 5000)
         {
-            moodMeter.value += 0.2f /200f;
+            moodMeter.value += 2f /200f;
             if (moodMeter.value > moodMeter.maxValue) moodMeter.value = moodMeter.maxValue;
             yield return null;
         } 
@@ -76,11 +94,13 @@ public class MoodMeter : MonoBehaviour
           StopCoroutine("IncreaseMood"); 
           if (player.isMoving && !dialogue.isDialogueActive)
             {
+                decreasing = true;
                 StartCoroutine("DecreaseMood"); 
             }
             else if (!player.isMoving || dialogue.isDialogueActive)
             {
                 StopCoroutine("DecreaseMood"); 
+                decreasing = false;
             }
         }
        

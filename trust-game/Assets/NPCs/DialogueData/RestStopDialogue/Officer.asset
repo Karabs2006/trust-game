@@ -21,7 +21,7 @@ MonoBehaviour:
   - Ill show you a real threat...
   - Just old age and old lungs, nothing to worry bout
   autoProgressLines: 
-  endDialogueLines: 000000000001
+  endDialogueLines: 000000000000
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   carFullIndex: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
     - I think your infected
     - You doing okay?
     nextDialogueIndex: 0200000005000000
-  giveLiftIndex: 
+  giveLiftIndex: 000000000001
   leaveBehindIndex: 0000000001
   nextDialogueIndexI: 0
   item: {fileID: 0}

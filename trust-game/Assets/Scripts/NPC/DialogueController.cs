@@ -289,7 +289,9 @@ public class DialogueController : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(1f);
         if (givenLift)
         {
-            pickupActions.PickUp();
+            if (!reststop.restStopActive)
+            {
+               pickupActions.PickUp();
             if(npcIndex == 5)
             {
                 if(puzzleHolder !=null )
@@ -298,7 +300,13 @@ public class DialogueController : MonoBehaviour, IInteractable
                     GameObject colliderObj = puzzleHolder.transform.Find("PuzzleTrigger").gameObject;
                     colliderObj.transform.position = transform.position + Vector3.right * 10f;
                 }
-            }  
+            }    
+            }
+            else
+            {
+                EndDialogue();  
+            }
+           
             //Debug.Log("PickedUp");
         }
         else if (!givenLift)
@@ -322,7 +330,7 @@ public class DialogueController : MonoBehaviour, IInteractable
                 else
                 {
                   EndDialogue();
-                    
+                   npcController.SetActive(false); 
                 }
             
             //Debug.Log("LeftBehind");  
@@ -336,11 +344,6 @@ public class DialogueController : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(0.5f);
         //Debug.Log("Wait");
         EndDialogue();  
-        if (reststop.restStopActive || givenLift)
-        {
-            //npcController.SetActive(false);
-           // Destroy(gameObject);
-        }
     }
 
 

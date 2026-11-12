@@ -20,7 +20,7 @@ MonoBehaviour:
   - I understand, my parents always said I was a bit much
   - You, me and Moshi Moshi are going to be the best of friends!
   autoProgressLines: 
-  endDialogueLines: 0000000001
+  endDialogueLines: 0000000000
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   carFullIndex: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     - I think you should stay here
     - Im glad too
     nextDialogueIndex: 0200000004000000
-  giveLiftIndex: 
+  giveLiftIndex: 0000000001
   leaveBehindIndex: 0000000100
   nextDialogueIndexI: 0
   item: {fileID: 0}

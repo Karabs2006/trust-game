@@ -50,7 +50,6 @@ MonoBehaviour:
   npcIndex: 3
   npcController: {fileID: 3299491024699093953}
   isInfected: 0
-  spores: {fileID: 0}
   itemInfo: {fileID: 0}
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}
@@ -260,4 +259,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046609f8a1d24664084ec694b8bbc94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestStopDialogue
-  npcDialogue: {fileID: 0}
+  npcDialogue: {fileID: 1488490192871890398}

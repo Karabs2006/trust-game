@@ -21,7 +21,7 @@ MonoBehaviour:
   - Whatever
   - ...
   autoProgressLines: 
-  endDialogueLines: 000000000001
+  endDialogueLines: 000000000000
   autoProgressDelay: 1.5
   dialogueSpeed: 0.05
   carFullIndex: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
     - You should stay here then
     - '*Walk away*'
     nextDialogueIndex: 0300000005000000
-  giveLiftIndex: 
+  giveLiftIndex: 000000000001
   leaveBehindIndex: 000000000100
   nextDialogueIndexI: 0
   item: {fileID: 0}
