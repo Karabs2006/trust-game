@@ -65,6 +65,7 @@ public class CarHolder : MonoBehaviour
                         {
                         Instantiate(icon.npcController, openSlots[openSlotIndex]); //she leaves after causing the road event
                         openSlotIndex++;
+
                         }
 
                         if(npc.npcIndex == 6) //Dog Walker

@@ -45,6 +45,8 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         puzzleHolder = GameObject.Find(puzzleGameObjName);
 
+
+        /*
         if(puzzleHolder !=null )
         {
             //Puzzle Trigger
@@ -53,6 +55,7 @@ public class DialogueController : MonoBehaviour, IInteractable
             //colliderObj.SetActive(true);
             colliderObj.transform.position = transform.position + Vector3.right * 10f;
         }
+        */
 
     }
 
@@ -287,6 +290,15 @@ public class DialogueController : MonoBehaviour, IInteractable
         if (givenLift)
         {
             pickupActions.PickUp();
+            if(npcIndex == 5)
+            {
+                if(puzzleHolder !=null )
+                {
+                    //Puzzle Trigger
+                    GameObject colliderObj = puzzleHolder.transform.Find("PuzzleTrigger").gameObject;
+                    colliderObj.transform.position = transform.position + Vector3.right * 10f;
+                }
+            }  
             //Debug.Log("PickedUp");
         }
         else if (!givenLift)
@@ -296,10 +308,21 @@ public class DialogueController : MonoBehaviour, IInteractable
                 if (!reststop.restStopActive)
                 {
                     pickupActions.LeaveBehind();
+                    
+                    if(npcIndex != 5)
+                    {
+                        if(puzzleHolder !=null )
+                        {
+                            //Puzzle Trigger
+                            GameObject colliderObj = puzzleHolder.transform.Find("PuzzleTrigger").gameObject;
+                            colliderObj.transform.position = transform.position + Vector3.right * 10f;
+                        }
+                    }  
                 }
                 else
                 {
-                  EndDialogue();     
+                  EndDialogue();
+                    
                 }
             
             //Debug.Log("LeftBehind");  

@@ -33,7 +33,7 @@ public class PuzzleFour : MonoBehaviour
             particleSystem.Play();
         }
 
-        if(slider.value == 150)
+        if(slider.value == 100)
         {
             puzzle.SetActive(false);
             playerMovement.currentSpeed = 10;
