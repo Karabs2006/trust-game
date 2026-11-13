@@ -241,7 +241,7 @@ public class DialogueController : MonoBehaviour, IInteractable
 
         if(itemInfo.inventoryGroup == "Trunk")
         {
-            inventoryScript.AddItem("trunk", itemInfo,inventoryScript.buttonPrefab, inventoryScript.inventoryPanel);
+            inventoryScript.AddItem("trunk", itemInfo,inventoryScript.buttonPrefab, inventoryScript.inventoryPanel, itemInfo.icon);
             Debug.Log("ITEM IN TRUNK");
         }
 
@@ -254,7 +254,7 @@ public class DialogueController : MonoBehaviour, IInteractable
             //miniInventory.amount++;
             //miniInventory.countText.text = $"{miniInventory.amount}";
 
-            inventoryScript.AddItem("mini", itemInfo,inventoryScript.buttonPrefabMini, inventoryScript.inventoryPanelMini);
+            inventoryScript.AddItem("mini", itemInfo,inventoryScript.buttonPrefabMini, inventoryScript.inventoryPanelMini, itemInfo.icon);
             Debug.Log("ITEM IN MINI");
 
         }
@@ -332,7 +332,7 @@ public class DialogueController : MonoBehaviour, IInteractable
                         {
                             //Puzzle Trigger
                             GameObject colliderObj = puzzleHolder.transform.Find("PuzzleTrigger").gameObject;
-                            colliderObj.transform.position = transform.position + Vector3.right * 10f;
+                            colliderObj.transform.position = transform.position + Vector3.right * 15f;
                         }
                     }  
                 }

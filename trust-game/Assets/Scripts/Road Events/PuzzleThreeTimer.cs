@@ -8,6 +8,7 @@ public class PuzzleThreeTimer : MonoBehaviour
 {   
     public TMP_Text timerText;
     public TMP_Text solvedText;
+    public TMP_Text lossText;
     public int timeInt = 60;
     public int solvedInt = 0;
     public GameObject puzzle;
@@ -46,6 +47,13 @@ public class PuzzleThreeTimer : MonoBehaviour
             playerMovement.currentSpeed = 10;
             playerMovement.rb.linearVelocity = new Vector2(playerMovement.currentSpeed, playerMovement.rb.linearVelocity.y);
             playerMovement.puzzleActive = false;
+        }
+
+        if(timeInt == 0 && solvedInt < 5)
+        {   
+            lossText.enabled = true;
+            puzzle.SetActive(false);
+
         }
     }
 

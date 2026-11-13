@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
 
     }
 
-    public void AddItem(String group, Item newItem,GameObject prefab, Transform itemArea)
+    public void AddItem(String group, Item newItem,GameObject prefab, Transform itemArea, Sprite itemImg)
     {
         if(group == "trunk")
         {
@@ -57,11 +57,13 @@ public class Inventory : MonoBehaviour
         }
 
         GameObject button = Instantiate(prefab, itemArea);
-        TMP_Text tMP_Text = button.GetComponentInChildren<TMP_Text>();
-        tMP_Text.text = $"{newItem.itemName}";
+        //TMP_Text tMP_Text = button.GetComponentInChildren<TMP_Text>();
+        
+        //tMP_Text.text = $"{newItem.itemName}";
         Debug.Log(newItem.itemName);
 
         Button buttonArea = button.GetComponent<Button>();
+        buttonArea.image.sprite = itemImg;
         buttonArea.onClick.AddListener(() =>
         {
             newItem.Use();

@@ -25,7 +25,7 @@ public class RoadEvent : MonoBehaviour
         {
             //Stop Player Movement when puzzle is active
             
-            SoundEffectManager.Play("carBreakdown");
+            SoundEffectManager.Play("CarBreakdown");
             SoundEffectManager.SetVolume(1f);
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
             playerMovement.currentSpeed = 0;
