@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public Sprite skullImg;
     public Sprite carImg;
     public Image mainImg;
+    public Animator animator;
+    public Image speedometerImg;
 
     //public SpriteRenderer spriteRenderer;
    
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         //spriteRenderer.sprite = carImg;
 
         mainImg.sprite = carImg;
+        animator.speed = 1f;
 
     }
 

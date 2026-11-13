@@ -35,6 +35,7 @@ public class RoadEvent : MonoBehaviour
             playerMovement.rb.linearVelocity = Vector2.zero;
             playerMovement.puzzleActive = true;
             playerMovement.mainImg.sprite = playerMovement.skullImg;
+            playerMovement.animator.speed = 0f;
             //Randomise();
            
 

@@ -21,10 +21,14 @@ public class Interactions : MonoBehaviour
         {
             hasObject = true;
             isDialogueActive = true;
+            playerMovement.mainImg.enabled = false;
+            playerMovement.speedometerImg.enabled = false;
         }
         else
         {
            isDialogueActive = false; 
+           playerMovement.mainImg.enabled = true;
+            playerMovement.speedometerImg.enabled = true;
         }
     }
 
@@ -54,7 +58,8 @@ public class Interactions : MonoBehaviour
         {
             isDialogueActive = false;
             playerMovement.currentSpeed = 10f;
-           StartCoroutine("Delay");
+            
+            StartCoroutine("Delay");
         }
 
     }
