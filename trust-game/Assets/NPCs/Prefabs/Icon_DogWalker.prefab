@@ -146,7 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RestStopDialogue
   npcDialogue: {fileID: 2601176967856141455}
-  npcActive: 0
 --- !u!1 &5555119649873020966
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,8 +229,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.9448962, a: 1}
+  m_Sprite: {fileID: 7338463833840661497, guid: f4e6e569e51674e488e171b40a990675, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -256,7 +255,6 @@ MonoBehaviour:
   npcIndex: 6
   npcController: {fileID: 5555119649873020966}
   isInfected: 0
-  spores: {fileID: 0}
   itemInfo: {fileID: 0}
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}

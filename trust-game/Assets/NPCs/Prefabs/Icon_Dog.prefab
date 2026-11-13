@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.4415095, g: 0.27131477, b: 0.16577427, a: 1}
+  m_Sprite: {fileID: -676178738946772688, guid: cb41168ac69e32e43b5613f2f9c0c4fb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,7 +109,6 @@ MonoBehaviour:
   npcIndex: 7
   npcController: {fileID: 5803868017654263848}
   isInfected: 0
-  spores: {fileID: 0}
   itemInfo: {fileID: 0}
   isDialogueActive: 0
   puzzleHolder: {fileID: 0}

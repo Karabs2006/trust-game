@@ -7,8 +7,8 @@ public class Reststop : MonoBehaviour
     public bool restStopActive;
     public GameObject inventory;
     //private CarHolder carHolder;
-    public RectTransform inventoryTransform;
-    public Vector2 rightSidePosition;
+    // public RectTransform inventoryTransform;
+    // public Vector2 rightSidePosition;
     void Start()
     {
         playerMovement = FindAnyObjectByType<PlayerMovement>();
@@ -23,8 +23,8 @@ public class Reststop : MonoBehaviour
             playerMovement.currentSpeed = 0;
             restStopView.SetActive(true);
             restStopActive = true;
-            inventory.SetActive(true);
-            inventoryTransform.anchoredPosition = rightSidePosition;
+            // inventory.SetActive(true);
+            // inventoryTransform.anchoredPosition = rightSidePosition;
            
         }
     }
