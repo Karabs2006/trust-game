@@ -17490,6 +17490,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1086809002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086809003}
+  m_Layer: 0
+  m_Name: RestopUITransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086809003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086809002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1222, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089778078
 GameObject:
   m_ObjectHideFlags: 0
@@ -18473,7 +18504,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Reststop
   restStopView: {fileID: 1141037210}
   restStopActive: 0
-  inventory: {fileID: 1033056984}
+  inventory: {fileID: 628562828}
+  inventoryTransform: {fileID: 628562829}
+  rightSidePosition: {x: 0, y: 80}
 --- !u!61 &1151557456
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25393,7 +25426,7 @@ Transform:
   m_GameObject: {fileID: 1550971349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -246.4, y: 3.84, z: 0}
+  m_LocalPosition: {x: -53.7, y: 3.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38260,3 +38293,4 @@ SceneRoots:
   - {fileID: 1225504073}
   - {fileID: 103317417}
   - {fileID: 1033056985}
+  - {fileID: 1086809003}
