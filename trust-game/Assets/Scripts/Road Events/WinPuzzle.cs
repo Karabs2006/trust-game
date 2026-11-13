@@ -23,6 +23,7 @@ public class WinPuzzle : MonoBehaviour
             //puzzlePosition.winText.enabled = true;
             roadEvent.puzzle.SetActive(false);
             roadEvent.trunkInventory.SetActive(false);
+            player.mainImg.sprite = player.carImg;
             
         }
 
@@ -34,6 +35,7 @@ public class WinPuzzle : MonoBehaviour
             puzzleTwo.SetActive(false);
             roadEvent.puzzle.SetActive(false);
             roadEvent.trunkInventory.SetActive(false);
+            player.mainImg.sprite = player.carImg;
             
             
             

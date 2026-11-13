@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+//using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.UI;
 
 public class RoadEvent : MonoBehaviour
 {
@@ -10,8 +12,9 @@ public class RoadEvent : MonoBehaviour
     public PlayerMovement playerMovement;
     public GameObject moodMeter;
     public CarHolder puzzleRandomiser;
+    public Image kilometerImg;
 
-    
+    public Image skullImg;
 
     void Start()
     {
@@ -31,6 +34,7 @@ public class RoadEvent : MonoBehaviour
             playerMovement.currentSpeed = 0;
             playerMovement.rb.linearVelocity = Vector2.zero;
             playerMovement.puzzleActive = true;
+            playerMovement.mainImg.sprite = playerMovement.skullImg;
             //Randomise();
            
 

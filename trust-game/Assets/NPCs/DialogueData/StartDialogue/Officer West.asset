@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: Officer West
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 21300000, guid: 4e0e3543e10232746b5e679f88be4599, type: 3}
+  npcSprite: {fileID: -2828526269558188025, guid: f4e6e569e51674e488e171b40a990675, type: 3}
   dialogueLines:
   - Howdy fella. *Coughing*
   - 'You got space in that car for a man of the law? *Coughing* '

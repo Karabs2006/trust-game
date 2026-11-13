@@ -39,6 +39,7 @@ public class PuzzleFour : MonoBehaviour
             playerMovement.currentSpeed = 10;
             playerMovement.rb.linearVelocity = new Vector2(playerMovement.currentSpeed, playerMovement.rb.linearVelocity.y);
             playerMovement.puzzleActive = false;
+            playerMovement.mainImg.sprite = playerMovement.carImg;
         }
     }
 

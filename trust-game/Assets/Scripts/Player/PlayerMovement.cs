@@ -1,5 +1,7 @@
+//using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
     public bool puzzleActive = true;
     private bool hasStarted;
     public bool isMoving;
+
+    public Sprite skullImg;
+    public Sprite carImg;
+    public Image mainImg;
+
+    //public SpriteRenderer spriteRenderer;
    
 
     void Start()
@@ -19,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         hasStarted = false;
+        //spriteRenderer = mainImg.GetComponent<SpriteRenderer>();
+
+        //spriteRenderer.sprite = carImg;
+
+        mainImg.sprite = carImg;
 
     }
 

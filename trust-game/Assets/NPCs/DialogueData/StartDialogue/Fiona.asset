@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c23dd26fb346642ba2522f1dc4d706, type: 3}
   m_Name: Fiona
   m_EditorClassIdentifier: Assembly-CSharp::NPCInfo
-  npcSprite: {fileID: 21300000, guid: b7cc536033f514e4383e04fec428dd7b, type: 3}
+  npcSprite: {fileID: -4585173930034488372, guid: f4e6e569e51674e488e171b40a990675, type: 3}
   dialogueLines:
   - ' I''m really sorry to bother you'
   - 'anyway you got space in your car?  '
