@@ -6,6 +6,7 @@ public class Reststop : MonoBehaviour
     public GameObject restStopView;
     public bool restStopActive;
     public GameObject inventory;
+    public GameObject dialogue;
     //private CarHolder carHolder;
     // public RectTransform inventoryTransform;
     // public Vector2 rightSidePosition;
@@ -43,6 +44,7 @@ public class Reststop : MonoBehaviour
 
     public void EndRestStop()
     {
+        dialogue.SetActive(false);
         restStopView.SetActive(false);
         playerMovement.currentSpeed = 10;
         restStopActive = false;

@@ -59,16 +59,19 @@ public class CarHolder : MonoBehaviour
                 {
                     if (npc.npcIndex == icon.npcIndex)
                     {
-                        Instantiate(icon.npcController, carSlots[slotIndex]); 
-                        slotIndex++;
-                        // Debug.Log("Picked up");
-
                         if(npc.npcIndex == 5) //Fiona 
                         {
                         Instantiate(icon.npcController, openSlots[openSlotIndex]); //she leaves after causing the road event
                         openSlotIndex++;
 
                         }
+                        else
+                        {
+                          Instantiate(icon.npcController, carSlots[slotIndex]); 
+                        slotIndex++;  
+                        }
+                        
+                        // Debug.Log("Picked up");
 
                         if(npc.npcIndex == 6) //Dog Walker
                         {
