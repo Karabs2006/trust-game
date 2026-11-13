@@ -25,6 +25,7 @@ public class Reststop : MonoBehaviour
             restStopActive = true;
             inventory.SetActive(true);
             inventoryTransform.anchoredPosition = rightSidePosition;
+            playerMovement.animator.speed = 0f;
            
         }
     }
@@ -45,6 +46,7 @@ public class Reststop : MonoBehaviour
     {
         restStopView.SetActive(false);
         playerMovement.currentSpeed = 10;
+        playerMovement.animator.speed = 1f;
         restStopActive = false;
         inventory.SetActive(false);
     }
