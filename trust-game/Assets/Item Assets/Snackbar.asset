@@ -18,3 +18,4 @@ MonoBehaviour:
   itemIndex: 0
   inventoryGroup: Mini
   miniInvSubGroup: Energy Bar
+  description: 'Increases time during road events   '

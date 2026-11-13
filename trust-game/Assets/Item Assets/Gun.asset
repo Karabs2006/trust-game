@@ -18,3 +18,4 @@ MonoBehaviour:
   itemIndex: 0
   inventoryGroup: Mini
   miniInvSubGroup: 
+  description: 'Lets you skip a road event '

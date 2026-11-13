@@ -37,8 +37,8 @@ public class PuzzleFour : MonoBehaviour
         {
             puzzle.SetActive(false);
             playerMovement.currentSpeed = 10;
-            //playerMovement.rb.linearVelocity = new Vector2(playerMovement.currentSpeed, playerMovement.rb.linearVelocity.y);
-             playerMovement.puzzleActive = false;
+            playerMovement.rb.linearVelocity = new Vector2(playerMovement.currentSpeed, playerMovement.rb.linearVelocity.y);
+            playerMovement.puzzleActive = false;
         }
     }
 

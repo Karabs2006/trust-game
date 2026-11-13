@@ -18,3 +18,4 @@ MonoBehaviour:
   itemIndex: 0
   inventoryGroup: Mini
   miniInvSubGroup: 
+  description: 'Lets the player reset a puzzle to its original state (Acts as a reset)  '

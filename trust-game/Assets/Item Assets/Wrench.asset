@@ -18,4 +18,5 @@ MonoBehaviour:
   itemIndex: 0
   inventoryGroup: Trunk
   miniInvSubGroup: 
+  description: Adds time during Maze road event
   usedOnce: 1

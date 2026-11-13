@@ -18,3 +18,4 @@ MonoBehaviour:
   itemIndex: 0
   inventoryGroup: Trunk
   miniInvSubGroup: 
+  description: 'Provides 25+mood during rest  '

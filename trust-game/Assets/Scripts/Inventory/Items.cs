@@ -9,5 +9,6 @@ public abstract class Item : ScriptableObject
     public int itemIndex;
     public string inventoryGroup;
     public string miniInvSubGroup;
+    public string description;
     public abstract void Use();
 }

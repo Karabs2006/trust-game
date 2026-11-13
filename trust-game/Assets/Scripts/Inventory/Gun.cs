@@ -4,8 +4,7 @@ using UnityEngine;
 public class Gun : Item
 {
     public override void Use()
-    {
-      
+    {      
       PuzzleCheck.currentPuzzle.SetActive(false);
       PuzzleCheck.trunkInv.SetActive(false);
       GameObject player = GameObject.Find("Player");

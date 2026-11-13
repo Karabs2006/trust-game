@@ -19,29 +19,11 @@ public class Inventory : MonoBehaviour
     public GameObject buttonPrefabMini;
     public Transform inventoryPanelMini;
 
+    public Wrench wrench;
+
     void Start()
     {   
-        /*
-        foreach(Item item in items)
-        {
-            //Reuse this to put item in the inventory
-            //We will swap name logic to actual images/icons
-
-            GameObject button = Instantiate(buttonPrefab, inventoryPanel);
-            TMP_Text tMP_Text = button.GetComponentInChildren<TMP_Text>();
-            tMP_Text.text = $"{item.itemName}";
-            Debug.Log(item.itemName);
-
-            //Run the use function for each respective item
-            Button buttonArea = button.GetComponent<Button>();
-            buttonArea.onClick.AddListener(() =>{ 
-            item.Use();
-            button.SetActive(false);
-            });
-        }
-        */
-
-
+        AddItem("trunk", wrench, buttonPrefab,inventoryPanel, wrench.icon);
     }
 
     public void AddItem(String group, Item newItem,GameObject prefab, Transform itemArea, Sprite itemImg)
@@ -64,9 +46,15 @@ public class Inventory : MonoBehaviour
 
         Button buttonArea = button.GetComponent<Button>();
         buttonArea.image.sprite = itemImg;
+        buttonArea.AddComponent<Tooltip>();
+        Tooltip tooltip = buttonArea.GetComponent<Tooltip>();
+        tooltip.toolDescription= newItem.description;
+
         buttonArea.onClick.AddListener(() =>
         {
             newItem.Use();
+            tooltip.background.enabled = false;  
+            tooltip.toolText.text = ""; 
             button.SetActive(false);
         });
     }
